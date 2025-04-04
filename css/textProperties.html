@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+
+        font-family: sans-serif;
+        font-optical-sizing: auto;
+
+        font-style: normal;
+      }
+      section {
+        margin: 90px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="txt-align">
+      <style>
+        p.c0 {
+          font-size: 72px;
+          display: inline;
+          direction: rtl;
+          unicode-bidi: bidi-override; /* Reverses the text */
+        }
+        p.c0 button {
+          vertical-align: middle;
+        }
+      </style>
+      <p class="c0">Text Align <button>vertical Align</button></p>
+    </section>
+
+    <!-- text-decoration line -->
+    <section>
+      <style>
+        p.c1 {
+          text-decoration: overline underline dashed red 10px;
+        }
+      </style>
+      <h2>Text Decoration Line</h2>
+      <p class="c1" style="font-size: 48px">This is Text</p>
+    </section>
+
+    <section>
+      <style>
+        @keyframes glow {
+          0% {
+            text-shadow: 0px 0px 4px green;
+          }
+
+          30% {
+            text-shadow: 3px 3px 16px green;
+          }
+
+          60% {
+            text-shadow: 5px 5px 16px green;
+          }
+          100% {
+            text-shadow: 0px 0px 0px green;
+          }
+        }
+
+        @keyframes up {
+          0% {
+            text-shadow: 0px 0px 0px #999;
+          }
+
+          50% {
+            text-shadow: 5px 5px 0px #999;
+          }
+
+          60% {
+            text-shadow: 5px 5px 3px #999;
+          }
+
+          100% {
+            text-shadow: 5px 5px 3px #999;
+          }
+        }
+
+        .c2 {
+          font-size: 72px;
+          text-shadow: 0px 0px 4px green;
+          animation: glow 2s linear 1 forwards;
+          animation: up 2s linear 2s 1 forwards;
+        }
+      </style>
+      <h1 class="c2">This is a Text Shadow</h1>
+    </section>
+
+    <section>
+      <style>
+        .box {
+          width: 300px;
+          height: 300px;
+          background-color: bisque;
+          margin: 0 auto;
+          padding: 20px;
+
+          border: 10px red dotted;
+          outline: 10px green dashed;
+          outline-offset: 20px;
+        }
+      </style>
+      <div class="box">Border And Outline</div>
+    </section>
+
+    <section>
+      <iframe
+        src="index.html"
+        frameborder="1"
+        style="width: 500px; border: 10px solid green"
+      ></iframe>
+
+      <object data="./index.html" width="500px" type=""></object>
+
+      <embed src="./index.html" type="" />
+    </section>
+    <section>
+      <label for="temperature">Temperature Level:</label>
+      <meter
+        id="temperature"
+        value="25"
+        min="0"
+        max="100"
+        low="10"
+        high="70"
+        optimum="50"
+      >
+        25°C
+      </meter>
+    </section>
+
+    <section class="c3">
+      <h1>Font variant property</h1>
+      <style>
+        .c3 {
+          font-variant: small-caps;
+        }
+      </style>
+      <p>
+        Lorem, Ipsum dolor sit amet Consectetur adipisicing elit. Veniam
+        excepturi dolor Magnam, et eum Exercitationem illo Doloribus placeat
+        Quibusdam Alias!
+      </p>
+    </section>
+  </body>
+</html>

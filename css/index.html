@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      div p {
+        background-color: greenyellow;
+      }
+
+      div > p {
+        background-color: red;
+      }
+
+      div ~ p {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut aperiam
+        architecto molestiae dignissimos perspiciatis doloribus soluta
+        asperiores iusto vitae nostrum!
+      </p>
+      <h1>This is heading inside div</h1>
+      <section>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut aperiam
+          architecto molestiae dignissimos perspiciatis doloribus soluta
+          asperiores iusto vitae nostrum!
+        </p>
+        <h1>This is heading inside section inside div</h1>
+      </section>
+      <h1>This is heading below section</h1>
+    </div>
+    <p>This is p outside div</p>
+    <p>This is another paragraoh</p>
+  </body>
+</html>

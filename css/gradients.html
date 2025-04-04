@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradients</title>
+
+    <style>
+      body {
+        display: grid;
+        place-content: center;
+      }
+
+      div {
+        width: 500px;
+        height: 500px;
+        border: 5px inset pink;
+        margin-bottom: 100px;
+      }
+
+      body div:nth-of-type(1) {
+        background: linear-gradient(to bottom, blue, green);
+      }
+
+      div:nth-of-type(2) {
+        background: radial-gradient(
+          ellipse,
+          farthest-corner,
+          rgb(255, 0, 0) 10%,
+          rgb(0, 255, 0) 30%,
+          rgb(0, 0, 255) 80%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <h1>linear Gradient</h1>
+    <div></div>
+    <h1>Radial Gradient</h1>
+    <div></div>
+    <h1>Conic Gradient</h1>
+    <div></div>
+  </body>
+</html>

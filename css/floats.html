@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Float</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      header {
+        height: 100px;
+        background: linear-gradient(to left, #52f70c, #b5f70c);
+        position: sticky;
+        top: 0;
+        z-index: 99;
+      }
+
+      .logo {
+        width: 200px;
+        height: 80px;
+        background-color: #999;
+        font-size: 32px;
+        text-align: center;
+        float: left;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        margin-left: 20px;
+        text-align: center;
+      }
+      .menu {
+        /* float: right; */
+        height: 100%;
+      }
+
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      .menu-list {
+        text-decoration: none;
+        list-style: none;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-right: 50px;
+      }
+
+      .menu-list li {
+        float: right;
+        margin-left: 20px;
+        font-size: 20px;
+      }
+
+      .hero {
+        height: 100vh;
+        background-color: black;
+        position: relative;
+      }
+
+      .image {
+        width: 50%;
+        background-color: rgb(212, 106, 106);
+        height: 80%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .img-description {
+        width: 50%;
+        background-color: #ccc;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 80%;
+      }
+
+      .dummy-section {
+        height: 100vh;
+        position: relative;
+      }
+
+      .item {
+        width: 300px;
+        height: 400px;
+        background-color: #999;
+        border: 2px solid red;
+        float: left;
+        margin: 30px;
+        position: relative;
+        top: 50%;
+
+        transform: translateY(-50%);
+      }
+
+      .dummy-section2 {
+        height: 100vh;
+      }
+
+      .box1 {
+        width: 0px;
+        height: 80%;
+      }
+
+      .box2 {
+        width: 100%;
+        height: 80%;
+      }
+
+      .img-c {
+        max-width: 300px;
+        height: 400px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .img1 {
+        background-image: url("./beautiful-strawberry-garden-sunrise-doi-ang-khang-chiang-mai-thailand.jpg");
+      }
+      .img2 {
+        background-image: url("./mesmerizing-scenery-green-mountains-with-cloudy-sky-surface.jpg");
+      }
+
+      .img3 {
+        background-image: url("./odenwald-germany-is-pure-nature.jpg");
+      }
+
+      .img4 {
+        background-image: url("./wet-vietnam-mountain-flow-stream-rural.jpg");
+      }
+
+      .menu-withdropdown {
+        position: sticky;
+        top: 40px;
+        height: 100px;
+        background-color: #f4f4f4;
+      }
+
+      .menu-withdropdown > div ul li {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        padding: 40px;
+        font-size: 20px;
+        text-align: center;
+        cursor: pointer;
+      }
+      .menu-withdropdown > div ul li:hover:not(.active) {
+        background-color: #999;
+        color: #fff;
+      }
+
+      .menu-withdropdown > div ul li.active {
+        background-color: aquamarine;
+      }
+
+      .career-dropdown {
+        display: none;
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+      }
+
+      .career-dropdown li {
+        width: auto;
+        background-color: antiquewhite;
+        color: #000;
+      }
+
+      .career {
+        position: relative;
+      }
+
+      .career:hover .career-dropdown {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="clearfix">
+      <header class="clearfix">
+        <div class="logo">LOGO</div>
+        <div class="menu">
+          <ul class="menu-list clearfix">
+            <li>Contact Us</li>
+            <li>Services</li>
+            <li>Blogs</li>
+            <li>Users</li>
+            <li>Home</li>
+          </ul>
+        </div>
+      </header>
+      <section class="hero clearfix">
+        <div class="image"></div>
+        <div class="img-description">
+          <h1>THis section is Absolute to Outer division</h1>
+        </div>
+      </section>
+      <section class="dummy-section clearfix">
+        <div class="item item1"></div>
+        <div class="item item2"></div>
+        <div class="item item3"></div>
+        <div class="item item4"></div>
+      </section>
+    </section>
+
+    <section class="clearfix">
+      <section class="menu-withdropdown">
+        <div>
+          <ul>
+            <li class="active">Home</li>
+            <li>Contact</li>
+
+            <li class="career">
+              Career
+              <ul class="career-dropdown">
+                <li>Career 1</li>
+                <li>Career 1</li>
+              </ul>
+            </li>
+            <li>About</li>
+            <li>Blog</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="dummy-section2">
+        <div class="box1"></div>
+        <div class="box2">
+          <div class="img-c img1"></div>
+          <div class="img-c img2"></div>
+          <div class="img-c img3"></div>
+          <div class="img-c img4"></div>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>

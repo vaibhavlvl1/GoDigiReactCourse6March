@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animations</title>
+    <style>
+      body {
+        /* position: relative; */
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .container {
+        position: relative;
+        margin-bottom: 20px;
+        height: 300px;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: grey;
+        position: absolute;
+      }
+
+      #box1 {
+        animation: moveLeftRight 4s linear infinite forwards alternate;
+      }
+
+      @keyframes moveLeftRight {
+        0% {
+          right: 100%;
+        }
+        50% {
+          right: 0;
+        }
+
+        100% {
+          right: 100%;
+        }
+      }
+
+      .star {
+        width: 200px;
+        height: 200px;
+        background: gold;
+        position: absolute;
+        clip-path: polygon(
+          50% 0%,
+          61% 35%,
+          98% 35%,
+          68% 57%,
+          79% 91%,
+          50% 70%,
+          21% 91%,
+          32% 57%,
+          2% 35%,
+          39% 35%
+        );
+
+        animation: moveStar 4s linear infinite forwards alternate;
+      }
+
+      @keyframes moveStar {
+        0% {
+          transform: rotateZ(0deg);
+          left: 0;
+        }
+        100% {
+          transform: rotate(360deg);
+          left: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" id="box1"></div>
+    </div>
+    <div class="container">
+      <div class="star" id="box2"></div>
+    </div>
+  </body>
+</html>

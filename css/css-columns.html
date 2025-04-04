@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Columns</title>
+    <style>
+      :root {
+        --background: antiquewhite;
+        --divBackg: azure;
+      }
+
+      body {
+        display: grid;
+        place-items: center;
+        background-color: var(--background, white);
+      }
+
+      .container {
+        /* width: 900px; */
+        padding: 100px;
+        column-count: 6;
+        column-gap: 20px;
+        column-rule: 5px solid grey;
+        background-color: var(--divBackg);
+      }
+
+      @media (max-width: 1200px) {
+        .container {
+          column-count: 4;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .container {
+          column-count: 3;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .container {
+          column-count: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p style="text-align: justify; margin: 0; padding: 0">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati
+        magni tenetur labore quidem iste perspiciatis consequuntur molestias
+        cum, quis eius hic rerum alias non harum. Veritatis, quis qui voluptate
+        error iure optio accusantium inventore nemo, placeat quibusdam quisquam
+        debitis magni eos animi officiis ratione? Exercitationem commodi
+        mollitia assumenda, doloremque dolores ipsum accusamus sint, est id
+        harum delectus animi non consectetur? Reprehenderit recusandae quod
+        quidem cupiditate nulla sint architecto impedit eos quibusdam quisquam
+        consequuntur quam aliquam iste, qui excepturi eligendi voluptatum,
+        perspiciatis natus nostrum ad. Quidem, debitis fugiat! Atque harum quasi
+        repudiandae necessitatibus ducimus, voluptas rerum quo odit similique!
+        Earum, dicta! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Saepe deleniti quod, eum inventore ex, explicabo harum maiores enim a
+        quidem est dicta, delectus temporibus fugiat repudiandae suscipit?
+        Asperiores illo, sit ut quisquam quia accusamus eaque, veniam, velit
+        tempora facilis amet autem? Similique quibusdam, voluptatibus porro
+        dolore culpa illum doloribus odit numquam dolores ipsa quidem ullam, vel
+        totam fugiat saepe necessitatibus iure iusto quisquam velit reiciendis
+        assumenda. Magnam, libero sit ullam dolores quod magni quis itaque
+        tempora eligendi aliquid placeat aperiam delectus quos ratione deserunt
+        possimus id laudantium molestiae odit vero repellat officiis. Error
+        iusto minus consequuntur impedit aspernatur assumenda magnam odit,
+        eveniet harum alias rem omnis ratione qui. Earum quos quas, suscipit
+        labore ducimus voluptates optio maxime architecto hic fuga officia odio,
+        vitae odit! Ipsa dolor dolorem dolore odio delectus mollitia iusto, ex
+        natus recusandae sequi ab amet fugiat illo dolorum itaque hic eum culpa
+        maxime totam voluptatum! Ipsa, quia. Dolorem nobis unde vel tempora,
+        minus accusantium libero molestias vero tenetur commodi, soluta natus
+        inventore. Molestiae rerum quisquam consequuntur eum. Deleniti omnis cum
+        quae doloremque recusandae? Quibusdam voluptatum, veniam mollitia sequi,
+        quis, aperiam facilis totam sint id consequuntur ullam harum labore
+        explicabo cumque optio beatae possimus pariatur ratione maiores quas!
+      </p>
+    </div>
+  </body>
+</html>

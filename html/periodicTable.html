@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* colors */
+
+      .lyellow {
+        background-color: #ffffc5;
+      }
+
+      .skin {
+        background-color: #ffe3ba;
+      }
+
+      .red {
+        background-color: #ffc8c8;
+      }
+
+      .purple {
+        background-color: #d6d6ff;
+      }
+
+      .metal {
+        background-color: #e3efc1;
+      }
+
+      .green {
+        background-color: #b9ffb9;
+      }
+
+      .blue {
+        background-color: #c5e2ff;
+      }
+
+      h1 {
+        font-size: 35px;
+        text-align: center;
+      }
+      td {
+        width: 100px;
+        height: 100px;
+        /* background-color: yellow; */
+        padding: 10px;
+      }
+      .name {
+        text-align: center;
+      }
+
+      .atn {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .at-n {
+        font-weight: 700;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <table>
+        <!-- row 1 -->
+        <tr>
+          <td class="lyellow">
+            <p class="atn">
+              <span class="at-n">1</span><span class="ms-n">1.0080</span>
+            </p>
+            <h1>H</h1>
+            <p class="name">Hydrogen</p>
+          </td>
+          <td colspan="16">f</td>
+          <td class="skin">
+            <p class="atn">
+              <span class="at-n">2</span><span class="ms-n">4.002600</span>
+            </p>
+            <h1>H</h1>
+            <p class="name">Helium</p>
+          </td>
+        </tr>
+
+        <!-- row 2 -->
+
+        <tr>
+          <td class="red">
+            <p class="atn">
+              <span class="at-n">3</span><span class="ms-n">7.0</span>
+            </p>
+            <h1>Li</h1>
+            <p class="name">Lithium</p>
+          </td>
+          <td class="purple">
+            <p class="atn">
+              <span class="at-n">4</span><span class="ms-n">9.012183</span>
+            </p>
+            <h1>Be</h1>
+            <p class="name">Berylium</p>
+          </td>
+          <td colspan="10"></td>
+
+          <td class="metal">
+            <p class="atn">
+              <span class="at-n">5</span><span class="ms-n">10.81</span>
+            </p>
+            <h1>B</h1>
+            <p class="name">Boron</p>
+          </td>
+          <td class="lyellow">
+            <p class="atn">
+              <span class="at-n">6</span><span class="ms-n">12.01</span>
+            </p>
+            <h1>C</h1>
+            <p class="name">Carbon</p>
+          </td>
+          <td class="lyellow">
+            <p class="atn">
+              <span class="at-n">7</span><span class="ms-n">14.007</span>
+            </p>
+            <h1>N</h1>
+            <p class="name">Nitrogen</p>
+          </td>
+          <td class="lyellow">
+            <p class="atn">
+              <span class="at-n">8</span><span class="ms-n">15.99</span>
+            </p>
+            <h1>O</h1>
+            <p class="name">Oxygen</p>
+          </td>
+          <td class="lyellow">
+            <p class="atn">
+              <span class="at-n">9</span><span class="ms-n">18.99</span>
+            </p>
+            <h1>Fl</h1>
+            <p class="name">Flourine</p>
+          </td>
+
+          <td class="skin">
+            <p class="atn">
+              <span class="at-n">10</span><span class="ms-n">20.180</span>
+            </p>
+            <h1>Ne</h1>
+            <p class="name">Neon</p>
+          </td>
+        </tr>
+        <!-- row3 -->
+        <tr>
+          <td class="red">
+            <p class="atn">
+              <span class="at-n">11</span><span class="ms-n">22.9897</span>
+            </p>
+            <h1>Na</h1>
+            <p class="name">Sodium</p>
+          </td>
+          <td class="purple">
+            <p class="atn">
+              <span class="at-n">12</span><span class="ms-n">24.305</span>
+            </p>
+            <h1>Mg</h1>
+            <p class="name">Magnesium</p>
+          </td>
+
+          <td colspan="10"></td>
+
+          <td class="green">
+            <p class="atn">
+              <span class="at-n">13</span><span class="ms-n">26.981</span>
+            </p>
+            <h1>Al</h1>
+            <p class="name">Aluminium</p>
+          </td>
+          <td class="metal">
+            <p class="atn">
+              <span class="at-n">14</span><span class="ms-n">28.085</span>
+            </p>
+            <h1>Si</h1>
+            <p class="name">Silicon</p>
+          </td>
+          <td class="lyellow">
+            <p class="atn">
+              <span class="at-n">15</span><span class="ms-n">28.085</span>
+            </p>
+            <h1>Ph</h1>
+            <p class="name">Phosphorus</p>
+          </td>
+          <td class="lyellow">
+            <p class="atn">
+              <span class="at-n">16</span><span class="ms-n">32.07</span>
+            </p>
+            <h1>S</h1>
+            <p class="name">Sulphur</p>
+          </td>
+          <td class="lyellow">
+            <p class="atn">
+              <span class="at-n">17</span><span class="ms-n">35.45</span>
+            </p>
+            <h1>Cl</h1>
+            <p class="name">Chlorine</p>
+          </td>
+          <td class="skin">
+            <p class="atn">
+              <span class="at-n">18</span><span class="ms-n">39.9</span>
+            </p>
+            <h1>Ar</h1>
+            <p class="name">Argon</p>
+          </td>
+        </tr>
+
+        <!-- row 4 -->
+
+        <tr>
+          <td class="red">
+            <p class="atn">
+              <span class="at-n">19</span><span class="ms-n">39.098</span>
+            </p>
+            <h1>K</h1>
+            <p class="name">Potassium</p>
+          </td>
+          <td class="purple">
+            <p class="atn">
+              <span class="at-n">20</span><span class="ms-n">40.078</span>
+            </p>
+            <h1>Ca</h1>
+            <p class="name">Calcium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">21</span><span class="ms-n">44.956</span>
+            </p>
+            <h1>Sc</h1>
+            <p class="name">Scandium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">22</span><span class="ms-n">47.867</span>
+            </p>
+            <h1>Ti</h1>
+            <p class="blue">Titanium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">23</span><span class="ms-n">50.942</span>
+            </p>
+            <h1>V</h1>
+            <p class="name">Vanadium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">24</span><span class="ms-n">51.996</span>
+            </p>
+            <h1>Cr</h1>
+            <p class="name">Chromium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">25</span><span class="ms-n">54.938</span>
+            </p>
+            <h1>Mn</h1>
+            <p class="name">Manganese</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">26</span><span class="ms-n">55.845</span>
+            </p>
+            <h1>Fe</h1>
+            <p class="blue">Iron</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">27</span><span class="ms-n">58.933</span>
+            </p>
+            <h1>Co</h1>
+            <p class="name">Cobalt</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">28</span><span class="ms-n">58.693</span>
+            </p>
+            <h1>Ni</h1>
+            <p class="name">Nickel</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">29</span><span class="ms-n">63.546</span>
+            </p>
+            <h1>Cu</h1>
+            <p class="name">Copper</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">30</span><span class="ms-n">65.38</span>
+            </p>
+            <h1>Zn</h1>
+            <p class="name">Zinc</p>
+          </td>
+          <td class="green">
+            <p class="atn">
+              <span class="at-n">31</span><span class="ms-n">69.723</span>
+            </p>
+            <h1>Ga</h1>
+            <p class="name">Gallium</p>
+          </td>
+          <td class="metal">
+            <p class="atn">
+              <span class="at-n">32</span><span class="ms-n">72.63</span>
+            </p>
+            <h1>Ge</h1>
+            <p class="name">Germanium</p>
+          </td>
+          <td class="lyellow">
+            <p class="atn">
+              <span class="at-n">33</span><span class="ms-n">74.922</span>
+            </p>
+            <h1>As</h1>
+            <p class="name">Arsenic</p>
+          </td>
+          <td class="lyellow">
+            <p class="atn">
+              <span class="at-n">34</span><span class="ms-n">78.971</span>
+            </p>
+            <h1>Se</h1>
+            <p class="name">Selenium</p>
+          </td>
+          <td class="lyellow">
+            <p class="atn">
+              <span class="at-n">35</span><span class="ms-n">79.904</span>
+            </p>
+            <h1>Br</h1>
+            <p class="name">Bromine</p>
+          </td>
+          <td class="skin">
+            <p class="atn">
+              <span class="at-n">36</span><span class="ms-n">83.798</span>
+            </p>
+            <h1>Kr</h1>
+            <p class="name">Krypton</p>
+          </td>
+        </tr>
+
+        <!-- row 5 -->
+        <tr>
+          <td class="red">
+            <p class="atn">
+              <span class="at-n">37</span><span class="ms-n">85.468</span>
+            </p>
+            <h1>Rb</h1>
+            <p class="name">Rubidium</p>
+          </td>
+          <td class="purple">
+            <p class="atn">
+              <span class="at-n">38</span><span class="ms-n">87.62</span>
+            </p>
+            <h1>Sr</h1>
+            <p class="name">Strontium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">39</span><span class="ms-n">88.906</span>
+            </p>
+            <h1>Y</h1>
+            <p class="name">Yttrium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">40</span><span class="ms-n">91.224</span>
+            </p>
+            <h1>Zr</h1>
+            <p class="name">Zirconium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">41</span><span class="ms-n">92.906</span>
+            </p>
+            <h1>Nb</h1>
+            <p class="name">Niobium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">42</span><span class="ms-n">95.95</span>
+            </p>
+            <h1>Mo</h1>
+            <p class="name">Molybdenum</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">43</span><span class="ms-n">(98)</span>
+            </p>
+            <h1>Tc</h1>
+            <p class="name">Technetium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">44</span><span class="ms-n">101.07</span>
+            </p>
+            <h1>Ru</h1>
+            <p class="name">Ruthenium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">45</span><span class="ms-n">102.91</span>
+            </p>
+            <h1>Rh</h1>
+            <p class="name">Rhodium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">46</span><span class="ms-n">106.42</span>
+            </p>
+            <h1>Pd</h1>
+            <p class="name">Palladium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">47</span><span class="ms-n">107.87</span>
+            </p>
+            <h1>Ag</h1>
+            <p class="name">Silver</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">48</span><span class="ms-n">112.41</span>
+            </p>
+            <h1>Cd</h1>
+            <p class="name">Cadmium</p>
+          </td>
+          <td class="green">
+            <p class="atn">
+              <span class="at-n">49</span><span class="ms-n">114.82</span>
+            </p>
+            <h1>In</h1>
+            <p class="name">Indium</p>
+          </td>
+          <td class="metal">
+            <p class="atn">
+              <span class="at-n">50</span><span class="ms-n">118.71</span>
+            </p>
+            <h1>Sn</h1>
+            <p class="name">Tin</p>
+          </td>
+          <td class="lyellow">
+            <p class="atn">
+              <span class="at-n">51</span><span class="ms-n">121.76</span>
+            </p>
+            <h1>Sb</h1>
+            <p class="name">Antimony</p>
+          </td>
+          <td class="lyellow">
+            <p class="atn">
+              <span class="at-n">52</span><span class="ms-n">127.6</span>
+            </p>
+            <h1>Te</h1>
+            <p class="name">Tellurium</p>
+          </td>
+          <td class="lyellow">
+            <p class="atn">
+              <span class="at-n">53</span><span class="ms-n">126.90</span>
+            </p>
+            <h1>I</h1>
+            <p class="name">Iodine</p>
+          </td>
+          <td class="skin">
+            <p class="atn">
+              <span class="at-n">54</span><span class="ms-n">131.29</span>
+            </p>
+            <h1>Xe</h1>
+            <p class="name">Xenon</p>
+          </td>
+        </tr>
+
+        <!-- row 6 -->
+        <tr>
+          <td class="red">
+            <p class="atn">
+              <span class="at-n">55</span><span class="ms-n">132.91</span>
+            </p>
+            <h1>Cs</h1>
+            <p class="name">Cesium</p>
+          </td>
+          <td class="purple">
+            <p class="atn">
+              <span class="at-n">56</span><span class="ms-n">137.33</span>
+            </p>
+            <h1>Ba</h1>
+            <p class="name">Barium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">57</span><span class="ms-n">138.91</span>
+            </p>
+            <h1>La</h1>
+            <p class="name">Lanthanum</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">72</span><span class="ms-n">178.49</span>
+            </p>
+            <h1>Hf</h1>
+            <p class="name">Hafnium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">73</span><span class="ms-n">180.95</span>
+            </p>
+            <h1>Ta</h1>
+            <p class="name">Tantalum</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">74</span><span class="ms-n">183.84</span>
+            </p>
+            <h1>W</h1>
+            <p class="name">Tungsten</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">75</span><span class="ms-n">186.21</span>
+            </p>
+            <h1>Re</h1>
+            <p class="name">Rhenium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">76</span><span class="ms-n">190.23</span>
+            </p>
+            <h1>Os</h1>
+            <p class="name">Osmium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">77</span><span class="ms-n">192.22</span>
+            </p>
+            <h1>Ir</h1>
+            <p class="name">Iridium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">78</span><span class="ms-n">195.08</span>
+            </p>
+            <h1>Pt</h1>
+            <p class="name">Platinum</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">79</span><span class="ms-n">196.97</span>
+            </p>
+            <h1>Au</h1>
+            <p class="name">Gold</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">80</span><span class="ms-n">200.59</span>
+            </p>
+            <h1>Hg</h1>
+            <p class="name">Mercury</p>
+          </td>
+          <td class="green">
+            <p class="atn">
+              <span class="at-n">81</span><span class="ms-n">204.38</span>
+            </p>
+            <h1>Tl</h1>
+            <p class="name">Thallium</p>
+          </td>
+          <td class="metal">
+            <p class="atn">
+              <span class="at-n">82</span><span class="ms-n">207.2</span>
+            </p>
+            <h1>Pb</h1>
+            <p class="name">Lead</p>
+          </td>
+          <td class="lyellow">
+            <p class="atn">
+              <span class="at-n">83</span><span class="ms-n">208.98</span>
+            </p>
+            <h1>Bi</h1>
+            <p class="name">Bismuth</p>
+          </td>
+          <td class="lyellow">
+            <p class="atn">
+              <span class="at-n">84</span><span class="ms-n">(209)</span>
+            </p>
+            <h1>Po</h1>
+            <p class="name">Polonium</p>
+          </td>
+          <td class="lyellow">
+            <p class="atn">
+              <span class="at-n">85</span><span class="ms-n">(210)</span>
+            </p>
+            <h1>At</h1>
+            <p class="name">Astatine</p>
+          </td>
+          <td class="skin">
+            <p class="atn">
+              <span class="at-n">86</span><span class="ms-n">(222)</span>
+            </p>
+            <h1>Rn</h1>
+            <p class="name">Radon</p>
+          </td>
+        </tr>
+
+        <!-- row 7 -->
+
+        <tr>
+          <td class="red">
+            <p class="atn">
+              <span class="at-n">87</span><span class="ms-n">(223)</span>
+            </p>
+            <h1>Fr</h1>
+            <p class="name">Francium</p>
+          </td>
+          <td class="purple">
+            <p class="atn">
+              <span class="at-n">88</span><span class="ms-n">(226)</span>
+            </p>
+            <h1>Ra</h1>
+            <p class="name">Radium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">89</span><span class="ms-n">(227)</span>
+            </p>
+            <h1>Ac</h1>
+            <p class="name">Actinium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">104</span><span class="ms-n">(267)</span>
+            </p>
+            <h1>Rf</h1>
+            <p class="name">Rutherfordium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">105</span><span class="ms-n">(268)</span>
+            </p>
+            <h1>Db</h1>
+            <p class="name">Dubnium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">106</span><span class="ms-n">(269)</span>
+            </p>
+            <h1>Sg</h1>
+            <p class="name">Seaborgium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">107</span><span class="ms-n">(270)</span>
+            </p>
+            <h1>Bh</h1>
+            <p class="name">Bohrium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">108</span><span class="ms-n">(271)</span>
+            </p>
+            <h1>Hs</h1>
+            <p class="name">Hassium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">109</span><span class="ms-n">(278)</span>
+            </p>
+            <h1>Mt</h1>
+            <p class="name">Meitnerium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">110</span><span class="ms-n">(281)</span>
+            </p>
+            <h1>Ds</h1>
+            <p class="name">Darmstadtium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">111</span><span class="ms-n">(282)</span>
+            </p>
+            <h1>Rg</h1>
+            <p class="name">Roentgenium</p>
+          </td>
+          <td class="blue">
+            <p class="atn">
+              <span class="at-n">112</span><span class="ms-n">(285)</span>
+            </p>
+            <h1>Cn</h1>
+            <p class="name">Copernicium</p>
+          </td>
+          <td class="green">
+            <p class="atn">
+              <span class="at-n">113</span><span class="ms-n">(286)</span>
+            </p>
+            <h1>Nh</h1>
+            <p class="name">Nihonium</p>
+          </td>
+          <td class="metal">
+            <p class="atn">
+              <span class="at-n">114</span><span class="ms-n">(289)</span>
+            </p>
+            <h1>Fl</h1>
+            <p class="name">Flerovium</p>
+          </td>
+          <td class="lyellow">
+            <p class="atn">
+              <span class="at-n">115</span><span class="ms-n">(290)</span>
+            </p>
+            <h1>Mc</h1>
+            <p class="name">Moscovium</p>
+          </td>
+          <td class="lyellow">
+            <p class="atn">
+              <span class="at-n">116</span><span class="ms-n">(293)</span>
+            </p>
+            <h1>Lv</h1>
+            <p class="name">Livermorium</p>
+          </td>
+          <td class="lyellow">
+            <p class="atn">
+              <span class="at-n">117</span><span class="ms-n">(294)</span>
+            </p>
+            <h1>Ts</h1>
+            <p class="name">Tennessine</p>
+          </td>
+          <td class="skin">
+            <p class="atn">
+              <span class="at-n">118</span><span class="ms-n">(294)</span>
+            </p>
+            <h1>Og</h1>
+            <p class="name">Oganesson</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

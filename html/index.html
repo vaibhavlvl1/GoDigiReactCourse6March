@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML</title>
+    <style>
+      input {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="form">
+      <h1>FORMS</h1>
+      <form
+        action="submit.php"
+        method="get"
+        target="_blank"
+        enctype="multipart/form-data"
+        autocomplete="off"
+      >
+        <fieldset>
+          <legend>Input Types</legend>
+          <label for="textInput">Text Input</label>
+          <input id="textInput" type="text" name="name" />
+          <br />
+          <label for="emailInput">Email Input</label>
+          <input id="emailInput" type="email" name="email" />
+          <br />
+          <label for="inputTel">Input as Tel</label>
+          <input name="telephone" type="tel" pattern="[0-9]{10}" />
+          <br />
+          <label for="passwordInput">Password Input</label>
+          <input id="passwordInput" type="password" name="password" />
+          <br />
+
+          <label for="checkbox1">Checkbox 1</label>
+          <input
+            id="checkbox1"
+            type="checkbox"
+            name="checkbox1"
+            value="checkbox1"
+          />
+          <label for="checkbox2">Checkbox 2</label>
+          <input
+            id="checkbox2"
+            type="checkbox"
+            name="checkbox2"
+            value="checkbox2"
+          />
+          <label for="checkbox3">Checkbox 3</label>
+          <input
+            id="checkbox3"
+            type="checkbox"
+            name="checkbox3"
+            value="checkbox3"
+          />
+          <label for="checkbox4">Checkbox 4</label>
+          <input
+            id="checkbox4"
+            type="checkbox"
+            name="checkbox4"
+            value="checkbox4"
+          />
+          <br />
+          <label for="input_number">Enter a Number Input</label>
+          <input name="number" type="number" min="100" max="1000" />
+          <br />
+          <label for="dateInput">Date Input</label>
+          <input name="date" id="dateInput" type="date" />
+          <br />
+
+          <label for="dateInputLocal">Date Input Local</label>
+          <input name="dateLocal" id="dateInputLocal" type="datetime-local" />
+          <br />
+
+          <label for="upload_input">Upload a File</label><br />
+          <input name="uploads" id="upload_input" type="file" />
+          <br />
+
+          <label for="monthInput">Month Input - Also Includes Year</label>
+          <input name="month" type="month" />
+
+          <br />
+
+          <label for="radio1">Radio 1</label>
+          <input type="radio" id="radio1" name="radioInput" />
+          <label for="radio2">Radio 2</label>
+          <input type="radio" id="radio2" name="radioInput" />
+          <label for="radio3">Radio 3</label>
+          <input type="radio" id="radio3" name="radioInput" />
+          <label for="radio4">Radio 4</label>
+          <input type="radio" id="radio4" name="radioInput" />
+          <label for="radio5">Radio 5</label>
+          <input type="radio" id="radio5" name="radioInput" />
+
+          <br />
+          <input
+            id="inputHidden"
+            type="hidden"
+            value="this is a practice form"
+          />
+          <br />
+
+          <label for="range">Range Input 10-1000</label>
+
+          <input
+            id="range"
+            type="range"
+            min="10"
+            max="1000"
+            value="10"
+            name="rangeValue"
+          />
+          <br />
+
+          <label for="inputTime">Input type Time</label>
+          <input type="time" id="inputTime" name="inputTime" />
+
+          <br />
+          <label for="inputUrl">Input Type URL</label>
+          <input type="url" id="inputUrl" name="inputUrl" />
+          <br />
+          <label for="inputWeek">Input Type Week</label>
+          <input type="week" id="week" name="week" />
+
+          <hr />
+          <label for="imageInput">Image as a Submit Button Input</label><br />
+          <input
+            type="image"
+            src="./nav-image.jpg"
+            alt="submit"
+            width="200px"
+          />
+          <hr />
+          <br />
+          <input type="submit" />
+        </fieldset>
+        <fieldset>
+          <legend>Other Inputs</legend>
+          <label for="textAreaInput">Text Area Input</label><br />
+          <textarea name="message" id="textAreaInput" rows="5" cols="100">
+          </textarea>
+          <br />
+
+          <label for="selectInput">The Select Option Input</label><br />
+          <select name="selector" id="selector" size="2">
+            <option id="1" name="op1" value="1">Option1</option>
+            <option id="2" name="op2" value="2">Option2</option>
+            <option id="3" name="op3" value="3">Option3</option>
+            <option id="4" name="op4" value="4">Option4</option>
+          </select>
+
+          <br />
+          <label for="bowsers">List Of Browsers</label>
+          <input list="bowsers" />
+          <datalist id="bowsers">
+            <option value="Safari"></option>
+            <option value="Fox"></option>
+            <option value="Chrome"></option>
+            <option value="opera"></option>
+            <option value="mac"></option>
+          </datalist>
+        </fieldset>
+      </form>
+    </section>
+  </body>
+</html>

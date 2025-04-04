@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Task1</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        margin-bottom: 5px;
+      }
+      body {
+        height: 100vh;
+      }
+
+      label {
+        margin-bottom: 2px;
+      }
+      .form-container {
+        width: 500px;
+        height: auto;
+        background-color: #999;
+        padding: 10px;
+        margin: auto;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      form {
+        background-color: #fff;
+        padding: 10px;
+      }
+
+      div {
+        display: inline-block;
+        width: 47%;
+      }
+
+      #field1,
+      #field2 {
+        width: 100%;
+      }
+      #field3 {
+        width: 47%;
+      }
+
+      #field4,
+      #field5 {
+        width: 70%;
+      }
+
+      #textarea1 {
+        width: 100%;
+      }
+
+      .btn {
+        width: 100px;
+        padding: 5px;
+      }
+      .buttons {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>TASK 1</h1>
+    <div class="form-container">
+      <form action="">
+        <div>
+          <label for="field1">Field 1</label><br />
+          <input id="field1" name="field1" type="text" placeholder="text1" />
+        </div>
+        <div>
+          <label for="field2">Field 2</label><br />
+          <input id="field2" name="field2" type="text" placeholder="text2" />
+        </div>
+        <br />
+        <label for="field3">Field 3</label><br />
+        <select name="field3" id="field3">
+          <option value="1">Combo1</option>
+          <option value="2">Option1</option>
+          <option value="3">Option1</option>
+          <option value="4">Option1</option>
+          <option value="5">Option1</option></select
+        ><br />
+        <label for="field4"> Field 4 </label><br />
+        <input
+          id="field4"
+          type="text"
+          name="field4"
+          placeholder="text3"
+        /><br />
+        <label for="field5">Field 5</label><br />
+        <input id="field5" type="text" placeholder="text4" />
+        <br />
+        <label for="textarea1">Field 6</label><br />
+        <textarea
+          name="textarea1"
+          id="textarea1"
+          placeholder="Text Area 1"
+          rows="8"
+        ></textarea>
+        <div class="buttons">
+          <button class="btn" type="submit">Okay</button>
+          <button class="btn" type="reset">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

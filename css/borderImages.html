@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Border Images Backgrounds</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #f4f4f4;
+        height: 100vh;
+        display: grid;
+        place-content: center;
+      }
+      .container {
+        border: 20px solid transparent;
+        border-image: url(./border.jpg) 10% round;
+        height: 100px;
+        width: 300px;
+        resize: both;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>Content inside the border</p>
+    </div>
+  </body>
+</html>

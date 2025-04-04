@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>backgrounds</title>
+    <style>
+      body {
+        display: grid;
+        place-items: center;
+        gap: 20px;
+      }
+
+      .img {
+        width: 500px;
+        height: 100px;
+        border: 10px solid transparent;
+        border-image: url("./border.jpg") 10% round;
+      }
+
+      .img1 {
+        background: url("./beautiful-strawberry-garden-sunrise-doi-ang-khang-chiang-mai-thailand.jpg")
+            left no-repeat,
+          url("./beautiful-strawberry-garden-sunrise-doi-ang-khang-chiang-mai-thailand.jpg")
+            right no-repeat,
+          url("./wet-vietnam-mountain-flow-stream-rural.jpg") center no-repeat;
+        background-size: contain;
+      }
+
+      .img2 {
+        background: url("./mesmerizing-scenery-green-mountains-with-cloudy-sky-surface.jpg")
+          left bottom no-repeat;
+        background-size: cover;
+      }
+      .img4 {
+        background: url("./odenwald-germany-is-pure-nature.jpg") left bottom
+          no-repeat;
+        background-size: cover;
+      }
+
+      .img3 {
+        height: 70vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="img img1"></div>
+    <div class="img img2"></div>
+    <div class="img img4"></div>
+    <div class="img3"></div>
+  </body>
+</html>

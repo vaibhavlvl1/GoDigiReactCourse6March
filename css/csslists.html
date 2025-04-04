@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css lists</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  </head>
+  <body>
+    <style>
+      .fruits {
+        list-style-type: disc;
+        /* list-style-position: inside; */
+      }
+
+      .toys{
+        list-style-position: inside;
+        list-style-image: url("./star.png");
+        background-color: antiquewhite;
+        padding: 20px;
+      }
+
+      .toys li{
+        padding:10px;
+        background-color: aquamarine;
+        margin-bottom: 10px;
+      }
+
+
+    </style>
+    <ul class="fruits">
+      <li>Mango</li>
+      <li>Mango</li>
+      <li>Mango</li>
+      <li>Mango</li>
+      <li>Mango</li>
+    </ul>
+
+    <ol class="toys" type="A" start="4">
+      <li>Nerf</li>
+      <li>Nerf</li>
+      <li>Nerf</li>
+      <li>Nerf</li>
+      <li>Nerf</li>
+    </ul>
+  </body>
+</html>

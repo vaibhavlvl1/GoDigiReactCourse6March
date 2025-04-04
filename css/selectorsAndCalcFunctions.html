@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors And Calculation functions</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: grid;
+        place-items: center;
+      }
+
+      .level1 {
+        counter-reset: section;
+        list-style-type: none;
+      }
+
+      .level1 > li::before {
+        counter-increment: section;
+        content: " " counter(section) " ";
+      }
+
+      .level2 > ul {
+        list-style-type: none;
+        text-indent: 50px;
+
+        counter-reset: subsection;
+      }
+
+      .level2 > ul li::before {
+        counter-increment: subsection;
+        content: counter(section) "." counter(subsection);
+      }
+
+      .level3 {
+        counter-reset: subsection1;
+      }
+
+      .level3 > ul {
+        list-style-type: none;
+        text-indent: 100px;
+      }
+
+      .level3 > ul li::before {
+        counter-increment: subsection1;
+        content: counter(section) "." counter(subsection) "."
+          counter(subsection1);
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="level1">
+      <li>Mango</li>
+      <li>Jackfruit</li>
+      <li>Papaya</li>
+      <li class="level2">
+        Banana
+        <ul>
+          <li>American banana</li>
+          <li>American banana</li>
+          <li class="level3">
+            American banana
+            <ul>
+              <li>Indian Banana</li>
+              <li>Indian Banana</li>
+              <li>Indian Banana</li>
+              <li>Indian Banana</li>
+              <li>Indian Banana</li>
+              <li>Indian Banana</li>
+            </ul>
+          </li>
+          <li>American banana</li>
+          <li>American banana</li>
+        </ul>
+      </li>
+      <li>Apple</li>
+      <li>Grapes</li>
+      <li>Tomato</li>
+    </ul>
+  </body>
+</html>
