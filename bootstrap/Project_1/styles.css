@@ -1,0 +1,97 @@
+.custom-navbar {
+  height: 100px !important;
+}
+
+.hero-img {
+  height: 100vh;
+  background: linear-gradient(rgba(31, 44, 108, 0.65), rgba(31, 44, 108, 0.65)),
+    url("./755.jpg") no-repeat;
+  background-size: cover;
+}
+
+.nav-link.active::after {
+  content: "";
+
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+
+  background-color: blue;
+  transition: all 0.3s linear;
+}
+
+.nav-link {
+  font-weight: 400;
+  position: relative;
+}
+
+.nav-link:after {
+  content: "";
+
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: blue;
+  transition: all 0.3s linear;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #000;
+}
+
+.card-text i {
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-text i:hover {
+  color: #a6a6a6;
+}
+
+.cust-row-height {
+  min-height: 150px;
+}
+
+.cust-row-height .col-lg-3:hover {
+  background-color: rgba(149, 149, 241, 0.247);
+}
+
+.contact-link {
+  transition: all 0.3s linear;
+}
+
+.contact-link:hover {
+  color: #000 !important;
+  /* font-weight: 400; */
+}
+
+.client-img img {
+  transition: 0.3s all linear;
+}
+
+.client-img img:hover {
+  transform: scale(1.2);
+}
+
+.contact-me-links i:hover {
+  color: #a6a6a6;
+}
+
+footer {
+  height: 70px;
+}
+
+.download-resume {
+  width: 200px;
+  height: 50px;
+}

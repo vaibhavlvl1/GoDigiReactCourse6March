@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Using Bootstrap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <section class="container-fluid fixed-top bg-white">
+      <nav class="navbar navbar-expand-lg" id="navybar">
+        <div class="container-fluid">
+          <a class="navbar-brand text-primary fw-bold" href="index.html"
+            >BOOTSTRAP
+            <span class="fs-6 fw-light text-secondary">project</span></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mb-2 mb-lg-0 d-flex text-uppercase">
+              <li class="nav-item">
+                <a class="nav-link" href="#hero">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#education"
+                  >Education</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#profiles">Profile</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#clients">Clients</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contactme">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <section class="hero-img position-relative scroll-section" id="hero">
+      <div class="container mt-5 pt-5 text-center h-100">
+        <div
+          class="row h-100 d-flex justify-content-center align-content-center"
+        >
+          <div
+            class="col-6 d-flex flex-column justify-content-center align-content-between align-items-center"
+          >
+            <h1 class="text-white text-center fw-bold lh-lg hello-text">
+              HI <span class="text-primary">,</span>I AM VAIBHAV SUTAR
+              <span class="text-primary">.</span>
+            </h1>
+            <p class="lead text-start text-white fw-light text-uppercase">
+              Web Developer and Designer
+            </p>
+            <button type="button" class="btn btn-primary download-resume">
+              Download Resume
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-me pt-5 pb-5 scroll-section" id="aboutme">
+      <h2 class="text-center pt-2 pb-2">ABOUT ME</h2>
+      <hr class="bg-light" />
+
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col-md-6 pe-lg-5">
+            <div class="row">
+              <p class="fw-bold">
+                I am a Professional UI/UX Designer and Web developer.
+                Consectetur an adipisi elita, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam quis
+                nostrud.
+              </p>
+              <p class="text-secondary mt-3">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum. Sed ut perspi unde omnis iste natus
+                error sit voluptatem accusantium doloremque lauda ntium, totam
+                rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+                quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+                ipsam vo luptatem quia voluptas sit aspernatur aut odit aut
+                fugit,
+              </p>
+              <hr class="mt-3 mb-3" />
+
+              <div class="table-container overflow-x-auto">
+                <table class="table">
+                  <thead>
+                    <tr class="">
+                      <th class="fw-bold text-secondary" scope="col">Phone</th>
+                      <th class="fw-bold text-secondary" scope="col">Email</th>
+                      <th class="fw-bold text-secondary" scope="col">
+                        Website
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-decoration-none text-secondary">
+                        9021122180
+                      </td>
+                      <td>
+                        <a
+                          class="text-decoration-none text-secondary"
+                          href="mailto:vaibhavsutar020@gmail.com"
+                          >vaibhavsutar020@gmail.com</a
+                        >
+                      </td>
+                      <td>
+                        <a
+                          class="text-decoration-none text-secondary"
+                          href="vaibhavlvl1.github.io.com/afterhoursweb"
+                          >Vaibhavs Portfolio</a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 ps-lg-5">
+            <div class="card" style="width: 22rem">
+              <img
+                src="./IMG20230215175419.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body bg-dark">
+                <p
+                  class="card-text text-center fs-4 d-flex justify-content-evenly"
+                >
+                  <i class="bi bi-whatsapp"></i>
+                  <i class="bi bi-instagram"></i>
+                  <i class="bi bi-youtube"></i>
+                  <i class="bi bi-linkedin"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="education pt-5 pb-5 bg-light scroll-section" id="education">
+      <h2 class="text-center pt-2 pb-2">EDUCATION</h2>
+      <hr class="bg-light" />
+
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col-lg-4">
+            <p class="fw-bolder text-secondary fs-5">2010-2012</p>
+            <p class="fw-normal text-secondary fs-6">HSC</p>
+            <hr />
+            <p class="fw-bolder text-secondary fs-5">SHIV CHHTRAPATI COLLEGE</p>
+            <p class="fs-6 text-secondary">Junnar</p>
+            <p class="text-secondary">
+              Duis aute irure dolor in reprehenderit in vol patate velit esse
+              cillum dolore eu fugiat nulla pari. Excepteur sint occana inna
+              tecat cupidatat non proident.
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <p class="fw-bolder text-secondary fs-5">2012-2015</p>
+            <p class="fw-normal text-secondary fs-6">GRADUATION</p>
+            <hr />
+            <p class="fw-bolder text-secondary fs-5">FERGUSSON COLLEGE</p>
+            <p class="fs-6 text-secondary">Pune</p>
+            <p class="text-secondary">
+              Duis aute irure dolor in reprehenderit in vol patate velit esse
+              cillum dolore eu fugiat nulla pari. Excepteur sint occana inna
+              tecat cupidatat non proident.
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <p class="fw-bolder text-secondary fs-5">2016-2018</p>
+            <p class="fw-normal text-secondary fs-6">POST GRADUATION</p>
+            <hr />
+            <p class="fw-bolder text-secondary fs-5">SP COLLEGE PUNE</p>
+            <p class="fs-6 text-secondary">Pune</p>
+            <p class="text-secondary">
+              Duis aute irure dolor in reprehenderit in vol patate velit esse
+              cillum dolore eu fugiat nulla pari. Excepteur sint occana inna
+              tecat cupidatat non proident.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pt-5 pb-5 scroll-section" id="skills">
+      <h2 class="text-center pt-2 pb-2">SKILLS</h2>
+      <hr class="bg-light" />
+
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col-lg-6">
+            <p class="text-secondary">HTML</p>
+            <div
+              class="progress"
+              role="progressbar"
+              aria-label="Basic example"
+              aria-valuenow="0"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <div class="progress-bar" style="width: 100%">HTML</div>
+            </div>
+            <p class="text-secondary mt-5">CSS</p>
+            <div
+              class="progress"
+              role="progressbar"
+              aria-label="Basic example"
+              aria-valuenow="0"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <div class="progress-bar" style="width: 98%">CSS</div>
+            </div>
+            <p class="text-secondary mt-5">JavaScript</p>
+            <div
+              class="progress"
+              role="progressbar"
+              aria-label="Basic example"
+              aria-valuenow="0"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <div class="progress-bar" style="width: 50%">JavaScript</div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <p class="text-secondary">React</p>
+            <div
+              class="progress"
+              role="progressbar"
+              aria-label="Basic example"
+              aria-valuenow="0"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <div class="progress-bar" style="width: 100%">React</div>
+            </div>
+            <p class="text-secondary mt-5">SASS</p>
+            <div
+              class="progress"
+              role="progressbar"
+              aria-label="Basic example"
+              aria-valuenow="0"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <div class="progress-bar" style="width: 80%">SASS</div>
+            </div>
+            <p class="text-secondary mt-5">MySQL</p>
+            <div
+              class="progress"
+              role="progressbar"
+              aria-label="Basic example"
+              aria-valuenow="0"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <div class="progress-bar" style="width: 50%">MySQL</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="profiles pt-5 pb-5 bg-light scroll-section" id="profiles">
+      <h2 class="text-center pt-2 pb-2">PROFILES</h2>
+      <hr class="bg-light" />
+
+      <div class="container">
+        <div class="row cust-row-height">
+          <div
+            class="col-lg-3 text-center d-flex flex-column justify-content-center align-items-center"
+          >
+            <i class="bi bi-dribbble text-secondary"></i>
+            <p class="text-secondary fw-bolder">ThemeForest</p>
+          </div>
+          <div
+            class="col-lg-3 text-center d-flex flex-column justify-content-center align-items-center"
+          >
+            <i class="bi bi-dribbble text-secondary"></i>
+            <p class="text-secondary fw-bolder">Dribble</p>
+          </div>
+          <div
+            class="col-lg-3 text-center d-flex flex-column justify-content-center align-items-center"
+          >
+            <i class="bi bi-dribbble text-secondary"></i>
+            <p class="text-secondary fw-bolder">Behance</p>
+          </div>
+          <div
+            class="col-lg-3 text-center d-flex flex-column justify-content-center align-items-center"
+          >
+            <i class="bi bi-dribbble text-secondary"></i>
+            <p class="text-secondary fw-bolder">BitBucket</p>
+          </div>
+        </div>
+        <div class="row cust-row-height">
+          <div
+            class="col-lg-3 text-center d-flex flex-column justify-content-center align-items-center"
+          >
+            <i class="bi bi-dribbble text-secondary"></i>
+            <p class="text-secondary fw-bolder">Github</p>
+          </div>
+          <div
+            class="col-lg-3 text-center d-flex flex-column justify-content-center align-items-center"
+          >
+            <i class="bi bi-dribbble text-secondary"></i>
+            <p class="text-secondary fw-bolder">Flikr</p>
+          </div>
+          <div
+            class="col-lg-3 text-center d-flex flex-column justify-content-center align-items-center"
+          >
+            <i class="bi bi-dribbble text-secondary"></i>
+            <p class="text-secondary fw-bolder">SmungMung</p>
+          </div>
+          <div
+            class="col-lg-3 text-center d-flex flex-column justify-content-center align-items-center"
+          >
+            <i class="bi bi-dribbble text-secondary"></i>
+            <p class="text-secondary fw-bolder">SquareSpace</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="clients pt-5 pb-5 scroll-section" id="clients">
+      <h2 class="text-center pt-2 pb-2">CLIENTS</h2>
+      <hr class="bg-light" />
+
+      <div class="container pt-5 pb-5">
+        <div class="row">
+          <div
+            class="col d-flex justify-content-around align-items-center client-img flex-wrap gap-3"
+          >
+            <img src="./c1.png" alt="" />
+            <img src="./c2.png" alt="" />
+            <img src="./c3.png" alt="" />
+            <img src="./c4.png" alt="" />
+            <img src="./c5.png" alt="" />
+            <img src="./c6.png" alt="" />
+            <img src="./c7.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="contact-me pt-5 pb-5 bg-light scroll-section"
+      id="contactme"
+    >
+      <h2 class="text-center pt-2 pb-2">CONTACT ME</h2>
+      <hr class="bg-light" />
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <form class="row g-3 border-2 bg-white p-5 mt-5">
+              <div class="col-md-6">
+                <label for="fname" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="fname" />
+              </div>
+              <div class="col-md-6">
+                <label for="lname" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="lname" />
+              </div>
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputAddress"
+                  placeholder="Area Name - District"
+                />
+              </div>
+              <div class="col-12">
+                <label for="inputAddress2" class="form-label">Street</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputAddress2"
+                  placeholder="Apartment, Lane , House No"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="inputCity" />
+              </div>
+              <div class="col-md-4">
+                <label for="inputState" class="form-label">State</label>
+                <select id="inputState" class="form-select">
+                  <option selected>Choose...</option>
+                  <option>Andhra Pradesh</option>
+                  <option>Arunachal Pradesh</option>
+                  <option>Assam</option>
+                  <option>Bihar</option>
+                  <option>Chhattisgarh</option>
+                  <option>Goa</option>
+                  <option>Gujarat</option>
+                  <option>Haryana</option>
+                  <option>Himachal Pradesh</option>
+                  <option>Jharkhand</option>
+                  <option>Karnataka</option>
+                  <option>Kerala</option>
+                  <option>Madhya Pradesh</option>
+                  <option>Maharashtra</option>
+                  <option>Manipur</option>
+                  <option>Meghalaya</option>
+                  <option>Mizoram</option>
+                  <option>Nagaland</option>
+                  <option>Odisha</option>
+                  <option>Punjab</option>
+                  <option>Rajasthan</option>
+                  <option>Sikkim</option>
+                  <option>Tamil Nadu</option>
+                  <option>Telangana</option>
+                  <option>Tripura</option>
+                  <option>Uttar Pradesh</option>
+                  <option>Uttarakhand</option>
+                  <option>West Bengal</option>
+                </select>
+              </div>
+              <div class="col-md-2">
+                <label for="inputZip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="inputZip" />
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="gridCheck"
+                  />
+                  <label class="form-check-label" for="gridCheck">
+                    Urgent Enquiry
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-6">
+            <div class="container-content mt-3 p-5">
+              <div class="mb-5">
+                <h2 class="fw-bold text-uppercase">Vaibhav Sutar</h2>
+                <p class="lead text-secondary">Web Designer and Developer</p>
+              </div>
+              <div class="mb-5">
+                <h4 class="fw-bold text-uppercase">Phone</h4>
+                <p class="lead">
+                  <a
+                    class="text-decoration-none text-secondary contact-link"
+                    href="tel:9021122180"
+                    >+91 9021122180</a
+                  >
+                </p>
+              </div>
+              <div class="mb-5">
+                <h4 class="fw-bold text-uppercase">Email</h4>
+                <p class="lead">
+                  <a
+                    class="text-decoration-none text-secondary contact-link"
+                    href="mailto:vaibhavsutar020@gmail.com"
+                    >vaibhavsutar020@gmail.com</a
+                  >
+                </p>
+              </div>
+              <div class="mb-5">
+                <h4 class="fw-bold text-uppercase">Website</h4>
+                <p class="lead">
+                  <a
+                    class="text-decoration-none text-secondary contact-link"
+                    href="https://vaibhavlvl1.github.io/afterhoursweb"
+                    target="_blank"
+                    >vaibhavlvl.github.io/afterhoursweb</a
+                  >
+                </p>
+              </div>
+              <div class="mb-5">
+                <p class="contact-me-links text-center fs-4 d-flex">
+                  <i class="bi bi-whatsapp"></i>
+                  <i class="bi bi-instagram ms-3"></i>
+                  <i class="bi bi-youtube ms-3"></i>
+                  <i class="bi bi-linkedin ms-3"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark d-flex justify-content-center align-items-center">
+      <p class="m-0 text-white">@Copyright 2025 Vaibhav Sutar</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

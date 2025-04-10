@@ -1,0 +1,42 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  background-color: #2c1e42;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+
+  display: grid;
+  place-items: center;
+}
+
+.bg-primary {
+  background-color: #a74add !important;
+}
+
+.text-primary {
+  color: #a74add !important;
+}
+
+.mail-body {
+  width: 800px;
+  background-color: #533376;
+}
+
+.logo-container {
+  background-color: #0a0a0a;
+}
+
+.logo-container img {
+  width: 130px;
+}
+
+.intro-buttons {
+  padding: 0;
+  font-size: 18px;
+  padding: 20px;
+
+  width: 330px;
+  border-radius: 32.5px;
+}
