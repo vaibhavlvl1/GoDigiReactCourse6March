@@ -289,8 +289,329 @@ nav {
 
 /* hero section */
 .hero-section {
-  height: 85vh;
+  /* height: 85vh; */
+  background: linear-gradient(to left, var(--sectionodd) 50%, #000);
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 3;
+  border-radius: 20px;
+  /* border: double 10px var(--headingcolor1); */
+  /* filter: drop-shadow(0 0 10px #fff); */
+}
+
+.hero-image-container {
+  position: relative;
+  width: 75%;
+}
+
+.hero-section-text {
+  color: #fff;
+}
+
+.hero-name {
+  font-size: 1.5rem;
+}
+
+.hero-name-description {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
+  font-family: cursive !important;
+}
+
+.subheading {
+  font-size: 1.3rem;
+}
+
+.build-together-text {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+
+  margin-bottom: 1.5rem;
+  font-family: cursive !important;
+}
+
+.hero-name-span {
+  color: var(--headingcolor2);
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5rem;
+  text-shadow: 0 10px 15px rgba(0, 255, 255, 0.9);
+}
+
+.cta {
+  position: relative;
+  width: 10rem;
+  padding: 8px 10px;
+  /* border-radius: 1.5rem; */
+  border: double 5px var(--buttoncolor2);
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  box-shadow: 0 0px 15px rgba(0, 255, 255, 0.8);
+
+  font-weight: 700;
+
+  margin-bottom: 1rem;
+}
+
+.cta:hover {
+  background-color: var(--buttonhover2);
+  color: #000;
+  box-shadow: 0 10px 15px rgba(0, 255, 255, 1);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+}
+
+/* tech stack start */
+
+.tech-stack-container {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.tech-stack-heading {
+  font-size: 1rem;
+  color: var(--headingcolor2);
+}
+
+.tech-stack-icons {
+  width: max-content;
+  position: relative;
+  right: 110%;
+
+  animation: tech_stack_move 10s linear infinite;
+}
+
+@keyframes tech_stack_move {
+  from {
+    right: -110%;
+  }
+
+  to {
+    right: 73%;
+  }
+}
+
+.tech-stack-icons i {
+  color: var(--buttonhover2);
+  font-size: 3rem;
+  filter: drop-shadow(0 5px 10px var(--buttonhover2));
+  margin-right: 2rem;
+  position: relative;
+}
+/* end of tech stack start */
+
+/* end of hero section */
+
+/* start of projects section */
+.projects {
+  background-color: var(--sectioneven);
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes light_up {
+  0% {
+    filter: drop-shadow(0px 0px 5px var(--headingcolor1))
+      drop-shadow(0px 0px 8px var(--headingcolor1));
+  }
+  30% {
+    filter: drop-shadow(0px 0px 0px var(--headingcolor1))
+      drop-shadow(0px 0px 0px var(--headingcolor1));
+  }
+
+  50% {
+    filter: drop-shadow(0px 0px 5px var(--headingcolor1))
+      drop-shadow(0px 0px 8px var(--headingcolor1));
+  }
+
+  70% {
+    filter: drop-shadow(0px 0px 2px var(--headingcolor1))
+      drop-shadow(0px 0px 5px var(--headingcolor1));
+  }
+
+  100% {
+    filter: drop-shadow(0px 0px 5px var(--headingcolor1))
+      drop-shadow(0px 0px 8px var(--headingcolor1));
+  }
+}
+
+.section-head {
+  color: var(--headingcolor1);
+  filter: drop-shadow(0px 0px 5px var(--headingcolor1))
+    drop-shadow(0px 0px 8px var(--headingcolor1));
+
+  animation: light_up 5s infinite ease-in-out;
+}
+
+.img-slider {
+  display: flex;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  gap: 4vmin;
+
+  transition: transform 0.3s ease;
+  cursor: grab;
+}
+
+.img-slider img {
+  width: 340px;
+  height: 400px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: 20px;
+  border: solid 4px var(--headingcolor1);
+  /* padding: 0px; */
+
+  box-shadow: 2px 8px 20px var(--headingcolor1);
+}
+
+/* end of projects section */
+
+/* start of skills */
+.skills {
   background-color: var(--sectionodd);
 }
 
-/* end of hero section */
+@keyframes light_up2 {
+  0% {
+    filter: drop-shadow(0px 0px 5px var(--headingcolor2))
+      drop-shadow(0px 0px 8px var(--headingcolor2));
+  }
+  30% {
+    filter: drop-shadow(0px 0px 0px var(--headingcolor2))
+      drop-shadow(0px 0px 0px var(--headingcolor2));
+  }
+
+  50% {
+    filter: drop-shadow(0px 0px 5px var(--headingcolor2))
+      drop-shadow(0px 0px 8px var(--headingcolor2));
+  }
+
+  70% {
+    filter: drop-shadow(0px 0px 2px var(--headingcolor2))
+      drop-shadow(0px 0px 5px var(--headingcolor2));
+  }
+
+  100% {
+    filter: drop-shadow(0px 0px 5px var(--headingcolor2))
+      drop-shadow(0px 0px 8px var(--headingcolor2));
+  }
+}
+
+.section-head2 {
+  color: var(--headingcolor2);
+  filter: drop-shadow(0px 0px 5px var(--headingcolor2))
+    drop-shadow(0px 0px 8px var(--headingcolor2));
+
+  animation: light_up2 5s infinite ease-in-out;
+}
+
+.tech-icons {
+  font-size: 4rem;
+  color: var(--headingcolor2);
+  -webkit-box-reflect: below 5px
+    linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0px 0px 5px var(--headingcolor2));
+}
+
+.skil-name {
+  color: var(--buttoncolor2);
+}
+
+/* end of skills */
+
+/* contact section */
+
+.section-head3 {
+  color: transparent;
+  background: linear-gradient(
+    to right,
+    var(--headingcolor1) 50%,
+    var(--headingcolor2) 0
+  );
+  background-clip: text;
+
+  filter: drop-shadow(0px 0px 5px var(--headingcolor2))
+    drop-shadow(0px 0px 8px var(--headingcolor2));
+
+  animation: light_up2 5s infinite ease-in-out;
+}
+
+.contact {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../images/contact-bg.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.contact-us-text {
+  color: var(--buttoncolor2);
+}
+
+.contact-form input {
+  margin-bottom: 2rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 1rem;
+  border: 1px solid var(--navicon2);
+
+  color: var(--navicon2);
+}
+
+.contact input::placeholder {
+  color: var(--navicon2);
+  font-size: 12px;
+}
+.contact textarea::placeholder {
+  color: var(--navicon2);
+  font-size: 12px;
+}
+
+.contact-form textarea {
+  margin-bottom: 2rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 1rem;
+  border: 1px solid var(--navicon2);
+
+  color: var(--navicon2);
+}
+
+.contact-form button {
+  border: none;
+  outline: none;
+  position: relative;
+  width: 10rem;
+  padding: 8px 10px;
+
+  width: 100%;
+
+  color: #999;
+  font-size: 18px;
+  background-color: var(--buttoncolor2);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  box-shadow: 0 0px 15px rgba(0, 255, 255, 0.8);
+
+  font-weight: 700;
+
+  margin-bottom: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+  background-color: var(--buttonhover2);
+}
+
+/* end of contact section */

@@ -28,11 +28,16 @@
       crossorigin="anonymous"
     />
 
-    <!-- bootstrap cdn icons -->
+    <!-- fontawesome cdn icons -->
 
     <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
     />
 
     <!-- custom styles -->
@@ -89,14 +94,23 @@
 
     <!-- hero section -->
     <section
-      class="hero-section d-flex justify-content-center align-items-center"
+      class="hero-section d-flex justify-content-center align-items-center pb-5 pt-5"
     >
       <div class="container">
         <div class="row">
           <div
-            class="col-md-6 d-flex flex-column align-content-between justify-content-start"
+            class="col-md-6 d-flex justify-content-center align-items-center"
           >
-            <h1 class="hero-name">Hello I Am <span>Vaibhav Sutar</span></h1>
+            <div class="hero-image-container">
+              <img class="hero-image" src="./images/hero-1.jpg" alt="" />
+            </div>
+          </div>
+          <div
+            class="col-md-6 d-flex flex-column justify-content-center hero-section-text"
+          >
+            <h1 class="hero-name">
+              Hello I Am <span class="hero-name-span">Vaibhav Sutar</span>
+            </h1>
             <h3 class="hero-name-description">
               "Crafting Exceptional Web Experiences"
             </h3>
@@ -105,14 +119,178 @@
               "As a front-end developer, I bring your vision to life with
               pixel-perfect designs and seamless user interactions."
             </h3>
-            <p>"Let's Build Something Amazing Together"</p>
-            <button class="cta">Click To know More</button>
-            <p>Tech Stack</p>
+            <p class="build-together-text">
+              "Let's Build Something Amazing Together"
+            </p>
+            <button class="cta">Contact Me</button>
+            <p class="tech-stack-heading">Tech Stack</p>
+
+            <div class="tech-stack-container">
+              <div class="tech-stack-icons">
+                <i class="fa-brands fa-html5"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+                <i class="fa-brands fa-js"></i>
+                <i class="fa-brands fa-react"></i>
+              </div>
+            </div>
           </div>
-          <div class="col-md-6"></div>
         </div>
       </div>
     </section>
     <!-- end hero section -->
+    <!-- projects section -->
+    <section class="projects pt-5 pb-5">
+      <div class="container mb-5 pb-5">
+        <h1 class="section-head text-center">My Projects</h1>
+      </div>
+
+      <div class="container">
+        <div
+          class="img-slider"
+          data-mouse-down-at="0"
+          data-prev-percentage="0"
+          data-percentage="0"
+        >
+          <div class="slide-wrapper">
+            <img src="./images/project-1.png" alt="" draggable="false" />
+          </div>
+          <div class="slide-wrapper">
+            <img src="./images/project-2.png" alt="" draggable="false" />
+          </div>
+          <div class="slide-wrapper">
+            <img src="./images/project-3.png" alt="" draggable="false" />
+          </div>
+          <div class="slide-wrapper">
+            <img src="./images/project-4.png" alt="" draggable="false" />
+          </div>
+          <div class="slide-wrapper">
+            <img src="./images/project-5.png" alt="" draggable="false" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end projects section -->
+
+    <!-- start skills -->
+    <section class="skills pt-5 pb-5">
+      <div class="container mb-5 pb-5">
+        <h1 class="section-head2 text-center">Tech Stack</h1>
+      </div>
+
+      <div class="container pt-5">
+        <div class="row tech-stack-icons-container gy-5">
+          <div
+            class="col-6 col-sm-2 col-md-4 d-flex flex-column justify-content-center align-items-center mb-5"
+          >
+            <p class="skil-name">HTML</p>
+            <i class="fa-brands fa-html5 tech-icons"></i>
+          </div>
+          <div
+            class="col-6 col-sm-2 col-md-4 d-flex flex-column justify-content-center align-items-center mb-5"
+          >
+            <p class="skil-name">CSS</p>
+            <i class="fa-brands fa-css3-alt tech-icons"></i>
+          </div>
+          <div
+            class="col-6 col-sm-2 col-md-4 d-flex flex-column justify-content-center align-items-center mb-5"
+          >
+            <p class="skil-name">JavaScript</p>
+            <i class="fa-brands fa-js tech-icons"></i>
+          </div>
+          <div
+            class="col-6 col-sm-2 col-md-4 d-flex flex-column justify-content-center align-items-center mb-5"
+          >
+            <p class="skil-name">ReactJS</p>
+            <i class="fa-brands fa-react tech-icons"></i>
+          </div>
+          <div
+            class="col-6 col-sm-2 col-md-4 d-flex flex-column justify-content-center align-items-center mb-5"
+          >
+            <p class="skil-name">GitHub</p>
+            <i class="fa-brands fa-github tech-icons"></i>
+          </div>
+          <div
+            class="col-6 col-sm-2 col-md-4 d-flex flex-column justify-content-center align-items-center mb-5"
+          >
+            <p class="skil-name">Bootstrap5</p>
+            <i class="fa-brands fa-bootstrap tech-icons"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end skills -->
+
+    <section class="contact pt-5 pb-5">
+      <div class="container">
+        <h1 class="section-head3 text-center">Contact Me</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 p-5 contact-us-text">
+            <h3>Get In Touch</h3>
+            <p>
+              We’d love to hear from you! Whether you have a question about our
+              services, want to start a project, or just want to say hello —
+              we’re all ears.
+            </p>
+            <p>
+              Drop us a message using the form, and we'll get back to you as
+              soon as possible. Prefer a direct chat? Reach out through the
+              details below:
+            </p>
+            <ul class="contact-details">
+              <li><strong>Email:</strong> vaibhavsutar020@gmail.com</li>
+              <li><strong>Phone:</strong>9021122180</li>
+              <li>
+                <strong>Address:</strong> Office No 2102, Joyville Tech Hub,
+                Hadapsar Pune
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 contact-form-col">
+            <form class="contact-form d-flex flex-column p-5">
+              <input type="text" placeholder="Enter Your Name" required />
+              <input type="email" placeholder="Enter Your Email" required />
+              <input type="tel" placeholder="Enter Your Phone" required />
+              <textarea placeholder="Enter Your Message" required></textarea>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const track = document.querySelector(".img-slider");
+      let isDragging = false;
+
+      window.addEventListener("mousedown", (e) => {
+        isDragging = true;
+        track.dataset.mouseDownAt = e.clientX;
+      });
+
+      window.addEventListener("mouseup", () => {
+        isDragging = false;
+        track.dataset.mouseDownAt = "0";
+        track.dataset.prevPercentage = track.dataset.percentage || "0";
+      });
+
+      window.addEventListener("mousemove", (e) => {
+        if (!isDragging) return;
+
+        const mouseDownAt = parseFloat(track.dataset.mouseDownAt);
+        const prevPercentage = parseFloat(track.dataset.prevPercentage) || 0;
+
+        const mouseDelta = mouseDownAt - e.clientX;
+        const maxDelta = window.innerWidth / 2;
+        const percentage = (mouseDelta / maxDelta) * -100;
+
+        let nextPercentage = prevPercentage + percentage;
+        nextPercentage = Math.max(Math.min(nextPercentage, 0), -100);
+
+        track.dataset.percentage = nextPercentage;
+        track.style.transform = `translate(${nextPercentage}%, 0%)`;
+      });
+    </script>
   </body>
 </html>
