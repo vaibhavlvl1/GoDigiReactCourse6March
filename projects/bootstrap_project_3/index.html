@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update For You Blogs</title>
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+
+    <!-- font awesome -->
+    <!-- Font Awesome Free CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-MaexDdSXzK6uTpSMiHkZIQF8j2x7vOB38RHbs+iJzUSwl4q3P2Hr43R1tJmcP/d0OFRyT9qCl+1xBa6eTG7SUw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- header start -->
+    <!-- signup section -->
+    <div class="row border-bottom">
+      <div
+        class="container d-flex justify-content-center align-items-center gap-3 p-3"
+      >
+        <p class="m-0 fw-semibold">Sign Up for our Newsletter</p>
+        <form>
+          <div class="input-group">
+            <input
+              class="form-control"
+              type="email"
+              placeholder="Enter your email"
+              name="signup_email"
+              id="signup_email"
+              required
+            />
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--  end signup section -->
+    <!-- site-title -->
+    <div class="container pt-3 pb-3 border-bottom">
+      <h1 class="text-center site-title">Update for You</h1>
+      <p class="site-description text-center">
+        Your one-stop destination for the latest updates and insights.
+      </p>
+    </div>
+
+    <!-- end of site-title -->
+    <!-- navbar -->
+    <div class="row position-sticky top-0 z-3">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul
+              class="navbar-nav mb-2 mb-lg-0 w-100 d-flex justify-content-center"
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./news.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./entertainment.html"
+                  >Entertainment</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./sports.html">Sports</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./stocks.html">Stock Market</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./technology.html">Technology</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./education.html">Education</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- end navbar -->
+    <!-- header end -->
+
+    <!-- main container with sidebar -->
+    <main class="main-content pt-5 pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9">
+            <!-- latest section news -->
+
+            <div class="row g-2">
+              <h2 class="section-heading">Latest News</h2>
+              <div class="col-md-8">
+                <div class="card" style="width: 100%">
+                  <img
+                    src="https://picsum.photos/300/136?random=1"
+                    class="card-img-top"
+                    alt="random"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Breaking News: Tech Innovations</h5>
+                    <p class="card-text">
+                      Discover the latest advancements in technology that are
+                      shaping our future. From AI to blockchain, stay informed
+                      about the trends that matter.
+                    </p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card" style="width: 18rem">
+                  <img
+                    src="https://picsum.photos/300/200?random=2"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Exciting Developments in Artificial Intelligence
+                    </h5>
+                    <p class="card-text">
+                      Explore the latest breakthroughs in artificial
+                      intelligence and how they are transforming industries.
+                      Don't miss out on the future of technology!
+                    </p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card" style="width: 18rem">
+                  <img
+                    src="https://picsum.photos/300/200?random=3"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Exploring the Wonders of Space</h5>
+                    <p class="card-text">
+                      Join us on a journey through the cosmos as we uncover the
+                      mysteries of the universe. From black holes to distant
+                      galaxies, the wonders of space await you.
+                    </p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card" style="width: 18rem">
+                  <img
+                    src="https://picsum.photos/300/200?random=4"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Unveiling the Secrets of Quantum Computing
+                    </h5>
+                    <p class="card-text">
+                      Dive into the world of quantum computing and discover how
+                      it is revolutionizing the tech landscape. Learn about its
+                      potential applications
+                    </p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card" style="width: 18rem">
+                  <img
+                    src="https://picsum.photos/300/200?random=5"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Exploring the Future of Artificial Intelligence
+                    </h5>
+                    <p class="card-text">
+                      Discover the advancements in AI technology and how it’s
+                      shaping industries, automating processes, and driving
+                      innovation across the globe.
+                    </p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-2 mt-5">
+              <h2 class="section-heading">Latest News</h2>
+              <div class="col-12">
+                <div class="card mb-3" style="max-width: 100%">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img
+                        src="https://picsum.photos/300/200?random=7"
+                        class="img-fluid rounded-start"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          Harnessing the Power of Renewable Energy
+                        </h5>
+                        <p class="card-text">
+                          Explore how solar and wind technologies are
+                          transforming the global energy landscape, offering
+                          cleaner alternatives to traditional fuels.
+                        </p>
+                        <p class="card-text">
+                          <small class="text-body-secondary"
+                            >Last updated 12 mins ago</small
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="card mb-3" style="max-width: 100%">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img
+                        src="https://picsum.photos/300/200?random=8"
+                        class="img-fluid rounded-start"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          The Evolution of Smart Home Technologies
+                        </h5>
+                        <p class="card-text">
+                          Dive into the latest trends in smart home automation
+                          and how AI-driven devices are reshaping modern living
+                          environments.
+                        </p>
+                        <p class="card-text">
+                          <small class="text-body-secondary"
+                            >Last updated 1 hour ago</small
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="card mb-3" style="max-width: 100%">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img
+                        src="https://picsum.photos/300/200?random=9"
+                        class="img-fluid rounded-start"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          Reimagining Urban Mobility with Innovation
+                        </h5>
+                        <p class="card-text">
+                          Learn how emerging technologies and sustainable
+                          transport solutions are revolutionizing the way cities
+                          move and grow.
+                        </p>
+                        <p class="card-text">
+                          <small class="text-body-secondary"
+                            >Last updated 2 days ago</small
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- end of latest section news -->
+          </div>
+          <div class="col-lg-3 pt-4">
+            <div class="row">
+              <div class="col-12">
+                <h5>Recent Posts</h5>
+                <div class="card mb-3" style="max-width: 540px">
+                  <div class="row g-0">
+                    <div class="col-12">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                          This is a wider card with supporting text below as a
+                        </p>
+
+                        <a href="#" class="btn">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mb-3" style="max-width: 540px">
+                  <div class="row g-0">
+                    <div class="col-12">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                          This is a wider card with supporting text below as a
+                        </p>
+
+                        <a href="#" class="btn">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mb-3" style="max-width: 540px">
+                  <div class="row g-0">
+                    <div class="col-12">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                          This is a wider card with supporting text below as a
+                        </p>
+
+                        <a href="#" class="btn">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <h5>Archive</h5>
+                <div class="row">
+                  <div class="col-12">
+                    <ul class="list-group">
+                      <li
+                        class="list-group-item d-flex justify-content-between align-items-center"
+                      >
+                        Exploring the Future of Renewable Energy
+                        <span class="badge text-bg-primary rounded-pill"
+                          >Read More</span
+                        >
+                      </li>
+                      <li
+                        class="list-group-item d-flex justify-content-between align-items-center"
+                      >
+                        The Rise of Electric Vehicles
+                        <span class="badge text-bg-primary rounded-pill"
+                          >Read More</span
+                        >
+                      </li>
+                      <li
+                        class="list-group-item d-flex justify-content-between align-items-center"
+                      >
+                        Top 10 Tech Gadgets of 2025
+                        <span class="badge text-bg-primary rounded-pill"
+                          >Read More</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- end of main container with sidebar -->
+
+    <footer class="p-0 pt-3 pb-3 mt-5">
+      <p class="text-center text-white fw-normal">
+        Copyright &copy; updateforyou.com . All rights reserved
+      </p>
+    </footer>
+
+    <!-- scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

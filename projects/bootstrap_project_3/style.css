@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
+
+.header-image {
+  background: url("./129728.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.site-title {
+  font-size: 72px;
+  font-family: "Tangerine", cursive !important;
+  font-weight: 700;
+  font-style: normal;
+  color: rgb(237, 84, 237);
+}
+
+.bg-body-tertiary {
+  background-color: rgb(237, 84, 237) !important;
+}
+
+.nav-link {
+  color: #fff !important;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.nav-link:hover {
+  text-decoration: underline !important;
+  text-underline-offset: 5px !important;
+}
+
+.active {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+footer {
+  background-color: rgb(237, 84, 237);
+  margin: 0 !important;
+}
