@@ -1,0 +1,13 @@
+.navy {
+  justify-content: space-between !important;
+}
+
+.hero {
+  height: 100vh;
+  background: url("./129728.jpg") center center;
+  background-size: cover;
+}
+
+.about {
+  height: 100vh;
+}
