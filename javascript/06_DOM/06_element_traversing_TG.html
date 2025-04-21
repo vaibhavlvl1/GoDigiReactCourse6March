@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traversing Elements</title>
+</head>
+
+<body>
+  <h1>Traversing Elements</h1>
+
+  <ul>
+    <li id="intro">List 1</li>
+    <li>List 2</li>
+    <li>List 3</li>
+    <li>List 4</li>
+    <li>List 5</li>
+  </ul>
+
+  <ul id="parent">
+    <li>List A</li>
+    <li>List B</li>
+    <li>List C</li>
+    <li>List D</li>
+    <li>List E</li>
+  </ul>
+
+  <script>
+    // Traversing Elements
+    let elm = document.getElementById("intro");
+    console.log(elm);
+
+    // Select the parent element
+    let parent = elm.parentElement;
+    parent.style.color = 'red';
+    console.log(parent);
+
+    //Select Children Elements
+    let childs = document.getElementById("parent");
+    console.log(childs);
+
+    //Select the first child element
+    let firstChild = childs.firstElementChild;
+    firstChild.style.color = 'magenta';
+
+    //Next Sibling
+    //Here, we are selecting the next sibling of the first child element of the parent element. The next sibling of the first child element is the second child element. We are changing the color of the second child element to red.
+    let nextSiblingFromFirst = firstChild.nextElementSibling;
+    nextSiblingFromFirst.style.color = 'red';
+
+
+    //Select the last child element
+    let lastChild = childs.lastElementChild;
+    lastChild.style.color = 'blue';
+
+    //Previous Sibling
+    //Here, we are selecting the previous sibling of the last child element of the parent element. The previous sibling of the last child element is the fourth child element. We are changing the color of the fourth child element to green.
+    let prevSiblingFromLast = lastChild.previousElementSibling;
+    prevSiblingFromLast.style.color = 'green';
+
+
+    //Change font size of all children elements
+    let allChildren = childs.children;
+    console.log(allChildren);
+
+    for (let i = 0; i < allChildren.length; i++) {
+      allChildren[i].style.fontSize = '30px';
+    }
+  </script>
+</body>
+
+</html>

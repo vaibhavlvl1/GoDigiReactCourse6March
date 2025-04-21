@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chai aur Code</title>
+</head>
+
+<body style="background-color: #212121; color: white;">
+  <!-- Dynamically generated content will be appended here -->
+</body>
+
+<script>
+  // ------------------------- 1. Creating a New Element -------------------------
+  // Sabse pehle hum ek new <div> element create karte hain using 'document.createElement()' method.
+
+  const div = document.createElement('div');
+  console.log(div); // Ye console mein newly created div ko log karega.
+
+  //--------------------------------------------------------------------------
+
+  // ------------------------- 2. Adding Class and ID to the Element -------------------------
+  // Hum new div element ko class aur id assign karte hain, jisse uski styling ya targeting easier ho jata hai.
+
+  div.className = 'main'; // Class assign kar rahe hain 'main' div ko.
+  div.id = Math.round(Math.random() * 10 + 1); // Random ID generate kar rahe hain for the div element.
+
+  //--------------------------------------------------------------------------
+
+  // ------------------------- 3. Setting Attributes -------------------------
+  // Hum 'setAttribute()' method ka use karke div ko custom attributes bhi de sakte hain.
+
+  div.setAttribute('title', 'Generated Title'); // Ye div ke liye ek title attribute set karega.
+
+  //--------------------------------------------------------------------------
+
+  // ------------------------- 4. Styling the Element -------------------------
+  // Hum inline CSS styles apply karte hain dynamically.
+
+  div.style.backgroundColor = 'red'; // Background color red set kar rahe hain.
+  div.style.color = 'white'; // Text ka color white set kar rahe hain.
+  div.style.padding = '10px'; // Padding 10px set kar rahe hain.
+
+  //--------------------------------------------------------------------------
+
+  // ------------------------- 5. Adding Text to the Element -------------------------
+  // Hum text ko dynamically add karne ke liye 'createTextNode()' ka use karte hain.
+
+  // Mostly prefer approach for adding text
+  const addText = document.createTextNode('This is a dynamically generated div element.');
+  div.appendChild(addText); // Ye text ko div element mein append karega.
+
+  //--------------------------------------------------------------------------
+
+  // ------------------------- 6. Appending the Element to the DOM -------------------------
+  // Ab hum apne newly created aur styled div element ko document ke body mein add karenge.
+
+  document.body.appendChild(div); // Ye div ko body ke andar append karega.
+
+</script>
+
+</html>

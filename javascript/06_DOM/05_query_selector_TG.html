@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Element</title>
+</head>
+
+<body>
+  <h1>Selecting Element by Query Selector</h1>
+
+  <h2 class="intro">Heading 1 </h2>
+  <div id="div1">
+    <p class="intro">Paragraph 1</p>
+    <h2 class="intro">Heading 2</h2>
+    <p>Paragraph 2</p>
+    <h2>Heading 3</h2>
+    <p class="intro">Paragraph 3</p>
+    <p class="intro">Paragraph 4</p>
+  </div>
+  <script>
+    // Query Selector to select only paragraph with class intro
+    let elm = document.querySelector("p.intro");
+    elm.innerHTML = "Updated Paragraph 1";
+    console.log(elm);
+    // Query Selector selects only first element with class intro
+
+    //------------------------------------------------------------//
+
+    // Query Selector All to select all paragraphs with class intro
+    let elmAll = document.querySelectorAll("p.intro");
+    console.log(elmAll);
+    for (let i = 0; i < elmAll.length; i++) {
+      elmAll[i].innerHTML = `Updated Paragraph ${i + 1}`;
+      elmAll[i].style.color = 'red';
+    }
+
+  </script>
+
+</body>
+
+</html>

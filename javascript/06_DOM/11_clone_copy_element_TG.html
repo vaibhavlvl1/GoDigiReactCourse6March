@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul id="menu">
+    <li>Home</li>
+    <li>About</li>
+    <li>Services</li>
+    <li>Contact</li>
+  </ul>
+  <script>
+    //To Clone the element
+    let menu = document.getElementById("menu");
+    let cloneMenu = menu.cloneNode(true); //true means clone the element with all its children
+    console.log(cloneMenu); //To check the cloned element
+    document.body.appendChild(cloneMenu); //Append the cloned element to the body
+    //Change id of the cloned element because id should be unique
+    cloneMenu.id = "menu2";
+  </script>
+</body>
+
+
+</html>

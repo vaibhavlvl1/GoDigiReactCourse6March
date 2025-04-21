@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- beforebegin -->
+  <div id="intro"> <!--selected -->
+    <!-- afterbegin -->
+    <h2>Heading 1</h2>
+    <p>This is Paragraph 1</p>
+    <!-- beforeend -->
+  </div>
+  <!-- afterend -->
+
+  <script>
+    //There are 4 positions where we can insert an element.
+    //1. beforebegin is before the selected element
+    //2. afterbegin is just inside the selected element, before its first child
+    //3. beforeend is just inside the selected element, after its last child
+    //4. afterend is after the selected element
+    //We do not need to create a new element to insert it at a particular position.
+
+    let elm = document.getElementById("intro");
+
+    elm.insertAdjacentHTML("beforebegin", "<h1>New Heading before the div</h1>");
+    elm.insertAdjacentHTML("afterbegin", "<h3>New Heading inside the div before the first child</h3>");
+    elm.insertAdjacentHTML("beforeend", "<p>New Paragraph inside the div after the last child</p>");
+    elm.insertAdjacentHTML("afterend", "<h2>New Heading after the div</h2>");
+
+  </script>
+</body>
+
+
+</html>

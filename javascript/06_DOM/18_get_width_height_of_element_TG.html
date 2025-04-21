@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #box {
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+      border: 8px solid red;
+      padding: 10px;
+      margin: 10px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="box">
+    <p>This is a Dummy Text !</p>
+  </div>
+  <script>
+    let box = document.getElementById("box");
+
+    //Offset Values
+    let width = box.offsetWidth; //Width of the element including padding and border
+    let height = box.offsetHeight; //Height of the element including padding and border
+    document.write(width);
+    document.write(height);
+
+    //Client Values
+    let width1 = box.clientWidth; //Width of the element excluding padding and border
+    let height1 = box.clientHeight; //Height of the element excluding padding and border
+    document.write(width1);
+    document.write(height1);
+  </script>
+</body>
+
+</html>

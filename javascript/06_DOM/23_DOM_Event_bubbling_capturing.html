@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      padding: 100px;
+      background-color: cornsilk;
+    }
+
+    #myDiv {
+      padding: 50px;
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="myDiv">
+    <button id="btn">Click Me</button>
+  </div>
+
+  <pre>
+    Event Bubbling: Jab koi event ho to wo pehle inner element pe chala jata hai phir uske parent element pe chala jata hai.
+    Event Capturing: Jab koi event ho to wo pehle parent element pe chala jata hai phir uske inner element pe chala jata hai.
+    Agar aap "Event bubbling" ko rokna chahte hain to aap event.stopPropagation() method ka use kar sakte hain.
+</pre>
+
+  <script>
+    //Event Bubbling
+    let d = document.getElementById("myDiv");
+    let b = document.getElementById("btn");
+
+    //true is for "Event capturing" if true is not written then it will be "Event Bubbling"
+    b.addEventListener('click', btnCLick, true);
+    d.addEventListener('click', divCLick, true);
+    document.body.addEventListener('click', bodyCLick, true);
+
+    function btnCLick(event) {
+      console.log("Button Clicked");
+      event.stopPropagation(); //To stop the event bubbling at this point.
+    }
+
+    function divCLick() {
+      console.log("DIV Clicked");
+    }
+
+    function bodyCLick() {
+      console.log("BODY Clicked");
+    }
+
+  </script>
+</body>
+
+</html>

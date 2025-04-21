@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Element</title>
+</head>
+
+<body>
+  <h1>Selecting Element in DOM by Class</h1>
+
+  <ul>
+    <li class="cl">List 1</li>
+    <li id="second">List 2</li>
+    <li class="cl"> List 3</li>
+  </ul>
+
+  <script>
+    // Selecting the element by className
+    let elm = document.getElementsByClassName("cl");
+    // console.log(elm.length);
+
+    for (let i = 0; i < elm.length; i++) { // Fixed loop declaration
+      elm[i].innerHTML = "Updated List Item by Using Classname"; // Update the content of the element
+    }
+
+    // For id selector there is no need to use loop because id is unique
+    // for class selector we need to use loop because class can be multiple in a document.
+
+  </script>
+
+</body>
+
+</html>

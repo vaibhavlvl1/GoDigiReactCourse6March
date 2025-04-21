@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insert before</title>
+</head>
+
+<body>
+
+  <ul id="list">
+    <!-- 1 -->
+    <li>List 1</li>
+    <!-- 2 -->
+    <li>List 2</li>
+    <!-- 3 -->
+    <li>List 3</li>
+    <!-- 4 -->
+    <li>List 4</li>
+  </ul>
+</body>
+
+<script>
+  // Selecting the element by ID
+  let list1 = document.getElementById("list");
+
+  // Create a new element
+  let item = document.createElement("li");
+  item.style.color = "red";
+
+  // Create a text node
+  item.innerText = "New List 5";
+
+  // Insert the new element before the first child of the parent element
+  let pos = list1.firstElementChild.nextElementSibling; // List 2
+
+  list1.insertBefore(item, pos);
+
+  //Isme 2 parameter pass hote hain, ek new element aur ek existing element jiske pehle insert karna hai
+
+  //------------------------------------------------------------//
+ 
+  // Insert before the list in the body
+
+  let parent = document.body; // body element
+  let elm = document.createElement("h1"); // Create a new element
+  elm.innerText = "New Heading before the list"; // Set the text content
+
+  let list = document.getElementById("list"); // Select the list element
+  parent.insertBefore(elm, list); // Insert the new element before the list element
+</script>
+
+</html>

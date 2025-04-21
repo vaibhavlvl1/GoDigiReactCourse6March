@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #anchor {
+      display: block;
+      width: 100px;
+      height: 30px;
+      background-color: red;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="https://www.google.com" id="anchor">Click Me</a>
+
+
+  <form action="" id="myForm">
+    <input type="text" id="myInput">
+    <input type="submit" value="Submit">
+  </form>
+</body>
+
+<script>
+  let link = document.getElementById("anchor");
+
+  link.addEventListener('click', function (event) {
+    event.preventDefault();
+    console.log("Link Clicked");
+  });
+
+
+  let form = document.getElementById("myForm");
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    console.log("Form Submitted");
+  });
+</script>
+
+</html>

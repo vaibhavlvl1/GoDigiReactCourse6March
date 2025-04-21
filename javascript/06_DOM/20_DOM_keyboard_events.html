@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Events</title>
+</head>
+
+<body>
+  <h1>DOM Events</h1>
+  <p>There are many events that can occur in the DOM. Some of the most common events are:
+  <ul>
+    <li>click</li>
+    <li>mouseover</li>
+    <li>mouseout</li>
+    <li>keydown</li>
+    <li>keyup</li>
+    <li>focus</li>
+    <li>blur</li>
+    <li>submit</li>
+    <li>stroke</li>
+    <li>load</li>
+    <li>resize</li>
+    <li>scroll</li>
+    <li>change</li>
+    <li>input</li>
+    <li>copy</li>
+    <li>cut</li>
+    <li>paste</li>
+  </ul>
+
+  <!--Example of click event -->
+  <button id="btn" onclick="clickEvent()">Click Me</button>
+  <button id="btn2">Another Button</button>
+  <script>
+    //Example of click event using onclick attribute
+    function clickEvent() {
+      alert("This button is using onclick attribute");
+    }
+
+    //Example of click event using addEventListener
+    let btn2 = document.getElementById("btn2");
+
+    btn2.addEventListener("click", function () {
+      console.log("This button is clicked using addEventListener");
+    });
+
+    //Example of mouseover event
+    btn2.addEventListener("mouseover", function () {
+      console.log("Mouse is over the button");
+    });
+
+    //Example of mouseout event
+    btn2.addEventListener("mouseout", function () {
+      console.log("Mouse is out of the button");
+    });
+  </script>
+</body>
+
+</html>

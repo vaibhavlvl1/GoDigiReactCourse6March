@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body style="background-color: #212121; color: white;">
+  <div class="parent">
+    <!-- This is parent div -->
+    <div class="day">Monday</div>
+    <div class="day">Tuesday</div>
+    <div class="day">Wednesday</div>
+    <div class="day">Thursday</div>
+    <div class="day">Friday</div>
+  </div>
+</body>
+
+<script>
+  // ------------------------- 1. Selecting and Logging Parent Element -------------------------
+  // Hum parent element ko select karte hain aur console pe log karte hain.
+
+  let parent = document.querySelector('.parent');
+  console.log(parent); // Yeh pure parent div ko log karega
+  console.log(parent.children); // Yeh HTMLCollection return karega, jo ek type of NodeList hota hai
+
+  // Hum parent ke pehle child element ko directly access kar sakte hain
+  console.log(parent.children[0]); // Output: <div class="day">Monday</div>
+  console.log(parent.children[0].innerHTML); // Output: Monday
+
+  // ------------------------------------------------------------ //
+
+  // ------------------------- 2. Iterating Over Parent Children -------------------------
+  // Parent element ke sabhi child elements ko iterate karne ke liye hum loop ka use karte hain
+
+  for (let i = 0; i < parent.children.length; i++) {
+    console.log(parent.children[i].innerHTML); // Har child element ka inner text console pe print hoga
+  }
+
+  // Hum pehle child element ka color change kar rahe hain
+  parent.children[0].style.color = 'red'; // First child element (Monday) ka text color red ho jayega
+
+  // ------------------------- 3. Accessing First and Last Child -------------------------
+  // Hum parent ke first aur last child element ko directly select kar sakte hain
+
+  // Pehla child element access karte hain using firstElementChild property
+  console.log(parent.firstElementChild); // Output: <div class="day" style="color: red;">Monday</div>
+
+  // Aakhri child element ko access karne ke liye lastElementChild ka use karte hain
+  console.log(parent.lastElementChild); // Output: <div class="day">Friday</div>
+
+  // ------------------------------------------------------------ //
+
+  // ------------------------- 4. Accessing First Element with Specific Class -------------------------
+  // Hum querySelector se specific class ko select kar sakte hain
+
+  // Pehla element jo 'day' class ke saath hai, usse select karte hain
+  const dayOne = document.querySelector('.day');
+  console.log(dayOne); // Yeh first day div ko print karega (Monday)
+
+  // Parent element ko access karte hain is specific element ka parentElement property use karke
+  console.log(dayOne.parentElement); // Parent div ko return karega
+
+  // Agar hum next sibling ko access karna chahein toh nextElementSibling ka use karte hain
+  console.log(dayOne.nextElementSibling); // Output: <div class="day">Tuesday</div>
+
+  // ------------------------------------------------------------ //
+
+  // ------------------------- 5. Accessing All Child Nodes -------------------------
+  // Hum childNodes property ka use karke sabhi child nodes ko access kar sakte hain
+
+  console.log("NODES: ", parent.childNodes);
+  // Yeh NodeList(11) return karega jisme text nodes aur div nodes dono honge:
+  // Output: NodeList(11) [text, div.day, text, div.day, text, div.day, text, div.day, text, div.day, text]
+</script>
+
+</html>

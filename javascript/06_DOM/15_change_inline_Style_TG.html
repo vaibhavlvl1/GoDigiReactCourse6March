@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="btn" name="form1">Send Data</button>
+
+  <script>
+    //Change inline style
+    let btn = document.getElementById("btn");
+    btn.style.backgroundColor = "red"; //Change background color but it is overridden by CSS Text property
+
+    ///CSS Text Property 
+    btn.style.cssText = "background-color: green; color: white; padding: 10px; border: none; border-radius: 5px;";
+    //Use mostly Css Text property because it is faster than setting individual properties and it overrides previous the inline style
+
+    //Remove inline style
+    btn.style.removeProperty("border");
+  </script>
+</body>
+
+</html>

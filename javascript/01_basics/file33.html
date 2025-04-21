@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylish Table</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+      color: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .table-container {
+      background-color: #2b2b2b;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+      max-width: 800px;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 auto;
+    }
+
+    thead {
+      background: #ff4081;
+      color: #fff;
+    }
+
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #444;
+    }
+
+    th {
+      font-size: 18px;
+    }
+
+    tr:nth-child(even) {
+      background: #3a3a3a;
+    }
+
+    tr:hover {
+      background: #484848;
+      transform: scale(1.01);
+      transition: transform 0.2s ease;
+    }
+
+    td {
+      font-size: 16px;
+      color: #f1f1f1;
+    }
+
+    caption {
+      margin-bottom: 15px;
+      font-size: 20px;
+      color: #ffccff;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="table-container">
+    <table>
+      <caption>Top Programming Languages in 2023</caption>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Language</th>
+          <th>Popularity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Python</td>
+          <td>High</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>JavaScript</td>
+          <td>High</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Java</td>
+          <td>Medium</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>C#</td>
+          <td>Medium</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>PHP</td>
+          <td>Medium</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

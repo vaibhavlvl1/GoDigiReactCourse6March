@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form action="">
+    <input type="text" id="myInput">
+  </form>
+</body>
+<script>
+  let x = document.getElementById("myInput");
+
+  //To change the background color of the input field when it is focused
+  x.addEventListener("focus", myFocusFunction);
+  function myFocusFunction() {
+    x.style.backgroundColor = "yellow";
+  }
+
+  //To change the background color of the input field when it is not focused
+  x.addEventListener("blur", myBlurFunction);
+  function myBlurFunction() {
+    x.style.backgroundColor = "pink";
+  }
+
+  //To get the value of the input field and detect the change
+  x.addEventListener("change", function () {
+    console.log(this.value);
+  });
+
+
+</script>
+
+</html>

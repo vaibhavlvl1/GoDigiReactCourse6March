@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment and Decrement Operators</title>
+</head>
+
+
+<body>
+    <script>
+        // Increment aur Decrement Operators
+        // Increment aur Decrement Operators ka use variables ki value ko increase ya decrease karne ke liye hota hai.
+        // JavaScript mein 4 types ke Increment aur Decrement Operators hote hain:
+        // 1. ++a (Pre-Increment) - Pehle increment hota hai, phir assign hota hai
+        // 2. a++ (Post-Increment)
+        // 3. --a (Pre-Decrement)
+        // 4. a-- (Post-Decrement)
+
+        // Note:
+        // Pre-Increment aur Pre-Decrement mein variable ki value pehle update hoti hai, fir expression mein use hoti hai.
+        // Post-Increment aur Post-Decrement mein pehli purani value expression mein use hoti hai, phir update hoti hai.
+
+        let a = 10; // Variable a ko initialize kiya 10 se
+        document.write("Initial Value of a: " + a + "<br><br>");
+
+        // ******** Pre-Increment ********
+        // Step 1: ++a -> Pehle value ko increment karega, fir print karega
+        document.write("Value of a after Pre-Increment (++a): " + (++a) + "<br><br>");
+        // Ab, a ki value 11 ho gayi hai
+
+        // ******** Post-Increment ********
+        // Step 2: a++ -> Pehle purani value print hoti hai, fir increment hota hai
+        document.write("Value of a after Post-Increment first step (a++): " + (a++) + "<br><br>");
+        document.write("Value of a after Post-Increment final (a++): " + a + "<br><br>");
+        // Ab, a ki value 12 ho gayi hai
+
+        // ******** Pre-Decrement ********
+        // Step 3: --a -> Pehle value ko decrement karega, fir print karega
+        document.write("Value of a after Pre-Decrement (--a): " + (--a) + "<br><br>");
+        // Ab, a ki value 11 ho gayi hai
+
+        // ******** Post-Decrement ********
+        // Step 4: a-- -> Pehle purani value print hoti hai, fir decrement hota hai
+        document.write("Value of a after Post-Decrement (a--): " + (a--) + "<br><br>");
+        // Ab, a ki value 10 ho gayi hai
+        document.write("Final Value of a: " + a + "<br>");
+    </script>
+</body>
+
+</html>

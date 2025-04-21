@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chai aur Code | DOM</title>
+</head>
+
+<body style="background-color: #212121; color: white;">
+  <ul class="language">
+    <li>Javascript</li>
+  </ul>
+</body>
+
+<script>
+
+  // ----------------------------- 1. Adding Element to the DOM -----------------------------
+  // Ye ek basic example hai jisme hum ek list item dynamically add kar rahe hain DOM mein using JavaScript.
+
+  // Function to add a new language to the list
+  function addLanguage(langName) {
+    const li = document.createElement("li");  // New <li> element create karte hain
+    li.innerHTML = `${langName}`;  // List item mein text insert karte hain
+    document.querySelector(".language").appendChild(li);  // Ye new <li> ko .language class wale <ul> mein append karte hain
+  }
+
+  // Calling function to add languages to the list
+  addLanguage("Python");  // Python language add kar rahe hain
+  addLanguage("Typescript");  // Typescript language add kar rahe hain
+
+  //-----------------------------------------------------------------------
+
+  // ----------------------------- 2. Optimized Way to Add Element -----------------------------
+  // Dusra optimized tareeka hai jisme hum text ko ek alag node bana kar append karte hain.
+
+  function addLanguage2(langName) {
+    const li = document.createElement("li");  // New <li> element create karte hain
+    li.appendChild(document.createTextNode(langName));  // Text ko ek text node banakar add karte hain
+    document.querySelector(".language").appendChild(li);  // Ye new <li> ko .language class wale <ul> mein append karte hain
+  }
+
+  // Calling optimized function to add more languages
+  addLanguage2("Java");  // Java language add kar rahe hain
+  addLanguage2("C++");  // C++ language add kar rahe hain
+
+  //-----------------------------------------------------------------------
+
+  // ----------------------------- 3. Edit the Content of an Element -----------------------------
+  // Hum kisi bhi existing element ko update ya replace bhi kar sakte hain.
+
+  const secondLi = document.querySelector('li:nth-child(2)')  // Second <li> ko select karte hain
+  // Ye method avoid karna chahiye, but isse text ko directly change kar rahe hain.
+  // secondLi.innerHTML = "React"; // Directly text change kar rahe hain, lekin yeh approach generally avoid ki jaati hai.
+
+  // Another better approach:
+  newLi = document.createElement("li");  // Naya <li> element create karte hain
+  newLi.textContent = "React";  // Is naye <li> ko React ka text content denge
+  secondLi.replaceWith(newLi);  // Aur second li ko replace kar denge naye <li> ke saath
+
+
+  // ---------------4. Replace the First Element in the List----------------//
+  const firstLang = document.querySelector('li:first-child')  // First <li> ko select karte hain
+  console.log(firstLang);
+  firstLang.outerHTML = "<li>Golang</li>"; // Directly text change kar rahe hain, lekin yeh approach generally avoid ki jaati hai.
+
+  // ----------------------------- 5. Remove an Element from the DOM -----------------------------
+  // Ye method ek existing element ko remove karne ke liye hai.
+
+  const lastLang = document.querySelector('li:last-child')  // Last <li> ko select karte hain
+  lastLang.remove();  // Last <li> ko remove kar diya
+
+</script>
+
+</html>

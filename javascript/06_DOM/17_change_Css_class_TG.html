@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      background-color: blue;
+      width: 400px;
+      height: 400px;
+    }
+
+    .dimension {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+
+    .thirdclass {
+      color: white;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="box" class="box">
+    <p>This is a Dummy text</p>
+  </div>
+
+  <script>
+    let box = document.getElementById("box");
+    box.className += " dimension"; //Add a new class to the element 
+
+    box.classList.add("thirdclass"); //Add a new class to the element 
+
+    box.classList.remove("box"); //Remove a class from the element
+
+    box.classList.replace("dimension", "box"); //Replace a class from the element
+
+    let isClass = box.classList.contains("box"); //Check if the class is present in the element
+
+    // box.classList.toggle("box"); //Toggle the class in the element
+    //Rememeber it applies the class if it is not present and removes the class if it is present
+
+    console.log(isClass); //To check if the class is present in the element
+
+    //Method 2: Use this method to get the class list of the element
+    //To check the class list of the element
+    for (let css of box.classList) {
+      console.log(css); //To check the class list of the element
+    }
+
+    //Method 1:
+    //To check the class list of the element
+    console.log(box.classList);
+
+  </script>
+</body>
+
+</html>

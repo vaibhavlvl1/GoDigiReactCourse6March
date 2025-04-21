@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change InnerHTML </title>
+</head>
+
+<body>
+  <div id="intro">
+    <p>Hello this is a P tag</p>
+  </div>
+
+
+  <script>
+    //Append maltab koi bhi element ko add karna.
+    //Isme hume pehle ek element create karna padega.
+    //Uske baad us element ko append karna padega.
+
+    let selectElm = document.getElementById("intro"); // Selecting the element by ID
+    let newh1 = document.createElement("h1"); // Creating a new element
+    let text = document.createTextNode("This is H1 Tag") // Adding content to the new element
+    newh1.appendChild(text); // Appending the content to the new element
+    selectElm.appendChild(newh1); // Appending the new element to the existing element
+
+    //Adding class and id to the new element
+    newh1.className = "class2 class3"; // Adding multiple class to the new element
+    newh1.id = "intro1 "; // Adding a Id to the new element
+
+    //Add element to the body
+    let newp = document.createElement("p");
+    let textp = document.createTextNode("This is a P Tag");
+    newp.appendChild(textp);
+    document.body.appendChild(newp);
+
+    //createTextNode vs textContent
+    //createTextNode is used to create a text node
+    //textContent is used to change or get the text content of an element
+    //Example
+
+    //Using textContent
+    let newh3 = document.createElement("h3");
+    newh3.textContent = "This is H3 Tag";
+    document.body.appendChild(newh3);
+
+    //Read using textContent
+    console.log(newh3.textContent);
+  </script>
+</body>
+
+</html>

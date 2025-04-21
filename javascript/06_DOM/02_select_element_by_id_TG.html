@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Element</title>
+</head>
+
+<body>
+  <h1>Selecting Element in DOM</h1>
+
+  <ul>
+    <li>List 1</li>
+    <li id="second">
+      <p>
+        Lorem ipsum dolor sit amet.
+      </p>
+      List 2
+    </li>
+    <li> List 3</li>
+  </ul>
+
+  <ul>
+    <li class="listitem">List 1</li>
+    <li class="listitem">List 2</li>
+    <li class="listitem">List 3</li>
+    <li class="listitem">List 4</li>
+  </ul>
+
+  <script>
+    // Selecting the element by ID
+    let elm1 = document.getElementById("wrong-id");
+    console.log(elm1); // Output: null because the element with ID "wrong-id" does not exist.
+
+
+    // Selecting the element by ID
+    let elm = document.getElementById("second");
+    console.log(elm);
+    console.log(elm.innerHTML); // Output: List 2
+
+    // Update the content of the element
+    elm.innerHTML = "Updated List 2"; // Update the content of the element
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Events</title>
+  <style>
+    body {
+      height: 2000px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Hello</h1>
+  <script>
+    window.addEventListener('scroll', function () {
+      // console.log('Scrolled');
+    });
+
+
+    //To check whether scrolling is up or down
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > this.lastY) {
+        console.log('Scrolling Down');
+      } else {
+        console.log('Scrolling Up');
+      }
+      this.lastY = window.scrollY;
+    });
+
+
+    //To check scroll at a certain point and change the background color
+    window.addEventListener('scroll', function () {
+      if (window.pageYOffset > 300) {
+        document.body.style.backgroundColor = 'red';
+      } else {
+        document.body.style.backgroundColor = 'white';
+      }
+    });
+  </script>
+</body>
+
+</html>

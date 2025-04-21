@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NodeList to Array Conversion Example</title>
+</head>
+
+<body>
+
+  <!-- Sample Paragraphs to demonstrate NodeList to Array conversion -->
+  <p>This is the first paragraph.</p>
+  <p>This is the second paragraph.</p>
+  <p>This is the third paragraph.</p>
+  <p>This is the fourth paragraph.</p>
+  <p>This is the fifth paragraph.</p>
+  <p>This is the sixth paragraph.</p>
+
+  <script>
+    // ---------------------------- 1. Array.from() Method ----------------------------
+    // Ye method NodeList ko array mein convert karta hai aur array methods jaise 'map', 'filter' ka use karna possible banata hai.
+
+    // Step 1: Pehle sabhi <p> tags ko select karte hain, jo ek NodeList return karega.
+    const nodeList = document.querySelectorAll('p');
+
+    // Step 2: Array.from() method ka use karke NodeList ko ek Array mein convert karte hain.
+    const nodeArray = Array.from(nodeList);
+
+    // Step 3: Ab 'map' method ka use karte hain array pe, aur har paragraph ka text uppercase mein convert karte hain.
+    const modifiedNodesUppercase = nodeArray.map(p => p.innerText.toUpperCase());
+
+    // Step 4: Console pe modified array ko log karte hain.
+    console.log("Modified Text in Uppercase using Array.from():", modifiedNodesUppercase);
+
+    //----------------------------------------------------------------------------------------------------------------------------//
+
+    // ---------------------------- 2. Spread Operator (...) ----------------------------
+    // Spread operator bhi ek simple tareeka hai NodeList ko Array mein convert karne ka.
+
+    // Step 1: Spread operator ka use karte hue NodeList ko array mein convert karte hain.
+    const nodeArrayWithSpread = [...nodeList];
+
+    // Step 2: Array ke 'map' method ka use karte hain, aur is baar text ko lowercase mein convert karte hain.
+    const modifiedNodesLowercase = nodeArrayWithSpread.map(p => p.innerText.toLowerCase());
+
+    // Step 3: Console pe modified array ko log karte hain.
+    console.log("Modified Text in Lowercase using Spread Operator:", modifiedNodesLowercase);
+
+    //----------------------------------------------------------------------------------------------------------------------------//
+
+    // ---------------------------- 3. forEach() Method ----------------------------
+    // Agar aapko bas elements ko iterate karna ho, toh 'forEach()' method ka use kar sakte hain bina NodeList ko array mein convert kiye.
+
+    // Step 1: forEach() ka use karke har <p> tag ko individually access karte hain aur text ko change karte hain.
+    nodeList.forEach(p => {
+      p.innerText = p.innerText.split(' ').join('-');  // Text mein har space ko hyphen se replace karte hain
+    });
+
+    // Step 2: Console pe modified paragraphs ko log karte hain (jo space ko hyphen se replace kar chuke hain).
+    console.log("Modified Text using forEach() with Hyphen:", nodeList);
+
+    //----------------------------------------------------------------------------------------------------------------------------//
+  </script>
+
+</body>
+
+</html>
