@@ -73,7 +73,7 @@ console.log("Original Fruits slice ke baad:", fruits);
 // Splice se 2 elements remove karna (Index 2 se Mango aur Grapes hatenge)
 let removedFruits = fruits.splice(2, 2);
 console.log("Removed Fruits using splice:", removedFruits);
-console.log("Fruits splice ke baad:", fruits);
+console.log("Fruits splice ke baad: ", fruits);
 
 // Splice se naye elements add karna (Index 2 par Orange aur Kiwi add karna)
 fruits.splice(2, 0, "Orange", "Kiwi");

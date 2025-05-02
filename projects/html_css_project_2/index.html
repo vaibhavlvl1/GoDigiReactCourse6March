@@ -1,0 +1,1748 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      defer
+    />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      defer
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      defer
+    />
+
+    <!-- Fancybox CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+      defer
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/ico"
+      href="./crhs_assets/I2I-logo.png"
+    />
+
+    <style>
+      :root {
+        --navbar-bg: #572a31;
+        --navlink-color: #ffffff;
+        --navlink-hover-color: #ffd6d6;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+        font-family: "Roboto", sans-serif;
+        word-break: break-word;
+        position: relative;
+      }
+
+      /* start toggle btn  */
+
+      .toggler {
+        position: fixed !important;
+        top: 20px;
+        right: 20px;
+      }
+
+      /* end of toggle btn */
+
+      /* start of mobile-menu */
+      .mobile-menu-container {
+        position: fixed;
+
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -100%;
+        z-index: 98;
+        background-color: #572a31d2;
+        transition: all 0.3s ease;
+      }
+
+      .mobile-link-container ul li {
+        background-color: transparent;
+        color: #fff;
+      }
+      .mobile-link-container ul li a {
+        color: #fff;
+      }
+
+      .mobile-menu-logo-container {
+        border-bottom: 1px solid #fff;
+        padding-bottom: 10px;
+      }
+
+      .mobile-logo {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .mobile-logo img {
+        max-width: 125px;
+        height: auto;
+        object-fit: contain;
+      }
+      /* end of mobile menu */
+
+      /* header section start */
+
+      .header-section {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 9;
+        background-color: var(--navbar-bg);
+        transition: all 0.3s ease;
+      }
+
+      .header-section.fixed-header {
+        position: fixed;
+        background-color: #572a31;
+
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9;
+
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .club-logo a img {
+        max-width: 150px;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .navbar-container {
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar-menu-container {
+        margin-left: auto;
+      }
+
+      .navbar-menu-container ul li {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 40px;
+      }
+
+      .navbar-menu-container ul li a {
+        color: var(--navlink-color);
+        font-size: 13px;
+        font-weight: 500;
+        padding: 32px 0;
+        display: inline-block;
+        position: relative;
+        letter-spacing: 1px;
+
+        text-transform: uppercase;
+      }
+
+      .navbar-menu-container ul li a:before {
+        content: "";
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background-color: #fff;
+      }
+
+      .navbar-menu-container ul li a:hover:before {
+        width: 100%;
+        transform: translateX(-50%);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .navbar-menu-container ul li a img {
+        max-width: 24px;
+        height: 24px;
+        object-fit: contain;
+      }
+
+      .menu li a:hover,
+      .menu .active a {
+        color: var(--navlink-hover-color);
+      }
+
+      .menu .active a:before {
+        width: 100%;
+        transform: translateX(-50%);
+      }
+
+      /* header section end */
+
+      /* start hero section */
+
+      .hero-container {
+        background: linear-gradient(#572a31c0, #572a3193),
+          url("./crhs_assets/school_entrance.png") center center;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 250px 0;
+        position: relative;
+        z-index: 1;
+        height: 100dvh;
+      }
+
+      .hero-heading {
+        position: relative;
+        margin-bottom: 10px;
+        display: inline-block;
+      }
+
+      .hero-heading span.left-decor,
+      .hero-heading span.right-decor {
+        width: 30px;
+        height: 4px;
+        border-radius: 10px;
+        background-color: var(--primary-color);
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .hero-heading span.left-decor {
+        left: 0;
+      }
+      .hero-heading span.right-decor {
+        right: 0;
+      }
+
+      .hero-subheading {
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--primary-color);
+        text-transform: capitalize;
+        text-align: center;
+        padding: 0 35px;
+        display: inline-block;
+      }
+
+      .hero-button {
+        margin-top: 35px;
+      }
+
+      .hero-button-btn {
+        min-width: 150px;
+        padding: 15px 20px;
+        display: inline-block;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--button-text-color);
+        text-transform: capitalize;
+        background-color: var(--button-hover-bg);
+        border: 1px solid #fff;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-button-btn:hover {
+        background: var(--button-bg);
+        color: var(--button-text-color);
+
+        transform: scale(1.02);
+        /* box-shadow: 5px 5px 15px #b6465f; */
+      }
+
+      button.hero-button-btn {
+        border: none;
+      }
+
+      .hero-button .hero-button-btn {
+        min-width: 200px;
+        font-size: 18px;
+      }
+
+      .tag-line {
+        font-family: tangerine, cursive;
+        font-size: 48px;
+        margin-top: 20px;
+        font-weight: bold;
+        color: var(--primary-color);
+      }
+
+      /* end hero section */
+
+      /******************************************** 
+***********responsive styles **************
+*********************************************/
+
+      @media (min-width: 992px) {
+      }
+
+      @media (max-width: 1199px) {
+        .navbar-menu-container ul li {
+          margin-right: 10px;
+        }
+        .hero-container {
+          padding: 250px 0 80px 0;
+        }
+      }
+
+      @media (max-width: 991px) {
+        /* toggler */
+
+        .toggler {
+          display: block;
+          position: absolute;
+          right: 25px;
+          top: 75px;
+          cursor: pointer;
+          z-index: 99;
+        }
+
+        .toggler span {
+          width: 30px;
+          height: 4px;
+          background-color: #fff;
+          margin-bottom: 5px;
+          display: block;
+          margin-left: auto;
+          transition: all 0.3s ease-in-out;
+        }
+
+        .club-logo {
+          width: 100%;
+          padding: 15px;
+          border-radius: 5px;
+          position: relative;
+        }
+
+        .club-logo a img {
+          max-width: 125px;
+        }
+
+        .navbar-menu-container ul {
+          display: none;
+        }
+
+        .hero-container .row {
+          flex-direction: column-reverse;
+        }
+
+        .hero-container::before {
+          display: none;
+        }
+        .hero-container {
+          padding: 250px 0 50px 0;
+        }
+
+        .hero-button {
+          margin-top: 20px;
+        }
+        .hero-button .hero-button-btn {
+          min-width: 150px;
+          font-size: 15px;
+        }
+
+        /* end of toggler */
+      }
+
+      @media (max-width: 767px) {
+        /* toggler */
+        .toggler {
+          top: 56px;
+        }
+        /* end toggler */
+
+        .club-logo a img {
+          max-width: 100px;
+        }
+      }
+
+      @media (max-width: 575px) {
+        .toggler {
+          right: 15px;
+        }
+
+        .hero-container {
+          background-position: inherit;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .club-logo {
+          padding: 15px 0;
+          position: relative;
+        }
+
+        .club-logo a img {
+          max-width: 100px;
+          height: auto;
+        }
+
+        .hero-container span.left-decor,
+        .hero-container span.right-decor {
+          width: 20px;
+        }
+
+        .hero-subheading {
+          font-size: 18px;
+          font-weight: 500;
+          padding: 0 30px;
+        }
+
+        .hero-button-btn {
+          min-width: 130px;
+          padding: 10px 15px;
+          font-size: 15px;
+          font-weight: 400;
+        }
+      }
+
+      /******************************************** 
+*********** end responsive styles **************
+*********************************************/
+    </style>
+
+    <!--=== custom css ===-->
+
+    <!-- custom styles -->
+    <link rel="stylesheet" href="./custom_styles.css" />
+
+    <title>CRHS - Idea to Impact Club - Think Learn Change</title>
+
+    <meta
+      name="description"
+      content="A student-led club at CRHS where
+    economics, data analytics, and entrepreneurship meet real-world challenges
+    through research, leadership, and service."
+    />
+
+    <meta
+      name="keywords"
+      content="Idea To Impact Club, High School Club, Student Leadership, Data Analytics, Entrepreneurship, Community Service, Research Club, CRHS, Cinco Ranch High School"
+    />
+  </head>
+
+  <body>
+    <!-- join now button -->
+
+    <a
+      class="d-none d-md-block"
+      href="https://docs.google.com/forms/d/e/1FAIpQLSejN4RDv_N9YLX5RtFivRzzMTYat-0ljHlKqSn_drUquvEvbg/viewform?usp=sharing"
+      ><div class="join-now-float">
+        <div class="cube">
+          <div class="face front">
+            <img class="float-logo" src="./crhs_assets/symbol.png" alt="Logo" />
+          </div>
+          <div class="face back">
+            <p>Join Us</p>
+          </div>
+        </div>
+      </div></a
+    >
+
+    <!-- goto top button -->
+
+    <a href="#home" class="gototop-btn d-lg-none">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- mobile button -->
+    <div class="toggler">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- mobile menu -->
+    <div class="mobile-menu-container">
+      <div class="mobile-menu-logo-container">
+        <div class="mobile-logo">
+          <img
+            src="./crhs_assets/I2I-logo.png"
+            alt="idea to impace club Logo"
+          />
+          <div class="ps-3">
+            <h3 class="text-white">Idea To Impact Club</h3>
+            <p class="text-white">Think. Learn. Change</p>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-link-container pt-3">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <a href="#home">Home</a>
+          </li>
+
+          <li class="list-group-item">
+            <a class="mo-navlinks" href="#club-divisions" offset-top="80"
+              >Club Divisions</a
+            >
+          </li>
+          <li class="list-group-item">
+            <a class="mo-navlinks" href="#activities" offset-top="80"
+              >Activities</a
+            >
+          </li>
+          <li class="list-group-item">
+            <a class="mo-navlinks" href="#conference" offset-top="80"
+              >Conference</a
+            >
+          </li>
+          <li class="list-group-item">
+            <a class="mo-navlinks" href="#resources" offset-top="80"
+              >Resources</a
+            >
+          </li>
+          <li class="list-group-item">
+            <a class="mo-navlinks" href="#why-join" offset-top="80">Why Join</a>
+          </li>
+          <li class="list-group-item">
+            <a class="mo-navlinks" href="#leadership" offset-top="80"
+              >Leadership</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- end mobile menu -->
+
+    <!-- header section start -->
+    <div class="header-section">
+      <div class="container">
+        <div>
+          <div class="navbar-container">
+            <div class="club-logo">
+              <a href="index.html"
+                ><img src="./crhs_assets/I2I-logo.png" alt="idea to impact"
+              /></a>
+            </div>
+            <div class="navbar-menu-container">
+              <ul class="menu">
+                <li class="">
+                  <a href="#home" class="navlink" offset-top="80">Home</a>
+                </li>
+
+                <li>
+                  <a href="#club-divisions" class="navlink" offset-top="80"
+                    >Club Divisions</a
+                  >
+                </li>
+                <li>
+                  <a href="#activities" class="navlink" offset-top="80"
+                    >Activities</a
+                  >
+                </li>
+                <li>
+                  <a href="#conference" class="navlink" offset-top="80"
+                    >Conference</a
+                  >
+                </li>
+                <li>
+                  <a href="#resources" class="navlink" offset-top="80"
+                    >Resources</a
+                  >
+                </li>
+                <li>
+                  <a href="#why-join" class="navlink" offset-top="80"
+                    >Why Join</a
+                  >
+                </li>
+                <li>
+                  <a href="#leadership" class="navlink" offset-top="80"
+                    >Leadership</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- header section end -->
+    <!-- hero section start -->
+    <div class="hero-container" id="home">
+      <div class="container">
+        <div class="row gy-4 align-items-center">
+          <div class="col-12 text-center text-white">
+            <div class="">
+              <div class="hero-heading">
+                <span class="left-decor bg-white"></span>
+                <span class="right-decor bg-white"></span>
+                <h4 class="hero-subheading text-white">CRHS</h4>
+              </div>
+              <h1 class="text-white">
+                Welcome To <span> Idea</span> To Impact Club
+              </h1>
+              <p class="text-center tag-line text-white">
+                Think. Learn. Change.
+              </p>
+              <div class="hero-button">
+                <a
+                  target="_blank"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSejN4RDv_N9YLX5RtFivRzzMTYat-0ljHlKqSn_drUquvEvbg/viewform?usp=sharing"
+                  class="hero-button-btn"
+                  target="_blank"
+                  >Join Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- hero section end -->
+
+    <!-- Our Mission -->
+    <div class="our-mission" id="mission">
+      <div class="container">
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-6 col-md-12 order-2 order-lg-1">
+            <div
+              class="d-flex flex-column justify-content-center align-items-center"
+            >
+              <img
+                class="section-image"
+                src="./crhs_assets/i2ilogo-without-name-2.png"
+                alt="idea to impact logo"
+              />
+              <h4 class="fw-bold" style="color: #572a31">Idea To Impact</h4>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12 order-1 order-lg-2">
+            <div class="hero-heading">
+              <span class="left-decor"></span>
+              <span class="right-decor"></span>
+              <h4 class="hero-subheading">Learning That Leads to Change</h4>
+            </div>
+            <h2 class="section-main-heading text-start">OUR MISSION</h2>
+            <p class="our-mission-para">
+              <span>To</span> explore the real-world application of data
+              analytics, AI, and entrepreneurship in solving real-world
+              challenges, creating meaningful impact at our school and
+              community, and students to think critically, act ethically, and
+              innovate boldly
+            </p>
+            <!-- <a href="#" class="da-btn">read more</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Our Mission End -->
+
+    <!-- about section start -->
+    <div class="overview-section" id="about-us">
+      <div class="container">
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-6 col-md-12 order-2 order-lg-1">
+            <div class="hero-heading">
+              <span class="left-decor"></span>
+              <span class="right-decor"></span>
+              <h4 class="hero-subheading">Overview</h4>
+            </div>
+            <h2 class="section-main-heading text-start">
+              Where Curiosity Meets Real-World Action
+            </h2>
+            <p class="our-mission-para">
+              This club at Cinco Ranch High School is a student-led club that
+              blends academic curiosity with real-world action. Through
+              research, outreach, and enterprise, members will explore how
+              applied learnings intersects with business and community service
+              to create impact.
+            </p>
+            <a
+              target="_blank"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSejN4RDv_N9YLX5RtFivRzzMTYat-0ljHlKqSn_drUquvEvbg/viewform?usp=sharing"
+              class="hero-button-btn mt-5"
+              >Join Us</a
+            >
+          </div>
+          <div class="col-lg-6 col-md-12 order-1 order-lg-2">
+            <div class="">
+              <img
+                src="./crhs_assets/Cinco-Ranch-High-School-3.jpg"
+                alt="image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- about section end -->
+
+    <!-- club divisions start -->
+    <div class="club-divisions-section" id="club-divisions">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="hero-heading">
+              <span class="left-decor"></span>
+              <span class="right-decor"></span>
+              <h4 class="hero-subheading">club structure</h4>
+            </div>
+            <h2 class="section-main-heading">The Three Core Divisions</h2>
+          </div>
+        </div>
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="club-divisions-box">
+              <div class="box-container">
+                <span class="box-container-span"
+                  ><img src="./crhs_assets/3-div-technology.png" alt="image"
+                /></span>
+              </div>
+              <div class="club-divisions-content">
+                <h3>Technology</h3>
+                <ul>
+                  <li>
+                    <span>Learn AI</span> and data-driven analysis such as
+                    regression and visualization tools (e.g., Excel, R, Python
+                    basics)
+                  </li>
+                  <li>
+                    <span>Collaborate</span> on research projects — submit to
+                    national contests (e.g., MIT THINK, Fed Challenge).
+                  </li>
+                  <li><span>Organize</span> mini conference</li>
+                  <li>
+                    <span>Offer mentorship</span> in research, publishing,
+                    surveying, and writing
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="club-divisions-box">
+              <div class="box-container">
+                <span class="box-container-span"
+                  ><img src="./crhs_assets/3-div-community.png" alt="image"
+                /></span>
+              </div>
+              <div class="club-divisions-content">
+                <h3>Community</h3>
+                <ul>
+                  <li>
+                    <span>Use economics</span> and data to address local issues
+                    (e.g., impact of COVID on student learning)
+                  </li>
+                  <li>
+                    <span>Organize</span> donation drives, survey-based
+                    community studies, and awareness events
+                  </li>
+                  <li>
+                    <span>Partner</span> with nonprofits or school clubs (e.g.,
+                    NHS) to deliver action-oriented projects
+                  </li>
+                  <li>
+                    <span>Meet</span> community leaders and solve community
+                    problems
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="club-divisions-box">
+              <div class="box-container">
+                <span class="box-container-span">
+                  <img src="./crhs_assets/3-div-business.png" alt="image" />
+                </span>
+              </div>
+              <div class="club-divisions-content">
+                <h3>Business</h3>
+                <ul>
+                  <li>
+                    <span>Host speaker</span> sessions with startup founders,
+                    economists, or finance professionals
+                  </li>
+                  <li>
+                    <span>Simulations:</span> mock stock market, micro-loan
+                    fund, business plan competitions
+                  </li>
+                  <li>
+                    <span>Connect </span>to student's internship such as at a Y
+                    Combinator-backed EdTech firm to learn about real world
+                  </li>
+                  <li><span>Connect </span> in business plan competition</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- club divisions end -->
+
+    <!-- activities start -->
+    <div class="activities-section" id="activities">
+      <div class="container">
+        <div class="activities-heading-container">
+          <div class="hero-heading">
+            <span class="left-decor"></span>
+            <span class="right-decor"></span>
+            <h4 class="hero-subheading">Workshops & Competitions</h4>
+          </div>
+          <h2 class="section-main-heading">Key Activities</h2>
+        </div>
+
+        <h3 class="section-sub-heading text-center">Learning</h3>
+
+        <div class="row gy-4 mb-5">
+          <div class="col-lg-4 col-md-6">
+            <div class="activity-card">
+              <div class="box-container">
+                <span class="box-container-span"
+                  ><img src="./crhs_assets/learning-1.png" alt="image"
+                /></span>
+              </div>
+              <div class="activity-card-content">
+                <h4>
+                  Participating in Innovation Challenges and Learning
+                  Competitions
+                </h4>
+                <!-- <p>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eeu fugiat nulla pariatur. Excepteur sint
+                  occaecat.
+                </p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="activity-card">
+              <div class="box-container">
+                <span class="box-container-span"
+                  ><img src="./crhs_assets/learning-2.png" alt="image"
+                /></span>
+              </div>
+              <div class="activity-card-content">
+                <h4>
+                  Study sessions and cross-collaboration with other academic
+                  clubs.
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="activity-card">
+              <div class="box-container">
+                <span class="box-container-span"
+                  ><img src="./crhs_assets/learning-3.png" alt="image"
+                /></span>
+              </div>
+              <div class="activity-card-content">
+                <h4>Workshops on digital tools and AI methods</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="section-sub-heading text-center">Business</h3>
+
+        <div class="row gy-4 mb-5">
+          <div class="col-lg-4 col-md-6">
+            <div class="activity-card">
+              <div class="box-container">
+                <span class="box-container-span"
+                  ><img src="./crhs_assets/business-1.png" alt="image"
+                /></span>
+              </div>
+              <div class="activity-card-content">
+                <h4>
+                  Field visits to local businesses or municipal departments.
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="activity-card">
+              <div class="box-container">
+                <span class="box-container-span"
+                  ><img src="./crhs_assets/business-2.png" alt="image"
+                /></span>
+              </div>
+              <div class="activity-card-content">
+                <h4>
+                  Guest Sessions with Entrepreneurs and successful alumni.
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="activity-card">
+              <div class="box-container">
+                <span class="box-container-span"
+                  ><img src="./crhs_assets/business-3.png" alt="image"
+                /></span>
+              </div>
+              <div class="activity-card-content">
+                <h4>Simulated Stock Market and Business Competitions</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="section-sub-heading text-center">Community</h3>
+
+        <div class="row gy-4 mb-5">
+          <div class="col-lg-4 col-md-6">
+            <div class="activity-card">
+              <div class="box-container">
+                <span class="box-container-span"
+                  ><img src="./crhs_assets/community-1.png" alt="image"
+                /></span>
+              </div>
+              <div class="activity-card-content">
+                <h4>
+                  Econ4Good Competition - proposing real solutions to community
+                  issues.
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="activity-card">
+              <div class="box-container">
+                <span class="box-container-span"
+                  ><img src="./crhs_assets/community-2.png" alt="image"
+                /></span>
+              </div>
+              <div class="activity-card-content">
+                <h4>
+                  Student-led research presentations and impact campaigns.
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="activity-card">
+              <div class="box-container">
+                <span class="box-container-span"
+                  ><img src="./crhs_assets/community-3.png" alt="image"
+                /></span>
+              </div>
+              <div class="activity-card-content">
+                <h4>Hosting Awareness Campaigns and Donation Drives</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="section-sub-heading pt-5 mt-5 pb-5 text-center">
+          Planned Activities
+        </h3>
+
+        <section class="gallery-slider">
+          <div class="owl-carousel">
+            <div class="item">
+              <a data-fancybox="gallery" href="./crhs_assets/slide-1.png">
+                <img src="./crhs_assets/slide-1.png" alt="Image 1" />
+              </a>
+            </div>
+
+            <div class="item">
+              <a data-fancybox="gallery" href="./crhs_assets/slide-2.png">
+                <img src="./crhs_assets/slide-2.png" alt="Image 2" />
+              </a>
+            </div>
+
+            <div class="item">
+              <a data-fancybox="gallery" href="./crhs_assets/slide-3.png">
+                <img src="./crhs_assets/slide-3.png" alt="Image 3" />
+              </a>
+            </div>
+
+            <div class="item">
+              <a data-fancybox="gallery" href="./crhs_assets/slide-4.png">
+                <img src="./crhs_assets/slide-4.png" alt="Image 4" />
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="activities-section-2" id="conference">
+      <div class="container">
+        <h3 class="section-sub-heading text-center mb-5">Conference</h3>
+        <h6 class="text-center lh-base">
+          At the heart of our club is the spirit of learning, leading, and
+          creating real-world change. We will launch a unique opportunity for
+          students to showcase their talents across three exciting focus areas:
+        </h6>
+
+        <div class="row" id="conference">
+          <div class="col-lg-6">
+            <div class="row mt-5">
+              <h5 class="mb-3 fw-bold d-flex align-items-center gap-2">
+                <span class="box-container-span conference-span"
+                  ><img
+                    class="conference-img"
+                    src="./crhs_assets/./conference-1.png"
+                    alt=""
+                /></span>
+                Focus Areas
+              </h5>
+              <ul class="list-group list-group-flush mb-5 focus-area-list">
+                <li class="list-group-item">
+                  <span class="fw-bold">Applied Learning</span> — Economics,
+                  Data Analytics, and Research
+                </li>
+                <li class="list-group-item">
+                  <span class="fw-bold">Business & Innovation</span> —
+                  Entrepreneurship, Finance, and Startup Ideas
+                </li>
+                <li class="list-group-item">
+                  <span class="fw-bold">Community Impact</span> — Civic
+                  Engagement, Nonprofit Initiatives, and Local Solutions
+                </li>
+              </ul>
+
+              <h5 class="mb-3 fw-bold d-flex align-items-center gap-2">
+                <span class="box-container-span conference-span"
+                  ><img
+                    class="conference-img"
+                    src="./crhs_assets/conference-2.png"
+                    alt="" /></span
+                >Awards
+              </h5>
+              <p class="mb-2">
+                Each division will recognize
+                <span class="fw-bolder">three outstanding projects</span>
+                through awards that celebrate academic excellence, innovation,
+                and community leadership.
+              </p>
+              <p class="mb-5">
+                Winners will be recognized at our Conference Event and will have
+                opportunities to present their work to a panel of distinguished
+                judges.
+              </p>
+
+              <h5 class="mb-3 fw-bold d-flex align-items-center gap-2">
+                <span class="box-container-span conference-span"
+                  ><img
+                    class="conference-img"
+                    src="./crhs_assets/conference-3.png"
+                    alt=""
+                /></span>
+                Judging Panel
+              </h5>
+              <p class="mb-4">
+                Submissions will be evaluated by a panel of
+                <span class="fw-bold"
+                  >seasoned industry experts, community leaders, and faculty
+                  sponsors</span
+                >. Judging criteria will focus on originality, real-world
+                impact, analytical rigor, and presentation quality.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row mt-5">
+              <!-- Timeline Section -->
+              <section class="timeline-section">
+                <h4
+                  class="section-heading d-flex align-items-center gap-2 ms-5"
+                >
+                  <span class="box-container-span conference-span"
+                    ><img
+                      class="conference-img"
+                      src="./crhs_assets/date-1.png"
+                      alt=""
+                  /></span>
+                  Tentative Key Dates
+                </h4>
+                <div class="timeline">
+                  <div class="timeline-item">
+                    <div class="timeline-date">September 10, 2025</div>
+                    <div class="timeline-content">
+                      <h3>Submission Entry Opens</h3>
+                      <p>
+                        <a
+                          href="https://docs.google.com/forms/d/e/1FAIpQLSewWpm-anYDHQXQg8rTVZ1-f-HSfIfGr8O7WMdZs3DZKC72Rg/viewform"
+                          target="_blank"
+                          class="timeline-link"
+                          >Submit Your Entry Here!</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="timeline-date">September 25, 2025</div>
+                    <div class="timeline-content">
+                      <h3>Notification to Authors</h3>
+                      <p>Selected participants will be notified via email.</p>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="timeline-date">October 10, 2025</div>
+                    <div class="timeline-content">
+                      <h3>Final Materials Due</h3>
+                      <p>Final submissions must be completed and uploaded.</p>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="timeline-date">Late October 2025 (TBD)</div>
+                    <div class="timeline-content">
+                      <h3>Conference & Awards Ceremony</h3>
+                      <p>Details will be announced closer to the event date.</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- activities section end -->
+
+    <!-- resources start -->
+    <div class="resources-section pt-5 pb-5" id="resources">
+      <div class="activities-heading-container">
+        <div class="hero-heading">
+          <span class="left-decor"></span>
+          <span class="right-decor"></span>
+          <h4 class="hero-subheading">Valuable tools to help you grow</h4>
+        </div>
+        <h2 class="da-heading section-main-heading">Resources</h2>
+      </div>
+
+      <div class="container">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="true"
+                aria-controls="collapseThree"
+              >
+                Learning resources
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse">
+              <div class="accordion-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <a
+                      href="https://www.coursera.org/learn/ai-for-everyone"
+                      target="_blank"
+                      >AI For Everyone – Coursera (Andrew Ng)</a
+                    >
+                  </li>
+                  <li class="list-group-item">
+                    <a
+                      href="https://www.edx.org/course/data-science-for-everyone"
+                      target="_blank"
+                      >Data Science for Everyone – edX (HarvardX)</a
+                    >
+                  </li>
+                  <li class="list-group-item">
+                    <a
+                      href="https://www.youtube.com/watch?v=Gv9_4yMHFhI"
+                      target="_blank"
+                      >Machine Learning Crash Course – Google (YouTube)</a
+                    >
+                  </li>
+                  <li class="list-group-item">
+                    <a
+                      href="https://www.kaggle.com/learn/intro-to-machine-learning"
+                      target="_blank"
+                      >Intro to Machine Learning – Kaggle</a
+                    >
+                  </li>
+                  <li class="list-group-item">
+                    <a
+                      href="https://www.udemy.com/course/data-science-and-machine-learning-with-python-hands-on/"
+                      target="_blank"
+                      >Python for Data Science & ML – Udemy (Free course with
+                      coupons)</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                List of suitable high school journals for research publication
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse show">
+              <div class="accordion-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <a
+                      href="https://www.lumiere-education.com/post/15-journals-to-publish-your-research-in-high-school"
+                      >15 Journals to Publish Your Research in High School</a
+                    >
+                  </li>
+                  <li class="list-group-item">
+                    <a href="https://cjsjournal.org/"
+                      >The Columbia Junior Science Journal</a
+                    >
+                  </li>
+                  <li class="list-group-item">
+                    <a href="https://ajosr.org/"
+                      >American Journal of Student Research</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="true"
+                aria-controls="collapseTwo"
+              >
+                Internship opportunities
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse">
+              <div class="accordion-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <a href="#">To be declared at a later date</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- resources end -->
+
+    <!-- why join -->
+    <div class="why-join-container" id="why-join">
+      <div class="container">
+        <div class="row gy-4 align-items-center">
+          <div
+            class="col-lg-6 d-flex align-content-center justify-content-center"
+          >
+            <div class="why-join-img">
+              <a
+                target="_blank"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSejN4RDv_N9YLX5RtFivRzzMTYat-0ljHlKqSn_drUquvEvbg/viewform?usp=sharing"
+                ><img src="./crhs_assets/why-join-us.png" alt="image"
+              /></a>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center">
+            <div class="hero-heading mt-5">
+              <span class="left-decor"></span>
+              <span class="right-decor"></span>
+              <h4 class="hero-subheading">Where Purpose Meets Opportunity</h4>
+            </div>
+            <h2 class="section-main-heading">Why It Matters to Be Here</h2>
+
+            <div class="row gy-4 mt-3">
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="why-join-cards">
+                  <span>
+                    <img src="./crhs_assets/why-join-1.png" alt="image" />
+                  </span>
+                  <h4>
+                    Deepen your understanding of real-world challenges and
+                    solutions
+                  </h4>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="why-join-cards">
+                  <span>
+                    <img src="./crhs_assets/leadership.png" alt="image" />
+                  </span>
+                  <h4>
+                    Get hands-on experience in data, leadership, community
+                    services and business problems
+                  </h4>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="why-join-cards">
+                  <span>
+                    <img src="./crhs_assets/graduation-cap.png" alt="image" />
+                  </span>
+                  <h4>
+                    Build a competitive profile for college and scholarships
+                  </h4>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="why-join-cards">
+                  <span>
+                    <img src="./crhs_assets/united.png" alt="image" />
+                  </span>
+                  <h4>
+                    Join a team passionate about solving problems that matter to
+                    humanity
+                  </h4>
+                </div>
+              </div>
+            </div>
+
+            <a
+              target="_blank"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSejN4RDv_N9YLX5RtFivRzzMTYat-0ljHlKqSn_drUquvEvbg/viewform?usp=sharing"
+              class="hero-button-btn mt-5 text-center w-100"
+              >Join Us</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- why join end -->
+
+    <!-- leadership  start -->
+    <div class="leadership-section pb-5" id="leadership">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="hero-heading">
+              <span class="left-decor"></span>
+              <span class="right-decor"></span>
+              <h4 class="hero-subheading">The Team Behind the Mission</h4>
+            </div>
+            <h2 class="section-main-heading">Leadership</h2>
+          </div>
+        </div>
+        <div
+          class="mt-5 d-flex flex-wrap justify-content-center align-items-center gap-5"
+        >
+          <!-- team card -->
+          <div class="card">
+            <div class="card-img-container">
+              <img
+                src="./crhs_assets/gary.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Gary Lauderdale</h5>
+                <p class="card-text">Sponsor Teacher</p>
+              </div>
+            </div>
+            <div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">MS, University of Houston</li>
+                <li class="list-group-item">BS, Florida State University</li>
+                <li class="list-group-item">
+                  Featured in Teach Like a Champion 2.0
+                </li>
+                <li class="list-group-item">Authored high school courses</li>
+              </ul>
+              <div class="card-links-container">
+                <a href=""><i class="fa-solid fa-mobile"></i></a>
+                <a href=""><i class="fa-brands fa-square-whatsapp"></i></a>
+
+                <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href=""><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- team card -->
+          <div class="card">
+            <div class="card-img-container">
+              <img
+                src="./crhs_assets/rohan-card.webp"
+                class="card-img-top"
+                alt="Rohan Jha"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Rohan Jha</h5>
+                <p class="card-text">Founder & President</p>
+              </div>
+            </div>
+            <div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">3× AIME Qualifier</li>
+
+                <li class="list-group-item">
+                  Intern, Y Combinator-backed EdTech Startup
+                </li>
+                <li class="list-group-item">
+                  5 Research Papers including in Oxford Open Economics,
+                  Frontiers in Sustainability
+                </li>
+              </ul>
+              <div class="card-links-container">
+                <a href=""><i class="fa-solid fa-mobile"></i></a>
+                <a href=""><i class="fa-brands fa-square-whatsapp"></i></a>
+
+                <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href=""><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- team card end -->
+          <div class="card">
+            <div class="card-img-container">
+              <img src="" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Name</h5>
+                <p class="card-text">Vice President of Communication</p>
+              </div>
+            </div>
+            <div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Achievement 1</li>
+
+                <li class="list-group-item">Achievement 2</li>
+                <li class="list-group-item">Achievement 3</li>
+              </ul>
+              <div class="card-links-container">
+                <a href=""><i class="fa-solid fa-mobile"></i></a>
+                <a href=""><i class="fa-brands fa-square-whatsapp"></i></a>
+
+                <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href=""><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img-container">
+              <img src="" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Name</h5>
+                <p class="card-text">Vice President of Technology</p>
+              </div>
+            </div>
+            <div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Achievement 1</li>
+
+                <li class="list-group-item">Achievement 2</li>
+                <li class="list-group-item">Achievement 3</li>
+              </ul>
+              <div class="card-links-container">
+                <a href=""><i class="fa-solid fa-mobile"></i></a>
+                <a href=""><i class="fa-brands fa-square-whatsapp"></i></a>
+
+                <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href=""><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img-container">
+              <img src="" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Name</h5>
+                <p class="card-text">Vice President of Business</p>
+              </div>
+            </div>
+            <div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Achievement 1</li>
+
+                <li class="list-group-item">Achievement 2</li>
+                <li class="list-group-item">Achievement 3</li>
+              </ul>
+              <div class="card-links-container">
+                <a href=""><i class="fa-solid fa-mobile"></i></a>
+                <a href=""><i class="fa-brands fa-square-whatsapp"></i></a>
+
+                <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href=""><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img-container">
+              <img src="" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Name</h5>
+                <p class="card-text">Vice President of Community</p>
+              </div>
+            </div>
+            <div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Achievement 1</li>
+
+                <li class="list-group-item">Achievement 2</li>
+                <li class="list-group-item">Achievement 3</li>
+              </ul>
+              <div class="card-links-container">
+                <a href=""><i class="fa-solid fa-mobile"></i></a>
+                <a href=""><i class="fa-brands fa-square-whatsapp"></i></a>
+
+                <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href=""><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- leadership end -->
+
+    <!-- news & circulars start -->
+    <div class="news-section" id="news">
+      <div class="container text-center">
+        <div class="hero-heading">
+          <span class="left-decor"></span>
+          <span class="right-decor"></span>
+          <h4 class="hero-subheading">Club News</h4>
+        </div>
+        <h2 class="section-main-heading">Notices & Circulars</h2>
+
+        <div class="container mt-5">
+          <ul class="list-group">
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              Notice - 1 - Date
+              <button class="hero-button-btn p-2">Download Notice</button>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              Notice - 2 - Date
+              <button class="hero-button-btn p-2">Download Notice</button>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              Notice - 3 - Date
+              <button class="hero-button-btn p-2">Download Notice</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- news & circulars end -->
+
+    <!-- footer section start -->
+    <div class="footer-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-4 col-md-12 mb-md-3">
+            <div class="footer-logo">
+              <a href="#home">
+                <img src="./crhs_assets/I2I-logo.png" alt="image" />
+              </a>
+            </div>
+
+            <p class="tag-line text-white fs-2">Think. Learn. Change.</p>
+
+            <div class="footer-social-links">
+              <ul>
+                <li>
+                  <a href=""><img src="./crhs_assets/fb.png" alt="image" /></a>
+                </li>
+                <li>
+                  <a href=""><img src="./crhs_assets/tw.png" alt="image" /></a>
+                </li>
+                <li>
+                  <a href=""
+                    ><img src="./crhs_assets/insta.png" alt="image"
+                  /></a>
+                </li>
+                <li>
+                  <a href=""><img src="./crhs_assets/wa.png" alt="image" /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 col-12">
+            <div class="footer-links-container">
+              <div>
+                <h2 class="footer-heading">Quick Links</h2>
+              </div>
+              <div class="footer-links">
+                <ul>
+                  <li>
+                    <a href="#home" class="navlink" offset-top="80">Home</a>
+                  </li>
+
+                  <li>
+                    <a href="#club-divisions" class="navlink" offset-top="80"
+                      >Club Divisions</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#activities" class="navlink" offset-top="80"
+                      >Activities</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#conference" class="navlink" offset-top="80"
+                      >Conference</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#resources" class="navlink" offset-top="80"
+                      >Resources</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#news" class="navlink" offset-top="80"
+                      >News & Circulars</a
+                    >
+                  </li>
+
+                  <li>
+                    <a href="#leadership" class="navlink" offset-top="80"
+                      >Leadership</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6 col-md-6">
+            <div>
+              <h2 class="footer-heading">Send Us a Message</h2>
+            </div>
+
+            <form
+              action="https://formsubmit.co/crhs.i2i.econ@gmail.com"
+              method="POST"
+              class="iq-form"
+            >
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Enter Your Name Here..."
+              />
+
+              <input
+                id="message"
+                name="message"
+                type="text"
+                placeholder="Enter Your Message Here"
+              />
+
+              <button type="submit" class="enquiry-btn w-100">
+                Send Inquiry
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer section end -->
+
+    <!-- copyright section start -->
+    <div class="copyright-section ps-2 pe-2">
+      <div>
+        <p>
+          Copyright © &nbsp; <span class="copy-year"></span> &nbsp;
+          <a href="#home">Idea To Impact Club.</a> &nbsp; All Rights Reserved.
+        </p>
+      </div>
+      <div>
+        <p class="creator">
+          <a
+            target="_blank"
+            style="font-size: 10px; font-weight: 400"
+            href="https://vaibhavlvl1.github.io/afterhoursweb"
+          >
+            by AfterHoursWeb</a
+          >
+        </p>
+      </div>
+    </div>
+    <!-- copyright section end -->
+    <!--=== Optional JavaScript ===-->
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      defer
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+      defer
+    ></script>
+
+    <!-- Owl Carousel JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      defer
+    ></script>
+
+    <!-- Fancybox JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"
+      defer
+    ></script>
+    <!--=== Optional JavaScript ===-->
+    <script src="./custom.js" defer></script>
+  </body>
+</html>
