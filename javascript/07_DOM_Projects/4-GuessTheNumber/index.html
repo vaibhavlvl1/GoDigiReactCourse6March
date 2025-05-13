@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Number Guessing Game</title>
+  <style>
+    html {
+      font-family: sans-serif;
+    }
+
+    body {
+      width: 300px;
+      max-width: 750px;
+      min-width: 480px;
+      margin: 0 auto;
+      background-color: #212121;
+    }
+
+    .lastResult {
+      color: white;
+      padding: 7px;
+    }
+
+    .guesses {
+      color: white;
+      padding: 7px;
+    }
+
+    button {
+      background-color: #141414;
+      color: #fff;
+      width: 250px;
+      height: 50px;
+      border-radius: 25px;
+      font-size: 30px;
+      border-style: none;
+      margin-top: 30px;
+    }
+
+    #subt {
+      background-color: #161616;
+      color: #ffffff;
+      width: 200px;
+      height: 50px;
+      border-radius: 10px;
+      font-size: 20px;
+      border-style: none;
+      margin-top: 50px;
+    }
+
+    #guessField {
+      color: #000;
+      width: 250px;
+      height: 50px;
+      font-size: 30px;
+      border-style: none;
+      margin-top: 25px;
+      border: 5px solid #6c6d6d;
+      text-align: center;
+    }
+
+    #guess {
+      font-size: 55px;
+      margin-top: 120px;
+      color: #fff;
+    }
+
+    .guesses {
+      background-color: #7a7a7a;
+    }
+
+    #wrapper {
+      box-sizing: border-box;
+      text-align: center;
+      width: 450px;
+      height: 550px;
+      background-color: #474747;
+      color: #fff;
+      font-size: 25px;
+    }
+
+    h1 {
+      background-color: #161616;
+      color: #fff;
+      text-align: center;
+    }
+
+    p {
+      font-size: 16px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body style="background-color:#212121; color:#fff;">
+  <div id="wrapper">
+    <h1>Number guessing game</h1>
+    <p>Try and guess a random number between 1 and 100.</p>
+    <p>You have 10 attempts to guess the right number.</p>
+    </br>
+    <form class="form">
+      <label2 for="guessField" id="guess">Guess a number</label>
+        <input type="text" id="guessField" class="guessField">
+        <input type="submit" id="subt" value="Submit guess" class="guessSubmit">
+    </form>
+
+    <div class="resultParas">
+      <p>Previous Guesses: <span class="guesses"></span></p>
+      <p>Guesses Remaining: <span class="lastResult">10</span></p>
+      <p class="lowOrHi"></p>
+    </div>
+  </div>
+
+  <script>
+    // 1. Random Number generate karna jo user ko guess karna hai
+    const randomNumber = (parseInt(Math.random() * 100 + 1));
+
+    // 2. DOM elements ko select karna, jahan user input aur results show karenge
+    const submit = document.querySelector('#subt'); // Submit button
+    const userInput = document.querySelector('#guessField'); // User ka guess input field
+    const guessSlot = document.querySelector('.guesses'); // Previous guesses show karna
+    const lastResult = document.querySelector('.lastResult'); // Remaining guesses display karna
+    const lowOrHi = document.querySelector('.lowOrHi'); // Low or High hint display karna
+
+    // 3. Variables set karte hain: previous guesses aur attempts
+    const p = document.createElement('p'); // New paragraph create karna (result display ke liye)
+
+    let prevGuess = []; // Array jisme previous guesses store karenge
+    let numGuess = 1; // Number of attempts (starts from 1)
+    let playGame = true; // Game start hone ka flag
+
+    // 4. Jab user submit karta hai guess, form ka submit event handle karna
+    submit.addEventListener('click', function (e) {
+      e.preventDefault(); // Form ka default action prevent karna (page reload na ho)
+
+      let guess = parseInt(userInput.value); // User ka input guess ko integer mein convert karna
+
+      // 5. User input ko validate karna (check if it's a valid number)
+      if (isNaN(guess) || guess < 1 || guess > 100) {
+        displayMessage("Please enter a number between 1 and 100.");
+        return;
+      }
+
+      // 6. Check karna ki guess sahi hai ya nahi
+      checkGuess(guess);
+      // 7. Guess display karna
+      displayGuess(guess);
+    });
+
+    // 8. Guess ki value check karna
+    function checkGuess(guess) {
+      if (guess === randomNumber) {
+        // Agar guess sahi hai
+        displayMessage("Congratulations! You've guessed it right!");
+        endGame(); // Game end karna
+      } else if (numGuess === 10) {
+        // Agar 10 attempts ho gaye
+        displayMessage("Game over! The correct number was: " + randomNumber);
+        endGame();
+      } else {
+        // Agar guess sahi nahi hai, hint dena (low ya high)
+        if (guess < randomNumber) {
+          displayMessage("Your guess is too low!");
+        } else if (guess > randomNumber) {
+          displayMessage("Your guess is too high!");
+        }
+      }
+    }
+
+    // 9. Guess ko display karna
+    function displayGuess(guess) {
+      prevGuess.push(guess); // New guess ko previous guesses mein add karna
+      guessSlot.textContent = prevGuess.join(', '); // Previous guesses ko update karna
+      lastResult.textContent = 10 - numGuess; // Remaining guesses ko update karna
+      numGuess++; // Attempts increment karna
+    }
+
+    // 10. Message display karna
+    function displayMessage(message) {
+      lowOrHi.textContent = message; // Low or High hints ko update karna
+    }
+
+    // 11. Game ko end karna
+    function endGame() {
+      userInput.disabled = true; // User input ko disable karna game ke baad
+      submit.disabled = true; // Submit button ko disable karna game ke baad
+    }
+
+    // 12. New game start karne ke liye
+    function newGame() {
+      numGuess = 1; // Attempts ko reset karna
+      prevGuess = []; // Previous guesses ko clear karna
+      guessSlot.textContent = ''; // Previous guesses ko empty karna
+      lastResult.textContent = 10; // Remaining guesses ko reset karna
+      lowOrHi.textContent = ''; // Low/High message ko clear karna
+      userInput.disabled = false; // User input ko enable karna
+      submit.disabled = false; // Submit button ko enable karna
+      randomNumber = (parseInt(Math.random() * 100 + 1)); // New random number generate karna
+    }
+  </script>
+</body>
+
+</html>

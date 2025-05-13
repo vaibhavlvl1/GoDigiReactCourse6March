@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Function Examples</title>
+</head>
+<body>
+    <script>
+        // Example object with a method
+        let person = {
+            firstName: "John",
+            lastName: "Doe"
+        };
+
+        // Function to greet the person
+        function greet(greeting) {
+            return greeting + ", " + this.firstName + " " + this.lastName + "!";
+        }
+
+        // Using bind
+        let greetJohn = greet.bind(person, "Hello");
+        document.write("Using bind: " + greetJohn() + "<br>"); // Output: Hello, John Doe!
+
+        // Using call
+        let message = greet.call(person, "Good morning");
+        document.write("Using call: " + message + "<br>"); // Output: Good morning, John Doe!
+
+        // Using toString
+        document.write("Using toString: " + greet.toString() + "<br>");
+    </script>
+</body>
+</html>

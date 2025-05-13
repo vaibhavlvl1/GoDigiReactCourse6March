@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>BMI Calculator</title>
+  <style>
+    /* Container ka style - isme width, height aur dark background color diya gaya hai */
+    .container {
+      width: 575px;
+      /* Container ki width */
+      height: 825px;
+      /* Container ki height */
+      background-color: #212121;
+      /* Dark grey background */
+      padding-left: 30px;
+      /* Left padding */
+      color: #fff;
+      /* Text ka color white */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* Content ko center align karte hain */
+      justify-content: center;
+      /* Content ko vertically center karte hain */
+    }
+
+    /* Height aur Weight input fields ka style */
+    #height,
+    #weight {
+      width: 150px;
+      /* Input fields ka width */
+      height: 25px;
+      /* Input fields ki height */
+      margin-top: 30px;
+      /* Input fields ke upar space */
+    }
+
+    /* Weight guide section ka style */
+    #weight-guide {
+      margin-left: 75px;
+      /* Left margin for weight guide */
+      margin-top: 25px;
+      /* Top margin for weight guide */
+    }
+
+    /* BMI result ka style - Yeh large font size ke saath result show karega */
+    #results {
+      font-size: 35px;
+      /* Result ka font size */
+      margin-left: 90px;
+      /* Left margin */
+      margin-top: 20px;
+      /* Top margin */
+      color: rgb(241, 241, 241);
+      /* Light grey color for the text */
+    }
+
+    /* Calculate button ka style */
+    button {
+      width: 150px;
+
+      height: 35px;
+
+      margin-left: 90px;
+
+      margin-top: 25px;
+
+      background-color: #fff;
+
+      padding: 1px 30px;
+
+      border-radius: 8px;
+
+      color: #212121;
+
+      text-decoration: none;
+
+      border: 2px solid #212121;
+
+      font-size: 25px;
+
+    }
+
+    /* Heading ka style */
+    h1 {
+      padding-left: 15px;
+
+      padding-top: 25px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Heading of the page -->
+    <h1>BMI Calculator</h1>
+
+    <!-- Form jisme height aur weight input fields hain -->
+    <form>
+      <!-- Label aur input field for Height -->
+      <p><label for="height">Height in CM: </label><input type="number" id="height" /></p>
+      <!-- Label aur input field for Weight -->
+      <p><label for="weight">Weight in KG: </label><input type="number" id="weight" /></p>
+
+      <!-- Calculate button -->
+      <button type="submit">Calculate</button>
+
+      <!-- Yeh div BMI result ko show karega -->
+      <div id="results"></div>
+
+      <!-- BMI weight guide ko explain karne wala section -->
+      <div id="weight-guide">
+        <h3>BMI Weight Guide</h3>
+        <p>Under Weight = Less than 18.6</p>
+        <p>Normal Range = 18.6 and 24.9</p>
+        <p>Overweight = Greater than 24.9</p>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // Form ko select karke event listener add kar rahe hain
+    const form = document.querySelector('form');
+
+    // Form submit hone par yeh function execute hoga
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // Form ka default behavior prevent karte hain (page reload nahi hoga aur data submit nahi hoga)
+
+      // Height aur weight input values ko get kar rahe hain
+      const height = parseInt(document.querySelector('#height').value);
+      const weight = parseInt(document.querySelector('#weight').value);
+
+      // Results ko show karne wala div
+      const results = document.querySelector('#results');
+
+      // Agar height ya weight invalid hai (empty ya NaN), to error message show hoga
+      if (height === '' || isNaN(height) || height <= 0) {
+        results.innerHTML = 'Please enter valid Height'; // Height ke liye error message
+      } else if (weight === '' || isNaN(weight) || weight <= 0) {
+        results.innerHTML = 'Please enter valid Weight'; // Weight ke liye error message
+      } else {
+        // BMI calculate karte hain - BMI formula (Weight / (Height * Height) in meters)
+        const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+        // Result ko show kar rahe hain
+        results.innerHTML = `Your BMI is ${bmi}`;
+
+        // BMI ke range ka check aur result show karna
+        if (bmi < 18.6) {
+          results.innerHTML += '<br />You are Under Weight';
+        } else if (bmi >= 18.6 && bmi <= 24.9) {
+          results.innerHTML += '<br />You are in Normal Range';
+        } else {
+          results.innerHTML += '<br />You are Overweight';
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>

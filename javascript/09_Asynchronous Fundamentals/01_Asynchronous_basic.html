@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asynchronous JavaScript Example</title>
+</head>
+
+<body>
+
+  <h1>Asynchronous JavaScript</h1>
+  <!-- Asynchronous JavaScript ka matlab hota hai ki ek kaam ko shuru karne ke baad dusra kaam shuru kar sakte hain, bina
+  pehle kaam ka intezaar kiye. -->
+  <pre>
+    // Example of Asynchronous Code:
+    console.log('Hello World!');
+    setTimeout(function () {
+      console.log('Hello World! after 2 seconds');
+    }, 2000);
+    console.log('Hello Again!');
+  </pre>
+
+  <!-- Blocking Code / Synchronous Code -->
+  <!-- Synchronous means the code runs in a particular sequence of instructions. The code is executed line by line. The next line of code will not be executed until the current line of code has been executed. This is called blocking code. -->
+
+  <pre>
+    // Example of Synchronous Code:
+    console.log('Hello World!');
+    alert('Hello World!');
+  </pre>
+
+
+  <!--Non-Blocking Code / Asynchronous Code -->
+  <!-- Non-Blocking Code: Non-blocking code woh hota hai jo ek kaam ko shuru karne ke baad, dusra kaam shuru kar deta hai, bina pehle kaam ka intezaar kiye isi ko hum asynchronous code kehte hain. -->
+
+  <!-- Example of Asynchronous Code: -->
+  <p>Click the button to see the message.</p>
+  <button id="btn">Click me</button>
+  <script>
+    // Yahaan par hum 'btn' ID wale button pe click event listener laga rahe hain.
+    document.getElementById('btn').addEventListener('click', function () {
+      // Jab button pe click hoga, hum 2 seconds ke baad message show karenge
+      setTimeout(function () {
+        alert('Hello World!');
+      }, 2000);
+    });
+
+    // Example of Synchronous Code:
+    console.log('Hello World!');
+    alert('Hello World!');
+
+  </script>
+
+</body>
+
+</html>

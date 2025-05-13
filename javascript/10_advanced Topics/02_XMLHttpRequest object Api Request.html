@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Request in JavaScript</title>
+</head>
+
+<body>
+  <h2>API Request using XMLHttpRequest</h2>
+
+  <script>
+    // ****************** Step 1: XMLHttpRequest Object Create Karna ****************** //
+    // XMLHttpRequest ek built-in JavaScript object hai jo hume server se data fetch karne me madad karta hai.
+    // Iska use hum asynchronous data fetching ke liye karte hain, jaise ki kisi API se data lena.
+    const xhr = new XMLHttpRequest(); // XMLHttpRequest object create kiya
+
+    // ****************** Step 2: API URL Define Karna ****************** //
+    // Yahan hum ek external API ka endpoint define kar rahe hain, jo ek GitHub user ka data provide karega.
+    const apiUrl = 'https://api.github.com/users/hiteshchoudhary';
+
+    // ****************** Step 3: Request Open Karna ****************** //
+    // open() method ke madhyam se request ko initialize karte hain.
+    // Is method me 3 parameters hote hain: method (GET/POST), API URL, aur async (true/false).
+    xhr.open('GET', apiUrl, true); // GET request send kar rahe hain asynchronously
+
+    // ****************** Step 4: Response Handle Karna ****************** //
+    // onreadystatechange ek event listener hai jo tabhi trigger hota hai jab request ki state change hoti hai.
+    xhr.onreadystatechange = function () {
+      console.log("Current ReadyState: ", xhr.readyState);
+
+      /* readyState ki possible values:
+      0 - UNSENT: Request abhi initialize nahi hui.
+      1 - OPENED: Request open ho chuki hai.
+      2 - HEADERS_RECEIVED: Server ne request receive kar li hai.
+      3 - LOADING: Data process ho raha hai.
+      4 - DONE: Request complete ho chuki hai, response ready hai.
+      */
+
+      // Agar request complete ho gayi aur status 200 hai, to response handle karein
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        console.log("Request Successful! Response Mil Gaya");
+
+        const dataReceived = xhr.responseText; // Response hume string format me milega
+        console.log("String Response: ", dataReceived); //Responsetext ek property hai jo XMLHttpRequest object me hoti hai aur jo server se aane wala response string format me hota hai jise hum parse karke use kar sakte hain.
+
+        // ****************** Step 5: JSON Format Me Convert Karna ****************** //
+        // JSON.parse() ka use karke response string ko JSON object me convert karte hain.
+        const jsonData = JSON.parse(dataReceived);
+        console.log("JSON Data: ", jsonData); // JSON object print karenge.
+
+        // ****************** Step 6: Specific Data Access Karna ****************** //
+        // JSON object me se hum specific fields extract kar sakte hain.
+        console.log("User Name: ", jsonData.name);
+        console.log("Followers: ", jsonData.followers);
+      }
+    };
+
+    // ****************** Step 7: Request Send Karna ****************** //
+    // send() method ka use karke hum request server ko bhejte hain.
+    xhr.send(); // Request send kar di
+
+    /* ****************** Additional Points ******************
+    1. Agar request asynchronous hoti hai (true pass kiya hai open() me), to ye non-blocking hoti hai.
+    2. Agar API URL galat diya jaye ya internet issue ho to error response mil sakta hai.
+    3. Modern JavaScript me Fetch API aur Axios bhi use kiye jate hain jo aur easy aur flexible hain.
+    4. readyState aur status ka dhyan rakhna zaroori hai kyunki agar status 200 ke alawa kuch aur ho to request fail ho sakti hai.
+    5. XMLHttpRequest object synchronous bhi ho sakta hai (false pass karne se) lekin synchronous request recommended nahi hai kyunki ye page ko freeze kar sakta hai.
+    */
+  </script>
+</body>
+
+</html>

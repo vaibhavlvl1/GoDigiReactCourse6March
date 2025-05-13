@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>setTimeout and setInterval Example</title>
+</head>
+
+<body>
+  <h1>setTimeout and setInterval Demo</h1>
+
+  <p id="message">This message will change after 3 seconds.</p>
+
+  <p id="counter">Counter: 0</p>
+
+  <script>
+    // Using setTimeout to change the message after 3 seconds
+    setTimeout(function () {
+      document.getElementById("message").innerHTML = "Hello! 3 seconds have passed.";
+    }, 3000); // 3000 ms = 3 seconds
+
+    // Using   to increment the counter every 1 second
+    let counter = 0;
+    setInterval(function () {
+      counter++;
+      document.getElementById("counter").innerHTML = "Counter: " + counter;
+    }, 1000); // 1000 ms = 1 second
+  </script>
+</body>
+
+</html>

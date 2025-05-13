@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If-Else Examples</title>
+</head>
+<body>
+    <h1>If-Else Examples</h1>
+
+    <script>
+        // Example 1: Checking if a number is positive, negative, or zero
+        let num = 10;
+        if (num > 0) {
+            document.write("Example 1: Number is positive.<br>");
+        } else if (num < 0) {
+            document.write("Example 1: Number is negative.<br>");
+        } else {
+            document.write("Example 1: Number is zero.<br>");
+        }
+
+        // Example 2: Checking if a number is even or odd
+        let number = 7;
+        if (number % 2 === 0) {
+            document.write("Example 2: Number is even.<br>");
+        } else {
+            document.write("Example 2: Number is odd.<br>");
+        }
+
+        // Example 3: Checking if a person is eligible to vote
+        let age = 20;
+        if (age >= 18) {
+            document.write("Example 3: Eligible to vote.<br>");
+        } else {
+            document.write("Example 3: Not eligible to vote.<br>");
+        }
+
+        // Example 4: Checking if a year is a leap year
+        let year = 2024;
+        if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+            document.write("Example 4: Leap year.<br>");
+        } else {
+            document.write("Example 4: Not a leap year.<br>");
+        }
+
+        // Example 5: Checking if a number is positive, negative, or zero using ternary operator
+        let num2 = -5;
+        let result = (num2 > 0) ? "Positive" : (num2 < 0) ? "Negative" : "Zero";
+        document.write("Example 5: Number is " + result + ".<br>");
+    </script>
+</body>
+</html>

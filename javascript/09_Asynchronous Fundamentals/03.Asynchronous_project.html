@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asynchronous Example</title>
+</head>
+
+<body>
+  <h1 id="heading">Chai aur Meghraj</h1>
+  <button id="stop">STOP</button>
+  <button id="start">START</button>
+
+  <script>
+    // ******************** setInterval() Explanation ******************** //
+    // setInterval() ek asynchronous function hai jo ek specified time interval ke baad repeatedly execute hota hai.
+    // SetInterval() two arguments leta hai: ek callback function aur ek time interval in milliseconds. 
+    // Ye ek baar chalne ke baad dusre code ko block nahi karta, isiliye asynchronous behavior show karta hai.
+    // clearInterval() ka use karke ise stop kiya ja sakta hai.
+    // Syntax: setInterval(callbackFunction, timeIntervalInMilliseconds);
+
+    // ******************** Example: Changing Text Using setInterval() ******************** //
+
+    //Function H1 ke text/Color ko change karega aur isko ek variable me store kiya hai ise setInterval() me pass karna hai.
+    const updateHeading = () => {
+      document.getElementById("heading").innerHTML = "<h1 style='color:red'>Text Changed!<h1>";
+      console.log("Meghraj");
+    }
+
+    // setInterval() ko ek variable me store kiya gaya hai taki isse stop kiya ja sake.
+    const interval_Id = setInterval(updateHeading, 3000); // Har 3 second me text change hoga.
+
+    //Stopping setInterval() function using clearInterval() function by clicking on "STOP" button.
+    document.getElementById("stop").addEventListener("click", function () {
+      clearInterval(interval_Id); // setInterval() ko stop karne ke liye clearInterval() ka use kiya gaya hai.
+
+      console.log("Status: Stopped First Code");
+    });
+
+    //Starting setInterval() function using clearInterval() function by clicking on "START" button.
+    document.getElementById('start').addEventListener('click', function () {
+      setInterval(updateHeading, 3000);
+      console.log("Status: Started");
+    });
+
+    //Another Example
+    //Here, we are passing the third argument to the setInterval() function because hume callback function ke sath ek aur argument pass karna hai. Yahapar callback function naam hai sayDate.
+    const sayDate = (str) => {
+      console.log(str, new Date().toUTCString());
+    }
+    const newIntervalId = setInterval(sayDate, 5000, "Hi Current Date is: "); // Har 1 second me date print hoga.
+
+    //Stopping setInterval() function using clearInterval() function by clicking on "STOP" button.
+    document.getElementById("stop").addEventListener("click", function () {
+      clearInterval(newIntervalId); // setInterval() ko stop karne ke liye clearInterval() ka use kiya gaya hai.
+
+      console.log("Status: Stopped Second Code");
+    });
+
+  </script>
+</body>
+
+</html>

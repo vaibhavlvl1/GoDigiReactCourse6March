@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter</title>
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px 40px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  #container {
+    text-align: center;
+    background-color: #1abc9c;
+    padding: 50px;
+    border-radius: 20px;
+
+  }
+
+  .input-div {
+    display: inline-block;
+  }
+
+  .inp {
+    padding: 5px 10px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 250px;
+    text-align: center;
+  }
+
+  label {
+    font-size: 20px;
+    font-weight: bold;
+  }
+</style>
+
+<body>
+
+  <h1>Temperature Converter</h1>
+  <div id="container">
+    <div class="input-div">
+      <label>Celcius</label>
+      <br>
+      <input type="number" name="" id="cel" value="0" class="inp">
+
+    </div>
+    <div class="input-div">
+      <label>Fahrenheit</label>
+      <br>
+      <input type="number" name="" id="fah" value="32" class="inp">
+
+    </div>
+  </div>
+
+  <script>
+    let cel = document.getElementById('cel');
+    let fah = document.getElementById('fah');
+
+    cel.addEventListener('input', function () {
+      let c = this.value;
+      let f = (c * 9 / 5) + 32;
+      fah.value = f.toPrecision(6);
+    });
+
+
+    fah.addEventListener('input', function () {
+      let f = this.value;
+      let c = (f - 32) * 5 / 9;
+      cel.value = c.toPrecision(6);
+    });
+  </script>
+</body>
+
+</html>

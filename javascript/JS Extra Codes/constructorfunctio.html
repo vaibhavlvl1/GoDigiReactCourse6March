@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Objects Using Constructor Function</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        function Person(fname,lname,age,weight){
+            this.fname = fname;
+            this.lname = lname;
+            this.age = age;
+            this.weight = weight;
+        }
+
+        let mydetail = new Person('Meghraj','Hamade',27,68);
+        let fatherdetail = new Person('Subhash','Hamade',56,70);
+
+        document.getElementById("demo").innerHTML='My Name is: ' + mydetail.fname ;
+    </script>
+</body>
+</html>

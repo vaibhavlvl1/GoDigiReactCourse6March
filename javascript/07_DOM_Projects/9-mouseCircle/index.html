@@ -1,0 +1,49 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cursor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <div class="container">
+      <h1>Mouse Cursor Project</h1>
+      <p>You can only manage people, not the time</p>
+      <p>- Hitesh Choudhary</p>
+      <button>Chai aur code</button>
+    </div>
+
+    <script>
+      const cursor = document.querySelector('.cursor');
+// an array of 10 colors in hex value
+const colors = [
+  '#FF6633',
+  '#FFB399',
+  '#FF33FF',
+  '#FFFF99',
+  '#00B3E6',
+  '#E6B333',
+  '#3366E6',
+  '#999966',
+  '#99FF99',
+  '#B34D4D',
+];
+// add circle to cursor and change it's color as cursor moves on the screen. Pick color from these array
+document.addEventListener('mousemove', function (event) {
+  moveCursor(event.pageX, event.pageY);
+});
+
+const moveCursor = function (pageX, pageY) {
+  cursor.style.left = pageX + 'px';
+  cursor.style.top = pageY + 'px';
+
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+  cursor.style.backgroundColor = randomColor;
+};
+
+    </script>
+  </body>
+</html>

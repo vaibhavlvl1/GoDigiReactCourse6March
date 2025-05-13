@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var engmarks = 60;
+        var hinmarks = 70;
+        var scimarks = 80;
+        var phymarks = 90;
+        var totalmarks = engmarks + hinmarks + scimarks + phymarks;
+        var percentage = (totalmarks / 400) * 100;
+        var passorfail = '';//(percentage<=40);
+        var grade;
+
+        
+        if (percentage >= 90) {
+            passorfail = "pass";
+            grade = "A+";
+        } else if (percentage >= 80) {
+         passorfail = "pass";
+            grade = "A";
+        }
+        else if (percentage >= 70) {
+         passorfail = "pass";
+            grade = "B";
+        }
+        else if (percentage >= 60) {
+         passorfail = "pass";
+            grade = "C";
+        }
+        else if (percentage >= 50) {
+         passorfail = "pass";
+            grade = "D";
+        }
+        else if (percentage >= 40) {
+         passorfail = "pass";
+            grade = "E";
+        }
+        else {
+         passorfail = "fail";
+            grade = "F";
+        }
+
+        document.write("Total Marks: " + totalmarks);
+        document.write("Percentage: " + percentage);
+        document.write("Grade: " + grade);
+        document.write("Result: " + passorfail);
+    </script>
+</body>
+
+</html>

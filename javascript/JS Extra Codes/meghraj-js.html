@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Examples</title>
+</head>
+
+<body>
+    <h1>JavaScript Examples</h1>
+
+    <!-- JS Output -->
+    <h2>1. JS Output</h2>
+    <div id="demo"></div>
+
+    <!-- JS Statements -->
+    <h2>2. JS Statements</h2>
+    <p>Check the console for output.</p>
+
+    <!-- JS Syntax -->
+    <h2>3. JS Syntax</h2>
+    <div id="syntax"></div>
+
+    <!-- JS Comments -->
+    <h2>4. JS Comments</h2>
+    <p>Comments are present in the script. Check the code.</p>
+
+    <!-- JS Variables -->
+    <h2>5. JS Variables</h2>
+    <div id="variables"></div>
+
+    <!-- JS Let -->
+    <h2>6. JS Let</h2>
+    <div id="let"></div>
+
+    <!-- JS Const -->
+    <h2>7. JS Const</h2>
+    <div id="const"></div>
+
+    <!-- JS Operators -->
+    <h2>8. JS Operators</h2>
+    <div id="operators"></div>
+
+    <!-- JS Arithmetic -->
+    <h2>9. JS Arithmetic</h2>
+    <div id="arithmetic"></div>
+
+    <!-- JS Assignment -->
+    <h2>10. JS Assignment</h2>
+    <div id="assignment"></div>
+
+    <script>
+        // 1. JS Output Examples
+        console.log("Hello, World!");
+        document.write("<p>This is written using document.write()</p>");
+        alert("This is an alert box!");
+        document.getElementById("demo").innerHTML = "Output via innerHTML";
+        function sum(a, b) {
+            return a + b;
+        }
+        console.log("The sum is:", sum(5, 7));
+
+        // 2. JS Statements Examples
+        let name = "Brahmesh";
+        if (name === "Brahmesh") {
+            console.log("Hello, Brahmesh!");
+        }
+        for (let i = 0; i < 5; i++) {
+            console.log(i);
+        }
+        function greet() {
+            console.log("Welcome!");
+        }
+        greet();
+        let x = 10, y = 20;
+        x += y;
+        console.log(x);
+
+        // 3. JS Syntax Examples
+        let age = 25;
+        function sayHello() {
+            return "Hello!";
+        }
+        console.log(sayHello());
+        let person = { firstName: "John", lastName: "Doe" };
+        console.log(person.firstName);
+        let fruits = ["Apple", "Banana", "Cherry"];
+        console.log(fruits[1]);
+        let message = `My age is ${age}`;
+        document.getElementById("syntax").innerHTML = message;
+
+        // 4. JS Comments Examples
+        // This is a single-line comment.
+        /*
+        This is a multi-line comment.
+        */
+
+        // 5. JS Variables Examples
+        let a = 10;
+        var b = 20;
+        const c = 30;
+        document.getElementById("variables").innerHTML = `a: ${a}, b: ${b}, c: ${c}`;
+
+        // 6. JS Let Examples
+        let d = 50;
+        if (true) {
+            let d = 100; // Scoped variable
+            console.log("Inside block: " + d);
+        }
+        console.log("Outside block: " + d);
+        document.getElementById("let").innerHTML = `Value of d: ${d}`;
+
+        // 7. JS Const Examples
+        const pi = 3.14;
+        const numbers = [1, 2, 3];
+        numbers.push(4); // You can modify the array, but not reassign it.
+        document.getElementById("const").innerHTML = `pi: ${pi}, numbers: ${numbers}`;
+
+        // 8. JS Operators Examples
+        let e = 10, f = 5;
+        let addition = e + f;
+        let multiplication = e * f;
+        document.getElementById("operators").innerHTML = `Addition: ${addition}, Multiplication: ${multiplication}`;
+
+        // 9. JS Arithmetic Examples
+        let g = 10;
+        g++;
+        g += 5;
+        let h = g * 2;
+        document.getElementById("arithmetic").innerHTML = `g: ${g}, h: ${h}`;
+
+        // 10. JS Assignment Examples
+        let i = 15;
+        i += 5; // i = i + 5
+        i *= 2; // i = i * 2
+        document.getElementById("assignment").innerHTML = `Value of i: ${i}`;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asynchronous Example</title>
+</head>
+
+<body>
+  <h1 id="heading">Chai aur Meghraj</h1>
+  <button id="stop">STOP</button>
+  <button id="start">START</button>
+
+  <script>
+    // ******************** Asynchronous Example using setInterval() ******************** //
+
+    // Function jo har 1 second me current day print karega
+    const printDate = () => {
+      console.log("Today's Day is: " + new Date().getDay());
+    };
+
+    // Interval ko store karne ke liye variable
+    let intervalId = setInterval(printDate, 2000);
+
+    // STOP button: Interval ko rokne ke liye
+    document.getElementById("stop").addEventListener("click", () => {
+      clearInterval(intervalId);
+      console.log("Interval Stopped");
+      intervalId = null; // Reset kar diya taaki dobara start ho sake shuru se.
+    });
+
+    // START button: Agar interval band hai to firse start karega
+    document.getElementById("start").addEventListener("click", () => {
+      if (!intervalId) {
+        intervalId = setInterval(printDate, 3000);
+        console.log("Interval Started");
+      } else {
+        console.log("Interval is already running");
+      }
+    });
+  </script>
+</body>
+
+</html>

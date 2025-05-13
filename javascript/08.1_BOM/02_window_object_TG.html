@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    button {
+      margin: 10px;
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="btn1">Open GOOGLE</button>
+  <button id="btn2">Open Yahoo</button>
+  <button id="btn3">Close Popup</button>
+
+  <script>
+    let popupWindow = null;  // Declare the popup window reference
+
+    // Features for the popup window (size and other properties)
+    let features = 'height=600,width=600';
+
+    // Function to open the popup window
+    function openPopup(url, windowName) {
+      // If the popup window is already open, bring it to the front
+      if (popupWindow && !popupWindow.closed) {
+        popupWindow.focus();
+      } else {
+        // Open a new popup window
+        popupWindow = window.open(url, windowName, features);
+      }
+    }
+
+    // Event listener for btn1 to open Google
+    let btn1 = document.getElementById('btn1');
+    btn1.addEventListener('click', function () {
+      openPopup('https://www.google.com', 'google');
+    });
+
+    // Event listener for btn2 to open Yahoo
+    let btn2 = document.getElementById('btn2');
+    btn2.addEventListener('click', function () {
+      openPopup('https://www.yahoo.com', 'yahoo');
+    });
+
+    // Event listener for btn3 to close the popup window
+    let btn3 = document.getElementById('btn3');
+    btn3.addEventListener('click', function () {
+      if (popupWindow && !popupWindow.closed) {
+        popupWindow.close();
+      } else {
+        alert("No popup window is open.");
+      }
+    });
+
+    // Logging window properties (of the current browser window)
+    console.log('Inner Height:', window.innerHeight);
+    console.log('Inner Width:', window.innerWidth);
+    console.log('Outer Height:', window.outerHeight);
+    console.log('Outer Width:', window.outerWidth);
+  </script>
+</body>
+
+</html>

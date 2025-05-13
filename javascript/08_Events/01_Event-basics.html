@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Basics in JavaScript</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+  <h2>Event Basics in JavaScript</h2>
+
+  <p>JavaScript mein events ko handle karna ek basic concept hai. Jab hum kisi element ke saath koi action perform karte
+    hain (jaise click, hover, keypress), toh ek event trigger hota hai. Aaj hum basic events ko samjhenge.</p>
+
+  <!-- Button and Input for demonstration -->
+  <button id="basicEventButton">Click Me</button>
+
+<br>
+<br>
+<br>
+
+  <input type="text" id="textInput" placeholder="Type something...">
+
+
+
+
+  <img src="image.png" id="earthImg" alt="">
+
+  <h3>Explanation</h3>
+  <p>
+    1. Jab button ko click karte hain, tab ek "click" event trigger hota hai aur ek alert box show hota hai.
+    <br>
+    2. Jab input field mein type karte hain, toh "input" event trigger hota hai aur console mein ek message print hota
+    hai.
+  </p>
+
+  <script>
+    // Step-by-Step Explanation:
+
+    // 1. Simple Click Event:
+    // Jab user button par click karega, ek event trigger hoga.
+    // `addEventListener` se hum event ko button ke saath attach karte hain.
+
+    // `getElementById('basicEventButton')`: Button ko select karte hain using its id.
+    // `.addEventListener('click', function() {...})`: Hum click event ko button par attach karte hain. 
+    // Jab button click hoga, tab yeh function run hoga.
+    document.getElementById('basicEventButton').addEventListener('click', function () {
+      alert('Button Clicked!');  // Alert box dikhayega jab button par click hoga.
+    });
+
+
+
+    // 2. Input Event (on typing in the text input):
+    // Jab user input field mein kuch type karega, ek "input" event trigger hoga.
+    // Yeh event user ka text field mein input dete waqt trigger hota hai.
+
+    document.getElementById('textInput').addEventListener('input', function () {
+      console.log('You typed something!'); // Console mein message print hoga jab input field mein type karenge.
+    });
+
+    // 3. Mouseover Event (hovering over the image):
+    document.getElementById('earthImg').addEventListener('mouseover', function () {
+      console.log('Mouse is Hovering over the Image'); // Console mein message print hoga jab image ke upar mouse hover karenge.
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Color Changer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px 100px;
+    }
+
+    h1 {
+      text-align: center;
+      text-decoration: underline;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      height: auto;
+    }
+
+    p {
+      text-align: justify;
+      font-size: 20px;
+    }
+
+    .btn {
+      width: 25px;
+      height: 25px;
+      display: inline-block;
+      border: 1px solid black;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    #orange {
+      background-color: orangered;
+      color: white;
+    }
+
+    #red {
+      background-color: red;
+      color: white;
+    }
+
+    #pink {
+      background-color: pink;
+      color: darkgreen;
+    }
+
+    #goldenrod {
+      background-color: goldenrod;
+      color: darkmagenta;
+    }
+
+    #color-switcher {
+      text-align: right;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="color-switcher">
+    <span class="btn" id="orange" onclick="changeBg('#FFA500')"></span>
+    <span class="btn" id="red" onclick="changeBg('#FF0000')"></span>
+    <span class="btn" id="pink" onclick="changeBg('#FFC0CB')"></span>
+    <span class="btn" id="goldenrod" onclick="changeBg('#DAA520')"></span>
+  </div>
+  <h1 class="text">About US</h1>
+  <img
+    src="https://media.istockphoto.com/id/1325276224/photo/colleagues-having-meeting-in-boardroom-businessman-giving-speech-blurred-photo.jpg?s=612x612&w=0&k=20&c=8hr1wBe8SClcas5jcH-TiVmbe_AcLfmwsr2wJntC2Ls="
+    alt="">
+  <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam odit laboriosam minima amet qui
+    minus deleniti, corrupti, quisquam vel excepturi, sequi perspiciatis placeat. A veniam nobis, corrupti natus porro
+    obcaecati
+    architecto maiores nulla non quo. Accusantium qui id obcaecati reprehenderit officia numquam pariatur, nobis...</p>
+
+  <script>
+    function changeBg(color) {
+      document.body.style.backgroundColor = color;
+      let txt = document.getElementsByClassName('text');
+
+      if (color == '#FFA500' || color == '#FF0000') {
+        for (let elm of txt) {
+          elm.style.color = 'white'; // Light text color for darker backgrounds
+        }
+      } else if (color == '#FFC0CB' || color == '#DAA520') {
+        for (let elm of txt) {
+          elm.style.color = 'black'; // Dark text color for lighter backgrounds
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

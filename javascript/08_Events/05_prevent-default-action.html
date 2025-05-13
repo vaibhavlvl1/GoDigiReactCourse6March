@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prevent Default Action</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+  <h2>Prevent Default Action in JavaScript</h2>
+  <p>Agar hum kisi action ko prevent karna chahte hain, jaise link pe click karke page open hone ko, toh hum
+    <strong>e.preventDefault()</strong> use karte hain.
+  </p>
+
+  <a href="https://www.google.com" id="googleLink" style="color: aliceblue;">Click here to visit Google</a>
+
+  <script>
+    document.getElementById('googleLink').addEventListener('click', function (e) {
+     
+      console.log('Google link clicked, but prevented default action.');
+    }, false);    
+    
+    
+
+  </script>
+</body>
+
+</html>

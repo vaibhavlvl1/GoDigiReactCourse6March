@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asynchronous Project</title>
+</head>
+
+<body>
+  <h1>Two Asynchronous Projects</h1>
+  <button id="stop">STOP</button>
+
+  <script>
+    // ******************** Explanation of setTimeout() function ******************** //
+    //It derives from Window "window.setTimeout()" method.
+    //It only executes once.
+    //It takes two arguments: a callback function and a delay in milliseconds. 
+    //Syntax: setTimeout(callbackFunction, delayInMilliseconds);
+    // setTimeout() ek asynchronous function hai jo ek specific delay ke baad ek function execute karta hai.
+    // Ye ek baar execute hota hai aur dusre code ko block nahi karta, isiliye isse asynchronous kehte hain.
+
+    // ******************** Method 1: Predefined Function ******************** //
+    // Pehle ek function define karke use setTimeout() me pass karna
+    //Example1: 
+    let SayMeghraj = function () {
+      console.log("Meghraj Hamade");
+    }
+    setTimeout(SayMeghraj, 2000); // 2 seconds ke baad function execute hoga.
+
+    //setTimeout(SayMeghraj, 2000); // Here function is passed as reference means only function name is passed without (). 
+8
+    //Example2: With array
+    let arrayFruits = ["Apple", "Banana", "Mango"];
+    let displayFruits = function () {
+      console.log(arrayFruits);
+    }
+    setTimeout(displayFruits, 3000); // 3 seconds ke baad function execute hoga
+
+
+    // ***** Method 2: Directly Passing Anonymous Function ***** //
+    setTimeout(function () { //Anonymous function/No name Function without arrow function.
+      console.log("Hello World!");
+    }, 4000); // 4 seconds ke baad function execute hoga.
+
+    //Example1:
+    setTimeout(() => { console.log("How are you?") }, 5000); // 5 seconds ke baad function execute hoga.
+    
+    // ******************** Example: Changing Text Using setTimeout() With arrow function ******************** //
+
+    //Example2:
+    const changeText = () => { // // Anonymous function with arrow function
+      document.querySelector("h1").innerHTML = "This is Changed Text";
+    }
+
+    // setTimeout() ko ek variable me store kiya gaya hai taki age jaakar isse stop kiya ja sake.
+    let stopAction = setTimeout(changeText, 4000); // 4 seconds ke baad text change hoga.
+
+    // ******************** Stopping setTimeout() function using clearTimeout() function ******************** //
+    //ClearTimeout() always requires a variable that stores the setTimeout() function / Reference of setTimeout() function. 
+    //ClearTimeout()  takes only one argument that is the reference of setTimeout() function.
+    // Agar user "STOP" button click kare, to clearTimeout() ka use karke setTimeout ko cancel karenge.
+    document.getElementById("stop").addEventListener("click", () => {
+      clearTimeout(stopAction);
+      console.log("Timeout Stopped");
+    });
+
+  </script>
+</body>
+
+</html>

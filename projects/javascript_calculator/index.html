@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: grid;
+        place-items: center;
+        height: 100dvh;
+      }
+
+      .calculator {
+        width: 400px;
+        height: auto;
+        border: 1px solid #000;
+        box-shadow: 0px 5px 10px grey;
+      }
+      .input-container {
+        width: 100%;
+        padding: 5px;
+
+        input {
+          width: 100%;
+          text-align: right;
+          padding: 5px;
+        }
+      }
+
+      .calculator-buttons {
+        width: 50px;
+        height: 50px;
+        box-shadow: 0 5px 5px grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <form class="input-container">
+        <input id="queryBox" type="text" />
+      </form>
+      <div class="button-container">
+        <button id="calculate">Calculate</button>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

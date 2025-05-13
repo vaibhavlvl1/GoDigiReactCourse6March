@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stop Event Propagation</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+  <h2>Stop Event Propagation in JavaScript</h2>
+  <p>Event propagation ko stop karne ke liye hum <strong>e.stopPropagation()</strong> method use karte hain. Jab ek
+    event outer element tak nahi pahuncha chahta, hum stop kar sakte hain.</p>
+
+  <div id="outerDiv" style="background-color: #7e7e7e; padding: 20px; margin: 10px;">
+    Outer Div
+    <div id="innerDiv" style="background-color: #9b9b9b; padding: 20px; margin: 10px;">
+      Inner Div
+    </div>
+  </div>
+
+  <script>
+    // Outer Div click event
+    document.getElementById('outerDiv').addEventListener('click', function () {
+      console.log('Outer Div Clicked');
+    }, false);
+
+    // Inner Div click event with stopPropagation
+    document.getElementById('innerDiv').addEventListener('click', function (e) {
+      console.log('Inner Div Clicked');
+      e.stopPropagation(); // Stop the event from reaching the outer div
+    }, false);
+  </script>
+</body>
+
+</html>

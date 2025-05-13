@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Promises Explained</title>
+</head>
+
+<body>
+  <h1>Promises in Javascript - Explained</h1>
+  <p>Ek <b>Promise</b> Jo hai Object ek asynchronous operation ka result represent karta hai jo future me complete ya
+    fail ho
+    sakta hai.</p>
+  <p>Iska matlab hai ki jab hum koi asynchronous operation karte hain jaise ki API call, setTimeout ya setInterval, to
+    iska output turant nahi milta. Promise ye batata hai ki jab ye complete hoga to success (resolve) hoga ya fail
+    (reject).</p>
+
+  <h4>Promises ke 3 states hote hain:</h4>
+  <ul>
+    <li><b>Pending:</b> Initial state jab promise chalu hota hai, par abhi complete nahi hua.</li>
+    <li><b>Fulfilled:</b> Jab promise successfully complete ho jata hai.</li>
+    <li><b>Rejected:</b> Jab promise fail ho jata hai ya koi error aati hai.</li>
+  </ul>
+
+  <script>
+    // ****************** Example 1: Promise Create karna ****************** //
+    const promiseOne = new Promise(function (resolve, reject) {
+      // setTimeout ek asynchronous function hai jo kuch time baad code execute karta hai.
+      setTimeout(function () {
+        console.log("Async Task is Complete"); // Jab 2 sec baad complete hoga to ye print hoga
+        resolve(); // resolve ka matlab hai ki promise successfully complete ho gaya.
+      }, 2000);
+    });
+
+    // .then() ka use karke resolve ke andar likha function execute hoga
+    promiseOne.then(function () {
+      console.log("Promise is Consumed"); // Ye tab chalega jab promise resolve ho jayega
+    });
+
+    // ****************** Example 2: Promise without Variable ****************** //
+    new Promise(function (resolve, reject) {
+      setTimeout(function () {
+        console.log("Async Task Second is Complete");
+        resolve();
+      }, 2000);
+    }).then(function () {
+      console.log("Promise Second is Consumed");
+    });
+
+    // ****************** Example 3: Promise with Data ****************** //
+    const promiseThree = new Promise(function (resolve, reject) {
+      setTimeout(function () {
+        resolve({ username: 'Meghraj', age: 21 }); // Data return kar raha hai jab promise resolve hoga
+      }, 2000);
+    });
+
+    promiseThree.then(function (userdata) {
+      console.log(userdata); // pura object print karega
+      console.log(userdata.username); // sirf username print karega
+      console.log(userdata.age); // sirf age print karega
+    });
+
+    // ****************** Example 4: Promise with Error Handling ****************** //
+    const promiseFour = new Promise(function (resolve, reject) {
+      setTimeout(function () {
+        let error = true; // yaha error ko true rakha hai taaki reject case chale
+        if (!error) {
+          resolve({ name: 'Meghraj', age: 21 });
+        } else {
+          reject('Error: Something went wrong'); // reject case chalega kyunki error true hai
+        }
+      }, 2000);
+    });
+
+    promiseFour
+      .then((user) => {
+        console.log(user);
+        return user.username;
+      })
+      .then((username) => {
+        console.log(username); // Ye tab chalega jab pehla .then execute hoga
+      })
+      .catch((error) => {
+        console.log(error); // Ye tab chalega jab reject hoga
+      })
+      .finally(() => {
+        console.log("Promise is Consumed"); // Ye hamesha chalega, chahe success ho ya error
+      });
+
+    // ****************** Example 5: Promise with Async/Await ****************** //
+    const promiseFive = new Promise(function (resolve, reject) {
+      setTimeout(function () {
+        let error = false; // Yaha error false hai, isliye resolve hoga
+        if (!error) {
+          resolve({ name: 'Javascript', password: 1224684 });
+        } else {
+          reject('Error: JS went wrong');
+        }
+      }, 2000);
+    });
+
+    async function consumePromiseFive() {
+      const response = await promiseFive; // Await ka matlab hai ki jab tak promise resolve na ho, agla code wait karega
+      console.log(response); // Jab promise resolve hoga tab ye chalega
+    }
+    consumePromiseFive();
+  </script>
+</body>
+
+</html>

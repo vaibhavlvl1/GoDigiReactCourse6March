@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Propagation (Bubbling & Capturing)</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+  <h2>Event Propagation in JavaScript</h2>
+  <p>Event propagation me 2 types hote hain: Bubbling and Capturing. Let's see the examples for both.</p>
+  <div id="outerDiv" style="background-color: red; padding: 20px; margin: 10px;">
+    Outer Div
+    <div id="innerDiv" style="background-color: black; padding: 20px; margin: 10px;">
+      Inner Div
+    </div>
+  </div>
+
+  <script>
+    // Bubbling Example (Default behavior):
+    // document.getElementById('outerDiv').addEventListener('click', function () {
+    //   console.log('Outer Div Clicked (Bubbling)');
+    // }, false); // Bubbling by default
+
+    // //Inside to outside Propagation ko hum Bubbling kehte hain isme event inner se outer tak chalta hai
+    // document.getElementById('innerDiv').addEventListener('click', function () {
+    //   console.log('Inner Div Clicked (Bubbling)');
+    // }, false); // Bubbling by default
+
+    // Capturing Example:
+    document.getElementById('outerDiv').addEventListener('click', function () {
+      console.log('Outer Div Clicked (Capturing)');
+    }, true); // Capturing happens first
+
+    document.getElementById('innerDiv').addEventListener('click', function () {
+      console.log('Inner Div Clicked (Capturing)');
+    }, true); // Capturing happens first
+  </script>
+</body>
+
+</html>

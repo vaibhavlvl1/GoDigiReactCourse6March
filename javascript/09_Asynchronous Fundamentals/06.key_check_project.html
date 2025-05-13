@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Key Check Project</title>
+  <style>
+    /* Body Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    /* Styling for Key Display */
+    .key {
+      font-size: 2rem;
+      color: white;
+    }
+
+    /* Table Styling */
+    table {
+      border: 1px solid #e7e7e7;
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    th,
+    td {
+      border: 1px solid #e7e7e7;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Main Container */
+    .project {
+      background-color: #1c1c1c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    /* Box for Key Info */
+    .color {
+      background-color: aliceblue;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Key Check Project</h1>
+  <div class="project">
+    <div id="insert">
+      <div class="key">Press Any Key to See Details</div>
+    </div>
+  </div>
+
+  <script>
+    // HTML element ko select karna jisme hum key details show karenge
+    const insert = document.getElementById('insert');
+
+    // Key press event listener add karna
+    //Jaise "click" hota hai vaise hi "keydown" event ka use karke hume key details show karne hain.
+    window.addEventListener('keydown', (e) => {
+      insert.innerHTML = `
+        <div class="color">
+          <table>
+            <tr>
+              <th>Key</th>
+              <th>KeyCode</th>
+              <th>Code</th>
+            </tr>
+            <tr>
+              <td>${e.key === " " ? "Space" : e.key}</td>
+              <td>${e.keyCode}</td>
+              <td>${e.code}</td>
+            </tr>
+          </table>
+        </div>
+      `;
+    });
+  </script>
+</body>
+
+</html>

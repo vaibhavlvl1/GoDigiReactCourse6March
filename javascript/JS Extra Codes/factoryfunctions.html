@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factory Function</title>
+</head>
+<body>
+    <script>
+        function newCarProp(){
+        let carprop = {
+        color : 'red',
+        type : 'hybrid',
+        carfuel : function(){
+            console.log('This is a Petrol Car');
+        }
+    };
+    }
+
+    var createObj1 = newCarProp();
+</script>
+</body>
+</html>

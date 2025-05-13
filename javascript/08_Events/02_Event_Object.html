@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Object in JavaScript</title>
+</head>
+
+<body>
+  <h2>Understanding the Event Object in JavaScript</h2>
+  <p>Event object mein event ke baare mein sari information hoti hai, jaise mouse position, clicked element, etc.</p>
+
+  <button id="clickButton">Click Me</button>
+
+  <script>
+
+
+
+
+
+
+
+    document.getElementById('clickButton').addEventListener('click', function (e) {
+      console.log('Event Object:', e); // Event object will be logged here
+      console.log('Event Type:', e.type); // Type of the event (click)
+      console.log('Event Timestamp:', e.timeStamp); // Timestamp of the event
+      console.log('Event Target:', e.target); // Element that triggered the event
+      console.log('Mouse X Position:', e.clientX); // Mouse X position
+      console.log('Mouse Y Position:', e.clientY); // Mouse Y position
+    }, false);
+  </script>
+</body>
+
+</html>

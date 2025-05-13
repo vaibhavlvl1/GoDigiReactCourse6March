@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+ function commercialbill(){
+    var unit = 500;
+    var commercialrate = 15;
+    var commercialbill = unit * commercialrate;
+    document.write("The Total Commercial Bill is: " +commercialbill);
+ }
+  commercialbill();
+
+
+ function residentialbill(){
+    var unit = 300;
+    var residentialrate = 10;
+    var residentialbill = unit * residentialrate;
+document.write("The Total Residential Bill is: " +residentialbill);
+ }
+ residentialbill();
+
+ var totalbill = commercialbill() + residentialbill();
+ document.write("The total bill is:" +totalbill)
+
+</script>
+</body>
+</html>
