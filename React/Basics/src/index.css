@@ -40,6 +40,18 @@
   border: 1px solid #000;
 }
 
+.user-info-container2 {
+  position: fixed;
+  right: 10%;
+  top: 300px;
+  height: 300px;
+  width: 40%;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #000;
+}
+
 .active {
-  border: 5px red solid;
+  border: 2px red solid;
+  background-color: #b1b1b1;
 }

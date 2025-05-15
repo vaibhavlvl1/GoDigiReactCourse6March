@@ -1,49 +1,7 @@
 import { useEffect, useState } from "react";
 import User from "./User";
 import UserInfo from "./UserInfo";
-
-const userListInitial = [
-  {
-    id: 1,
-    name: "Alice Johnson",
-    email: "alice.johnson@example.com",
-    phone: "+1 (555) 123-4567",
-    address: "123 Maple Street, Springfield, IL",
-    image: "https://randomuser.me/api/portraits/women/1.jpg",
-  },
-  {
-    id: 2,
-    name: "Michael Smith",
-    email: "michael.smith@example.com",
-    phone: "+1 (555) 234-5678",
-    address: "456 Oak Avenue, Denver, CO",
-    image: "https://randomuser.me/api/portraits/men/2.jpg",
-  },
-  {
-    id: 3,
-    name: "Sophia Brown",
-    email: "sophia.brown@example.com",
-    phone: "+1 (555) 345-6789",
-    address: "789 Pine Road, Austin, TX",
-    image: "https://randomuser.me/api/portraits/women/3.jpg",
-  },
-  {
-    id: 4,
-    name: "James Wilson",
-    email: "james.wilson@example.com",
-    phone: "+1 (555) 456-7890",
-    address: "321 Birch Lane, Seattle, WA",
-    image: "https://randomuser.me/api/portraits/men/4.jpg",
-  },
-  {
-    id: 5,
-    name: "Emma Davis",
-    email: "emma.davis@example.com",
-    phone: "+1 (555) 567-8901",
-    address: "654 Cedar Street, Miami, FL",
-    image: "https://randomuser.me/api/portraits/women/5.jpg",
-  },
-];
+import axios from "axios";
 
 export default function Users() {
   const [usersList, setUsersList] = useState([]);
@@ -51,11 +9,27 @@ export default function Users() {
 
   const [selectedUser, setSelectedUser] = useState();
 
-  useEffect(() => {
-    setTimeout(() => {
-      setUsersList(userListInitial);
+  async function fetchData() {
+    try {
+      setIsLoading(true);
+      const response = await axios.get(
+        "https://jsonplaceholder.typicode.com/users"
+      );
+
+      if (response.status == "200") {
+        setUsersList(response.data);
+      }
+
+      console.log(response);
+    } catch (error) {
+      console.log(error.message);
+    } finally {
       setIsLoading(false);
-    }, 2000);
+    }
+  }
+
+  useEffect(() => {
+    fetchData();
   }, []);
 
   function deleteUser(userId) {

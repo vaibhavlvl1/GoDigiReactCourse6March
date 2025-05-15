@@ -1,8 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import FormHandling from "./components/FormHandling";
-import Header from "./components/Header";
-import Message from "./components/Message";
+
 import Home from "./screens/home";
 import Blog from "./screens/Blog";
 import About from "./screens/About";
@@ -15,11 +13,6 @@ import PageNotFound from "./screens/PageNotFound";
 export default function App() {
   return (
     <>
-      {/* <Header /> */}
-      {/* <Message /> */}
-      {/* <hr /> */}
-      {/* <FormHandling /> */}
-
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

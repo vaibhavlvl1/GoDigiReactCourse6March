@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function User({ user, deleteUser, viewInfo, selectedUser }) {
   return (
     <div
@@ -13,6 +15,8 @@ export default function User({ user, deleteUser, viewInfo, selectedUser }) {
       <button onClick={() => viewInfo(user)}>Click To View More Info</button>
       <br />
       <button onClick={() => deleteUser(user.id)}>Delete User</button>
+
+      <Link to={`/users/${user.id}`}>View Detailed Info</Link>
     </div>
   );
 }

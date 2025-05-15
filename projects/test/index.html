@@ -4,45 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+
+    <style>
+      .outerdiv {
+        background-color: aqua;
+        width: 200px;
+        height: 200px;
+      }
+
+      .innerdiv {
+        background-color: bisque;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+
+    <div class="outerdiv">
+      <div class="innerdiv"></div>
+    </div>
   </head>
   <body>
     <script>
-      const myArray = ["Meghraj", 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      document
+        .querySelector(".outerdiv")
+        .addEventListener("click", function () {
+          console.log("outerclicked");
+        });
 
-      for (const elements of myArray) {
-        console.log(elements);
-      }
-
-      const myObject = {
-        js: "Javascript",
-        py: "Python",
-        rb: "Ruby",
-        cs: "C#",
-        go: "Golang",
-        sw: "Swift",
-      };
-
-      for (const item in myObject) {
-        console.log(item);
-      }
-
-      const myNums2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-      myNums1 = myNums2.filter((num) => num > 5);
-      console.log(myNums1);
-
-      const books = [
-        {
-          title: "Javascript",
-          genre: "Programming",
-          publishYear: 2021,
-        },
-        { title: "Python", genre: "Programming", publishYear: 2020 },
-        { title: "Ruby", genre: "Science", publishYear: 2019 },
-        { title: "C#", genre: "Programming", publishYear: 2018 },
-        { title: "Golang", genre: "Photography", publishYear: 2017 },
-        { title: "Swift", genre: "Mechanics", publishYear: 2016 },
-      ];
+      document
+        .querySelector(".innerdiv")
+        .addEventListener("click", function () {
+          console.log("innerclicked");
+        });
     </script>
   </body>
 </html>
