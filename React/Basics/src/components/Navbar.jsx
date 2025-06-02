@@ -44,6 +44,11 @@ export default function Navbar() {
             Users
           </Link>
         </li>
+        <li>
+          <Link style={{ color: "#fff" }} to="/createuser">
+            Create User
+          </Link>
+        </li>
       </ul>
     </div>
   );

@@ -1,0 +1,20 @@
+.watchListContainer {
+  width: 50%;
+  position: absolute;
+  min-height: 100dvh;
+  right: 0;
+  top: 0;
+  z-index: 7;
+  transition: all 0.3s;
+  background-color: #fff;
+  /* overflow-y: scroll; */
+  padding: 20px;
+  box-shadow: -10px 0px 15px #888;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 9;
+}

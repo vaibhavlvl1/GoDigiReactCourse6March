@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  position: relative;
+}
+
+body {
+  background: linear-gradient(rgba(255, 255, 255, 0.7)),
+    url("./images/1393545.jpg") center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Roboto", serif;
+}
+
+a {
+  font-family: "lora", serif;
+}
+
+img {
+  width: 100%;
+}
+
+.logo {
+  font-family: "Fontdiner Swanky", serif;
+  font-size: 42px;
+  color: #fff;
+}
+
+button {
+  cursor: pointer;
+}
+
+.hide {
+  right: -100% !important;
+}

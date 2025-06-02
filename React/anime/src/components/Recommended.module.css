@@ -1,0 +1,122 @@
+.recContainer {
+  width: 100%;
+  min-height: 90dvh;
+  border-top: 2px solid #fff;
+  position: relative;
+  background-color: #000;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.description {
+  padding: 50px;
+  color: #fff;
+  width: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.errorTitle {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.animeTitle {
+  color: #fff;
+  font-family: Lora, serif;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 32px;
+}
+
+.animeTitleAlt {
+  color: #fff;
+  font-family: Lora, serif;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 26px;
+}
+
+.synopsis {
+  color: #fff;
+  font-size: 20px;
+}
+
+.genres {
+  p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  span {
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-right: 10px;
+  }
+}
+
+.info {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  span {
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #888;
+  }
+}
+
+.addToWatch {
+  background-color: red;
+  padding: 8px 15px;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.studio {
+  margin-top: 20px;
+  padding: 8px;
+  background-color: green;
+  margin-right: 10px;
+  width: auto;
+  color: #fff;
+  text-decoration: none;
+}
+
+.mal {
+  margin-top: 20px;
+  padding: 8px;
+  background-color: blue;
+  margin-right: 10px;
+  width: auto;
+  color: #fff;
+  text-decoration: none;
+}
+
+.trailerContainer {
+  width: 50%;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.slideChanger {
+  height: 50px;
+  width: 50px;
+  padding: 8px 15px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  margin-top: -30px;
+  background-color: transparent;
+  border: 1px solid #888;
+}

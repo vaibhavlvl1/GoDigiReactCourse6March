@@ -1,0 +1,31 @@
+.navList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  border-radius: 40px;
+  overflow: hidden;
+
+  li {
+    background-color: #00c9c9;
+    /* padding: 25px; */
+    font-size: 18px;
+    transition: 0.3s all;
+  }
+
+  li a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+  }
+}
+
+.active {
+  background-color: #00ffff !important;
+  transform: scale(1.05);
+}
