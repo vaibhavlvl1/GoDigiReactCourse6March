@@ -7,15 +7,21 @@ export const AnimeContext = createContext();
 export default function AnimeProvider({ children }) {
   const [search, setSearch] = useState("");
   const [watchCount, setWatchCount] = useState(0);
-  // const [watchListOpen, setWatchListOpen] = useState(false);
+
   const [watchList, setWatchList] = useState([]);
 
   function addToWatchList(anime) {
-    console.log("addTo WatchList function called");
     setWatchList((prev) => [...prev, anime]);
-    console.log(anime);
-    console.log(watchList);
+
     setWatchCount(watchList.length + 1);
+  }
+
+  function checkInWatchList(anime_Id) {
+    watchList.forEach((item) => {
+      if (item.id == anime_Id) {
+        return true;
+      }
+    });
   }
 
   function removeFromWatchList(animeId) {
@@ -44,6 +50,7 @@ export default function AnimeProvider({ children }) {
         addToWatchList,
         removeFromWatchList,
         itemInWatchList,
+        checkInWatchList,
       }}
     >
       {children}

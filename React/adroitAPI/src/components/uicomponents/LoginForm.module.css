@@ -1,0 +1,11 @@
+.loginForm {
+  input {
+    background-color: #2188c9;
+  }
+}
+
+.usersSignLoginForm {
+  color: #2188c9;
+  width: 60px;
+  height: 60px;
+}

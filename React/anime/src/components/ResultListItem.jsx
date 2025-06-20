@@ -1,10 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./ResultListItem.module.css";
 import { Link } from "react-router-dom";
 import { AnimeContext } from "../context/AnimeProvider";
 
 export default function ResultListItem({ anime }) {
-  const { addToWatchList } = useContext(AnimeContext);
+  const { addToWatchList, checkInWatchList } = useContext(AnimeContext);
+
+  const [isAdded, setIsAdded] = useState(false);
 
   return (
     <li className={styles.resultListItem}>
@@ -22,13 +24,16 @@ export default function ResultListItem({ anime }) {
         <p>{anime.synopsis.slice(0, 300)}....</p>
         <div className={styles.listItemLinks}>
           <a href={anime.url}>Visit MAL</a>
-          <Link to={`/search/${anime.mal_id}`}>View Details</Link>
+          <Link to={`/animeDetails/${anime.mal_id}`}>View Details</Link>
 
           <button
             onClick={() => {
               addToWatchList(anime);
+              setIsAdded(true);
             }}
-          ></button>
+          >
+            {isAdded ? "Added" : "Add to WatchList"}
+          </button>
         </div>
       </div>
     </li>

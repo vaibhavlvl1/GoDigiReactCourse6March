@@ -9,25 +9,16 @@ import WatchList from "./components/WatchList.jsx";
 import { useRef } from "react";
 
 function App() {
-  const watchListRef = useRef();
-
-  function handleHide() {
-    watchListRef.current.classList.toggle("hide");
-    // watchListRef.current.classList.toggle("unhide");
-  }
-
   return (
-    <>
-      <Header handleHide={handleHide} />
+    <div className="appContainer">
+      <Header />
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/search" element={<Search />} />
-        <Route path="/search/:id" element={<AnimeDetails />} />
+        <Route path="/animeDetails/:id" element={<AnimeDetails />} />
       </Routes>
-
-      <WatchList handleHide={handleHide} watchListRef={watchListRef} />
-    </>
+    </div>
   );
 }
 

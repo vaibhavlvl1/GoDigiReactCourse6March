@@ -5,6 +5,8 @@ import { useState, useEffect, useReducer } from "react";
 
 import { StepForward, StepBack } from "lucide-react";
 import Loader from "./Loader";
+import { useContext } from "react";
+import { AnimeContext } from "../context/AnimeProvider";
 
 const initialState = {
   index: 0,
@@ -33,6 +35,8 @@ function indexReducer(state, action) {
 export default function Recommended() {
   const [topAnimes, setTopAnimes] = useState();
   const [state, dispatch] = useReducer(indexReducer, initialState);
+
+  const { addToWatchList } = useContext(AnimeContext);
 
   async function getTopAnime() {
     try {
@@ -103,7 +107,12 @@ export default function Recommended() {
               <a href={topAnimes[state.index].url} className={styles.mal}>
                 Visit MAL
               </a>
-              <button className={styles.addToWatch}>Add To WatchList</button>
+              <button
+                onClick={(e) => addToWatchList(topAnimes[state.index])}
+                className={styles.addToWatch}
+              >
+                Add To WatchList
+              </button>
             </div>
           </div>
           <div className={styles.trailerContainer}>

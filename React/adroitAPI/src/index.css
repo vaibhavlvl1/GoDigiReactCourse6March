@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #2188c9;
+}
+
+body {
+  background-color: #114593;
+}
+
+table td,
+th {
+  padding: 5px !important;
+}
+
+table tr {
+  border-bottom: 1px solid rgb(228, 228, 228);
+}
+
+.deactivate {
+  width: 100px;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 2px;
+  border: none;
+  background-color: red;
+  margin-left: 10px;
+}
+
+.reactivate {
+  width: 100px;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 2px;
+  border: none;
+  background-color: green;
+  margin-left: 10px;
+}
+
+button {
+  cursor: pointer;
+}

@@ -14,6 +14,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   font-family: "Roboto", serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -35,5 +36,6 @@ button {
 }
 
 .hide {
-  right: -100% !important;
+  right: 0 !important;
+  /* display: block; */
 }

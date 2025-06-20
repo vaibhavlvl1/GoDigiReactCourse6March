@@ -1,11 +1,17 @@
-import React from "react";
-import SearchInput from "./SearchInput";
+import React, { useRef } from "react";
+
 import styles from "./Header.module.css";
-import WatchList from "./WatchListBtn";
+import WatchList from "./WatchList";
 import Nav from "./Nav";
 import WatchListBtn from "./WatchListBtn";
 
-export default function Header({ handleHide }) {
+export default function Header() {
+  const watchListRef = useRef();
+
+  function handleHide() {
+    watchListRef.current.classList.toggle("hide");
+    // watchListRef.current.classList.toggle("unhide");
+  }
   return (
     <header className={styles.header}>
       <div className="logo">
@@ -14,11 +20,10 @@ export default function Header({ handleHide }) {
         <span style={{ color: "#00ffff" }}>DB</span>
       </div>
 
-      {/* <SearchInput /> */}
-
       <Nav />
 
       <WatchListBtn handleHide={handleHide} />
+      <WatchList handleHide={handleHide} watchListRef={watchListRef} />
     </header>
   );
 }

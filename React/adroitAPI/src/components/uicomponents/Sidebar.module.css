@@ -1,0 +1,4 @@
+.dashList a:hover .dashList li {
+  background-color: #fff !important;
+  color: #000;
+}

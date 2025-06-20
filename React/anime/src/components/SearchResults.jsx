@@ -15,7 +15,7 @@ export default function SearchResults() {
   async function getAnimes() {
     let animeName, animeId, animeType, animeSfw, animeRating, animeAiring;
     animeName = document.querySelector("#AnimeName").value[0];
-    animeId = document.querySelector("#AnimeId").value;
+    // animeId = document.querySelector("#AnimeId").value;
     animeType = document.querySelector("#AnimeType").value;
     animeSfw = document.querySelector("#AnimeSfw").checked;
     animeRating = document.querySelector("#AnimeRating").value;
@@ -75,7 +75,7 @@ export default function SearchResults() {
           }}
         >
           <input id="AnimeName" type="text" placeholder="Search By Name" />
-          <input id="AnimeId" type="number" placeholder="search by MAL ID" />
+          {/* <input id="AnimeId" type="number" placeholder="search by MAL ID" /> */}
           <select name="searchByType" id="AnimeType">
             <option value="tv">TV</option>
             <option value="movie">Movie</option>

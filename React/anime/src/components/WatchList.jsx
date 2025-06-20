@@ -14,7 +14,9 @@ export default function WatchList({ watchListRef, handleHide }) {
         {watchList.length == 0 ? (
           <p>No Animes In WatchList</p>
         ) : (
-          watchList.map((anime) => <WatchListItem anime={anime} />)
+          watchList.map((anime) => (
+            <WatchListItem key={anime.mal_id} anime={anime} />
+          ))
         )}
       </ul>
     </div>
