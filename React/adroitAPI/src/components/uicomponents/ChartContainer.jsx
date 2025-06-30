@@ -10,6 +10,7 @@ export default function ChartContainer() {
   const [chartData, setChartData] = useState([]);
 
   const [lineChartData, setLineChartData] = useState(null);
+  const [lineChartDataSwitch, setLineChartSwitch] = useState(null);
   const [barChartData, setBarChartData] = useState(null);
 
   const formData = new FormData();
@@ -28,9 +29,32 @@ export default function ChartContainer() {
           labels: response.data.data.myDatao_d_monthly.split(","),
           datasets: [
             {
+              label: "Ads Booked Monthly",
               data: response.data.data.myDatao_n_monthly
                 .split(",")
                 .map((item) => Number(item.replace(/'/g, ""))),
+              borderColor: "rgba(75,192,192,1)",
+            },
+          ],
+        });
+
+        setLineChartSwitch({
+          labels: response.data.data.myDatao_d_monthly.split(","),
+          datasets: [
+            {
+              label: "Adds Booked Monthly",
+              data: response.data.data.myDatao_n_monthly
+                .split(",")
+                .map((item) => Number(item.replace(/'/g, ""))),
+              backgroundColor: [
+                "#60a5fa",
+                "#60a5fa",
+                "#60a5fa",
+                "#60a5fa",
+                "#60a5fa",
+                "#60a5fa",
+              ],
+              borderColor: "rgba(75,192,192,1)",
             },
           ],
         });
@@ -39,9 +63,19 @@ export default function ChartContainer() {
           labels: response.data.data.myDatao_d.split(","),
           datasets: [
             {
+              label: "Adds Booked Daily",
               data: response.data.data.myDatao_n
                 .split(",")
                 .map((item) => Number(item.replace(/'/g, ""))),
+              backgroundColor: [
+                "#60a5fa",
+                "#60a5fa",
+                "#60a5fa",
+                "#60a5fa",
+                "#60a5fa",
+                "#60a5fa",
+              ],
+              borderColor: "rgba(75,192,192,1)",
             },
           ],
         });
@@ -56,12 +90,16 @@ export default function ChartContainer() {
   }, []);
 
   return chartData ? (
-    <div className="charts w-full h-auto">
-      <button onClick={() => console.log(lineChartData)}>Log Data</button>
+    <div className="charts w-full h-auto ">
+      <div className="line-chart-container bg-white sm:p-20 mb-10">
+        <button>Switch</button>
+        {lineChartData && <LineChart lineChartData={lineChartData} />}
+      </div>
 
-      {lineChartData && <LineChart lineChartData={lineChartData} />}
-
-      {barChartData && <BarChart barChartData={barChartData} />}
+      <div className="bar-chart-container bg-white sm:p-20 ">
+        <button>Switch</button>
+        {barChartData && <BarChart barChartData={barChartData} />}
+      </div>
     </div>
   ) : (
     <Loader />

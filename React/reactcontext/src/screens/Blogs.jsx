@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { increment, decrement } from "../redux/Action";
+import { increment, decrement } from "../Redux/Action";
 
 function Blogs() {
   const count = useSelector((state) => state.count);

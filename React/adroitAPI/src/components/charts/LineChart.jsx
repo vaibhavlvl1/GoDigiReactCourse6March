@@ -62,6 +62,9 @@ export default function LineChart({ lineChartData }) {
       y: {
         beginAtZero: true,
       },
+      x: {
+        beginAtZero: false,
+      },
     },
   };
 

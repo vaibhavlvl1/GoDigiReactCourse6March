@@ -11,8 +11,6 @@ import ProtectedRoutes from "./components/logic/ProtectedRoutes";
 import PageNotFound from "./screens/PageNotFound";
 import HiddenRoute from "./components/logic/HiddenRoute";
 
-
-
 export default function App() {
   return (
     <>

@@ -1,12 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ProductsTable from "../components/uicomponents/ProductsTable";
 import Loader from "../components/uicomponents/Loader";
 import axios from "axios";
+import { AppContext } from "../context/AppProvider";
 
 export default function ProductManagement() {
+  const { token } = useContext(AppContext);
+  let statusLoading = null;
   const [isLoading, setIsLoading] = useState(false);
   const [prodList, setProdList] = useState([]);
+  const formData = new FormData();
+  formData.append("token", token);
 
   const productsListContainer = (
     <div className="tableContainer bg-white p-5">
@@ -16,6 +21,7 @@ export default function ProductManagement() {
           className="border-[1px] border-gray-300 pr-2 pl-1 mr-1 ml-1"
           name="entries"
           id=""
+          onChange={(e) => setEntries(e.target.value)}
         >
           <option value="10" default>
             10
@@ -25,7 +31,7 @@ export default function ProductManagement() {
         </select>
         entries
       </div>
-      <div className="mainTable ">
+      <div className="mainTable overflow-x-scroll bg-white ">
         <table className="table-auto w-full text-left">
           <thead>
             <tr>
@@ -43,9 +49,10 @@ export default function ProductManagement() {
           <tbody>
             {prodList.map((dataRow) => (
               <ProductsTable
-                key={dataRow.id}
+                key={dataRow.product_id}
                 dataRow={dataRow}
-                updateProduct={updateProduct}
+                handleStatus={handleStatus}
+                statusLoading={statusLoading}
               />
             ))}
           </tbody>
@@ -54,14 +61,41 @@ export default function ProductManagement() {
     </div>
   );
 
+  async function handleStatus(id) {
+    try {
+      statusLoading = id;
+      const response = await axios.post(
+        `/api/demo-adbook/api/products/active-inactive/${id}`,
+        formData
+      );
+
+      if (response.data.status) {
+        const newProdList = prodList.map((product) =>
+          product.product_id === id
+            ? { ...product, is_active: product.is_active === "1" ? "0" : "1" }
+            : product
+        );
+
+        setProdList(newProdList);
+      }
+    } catch (error) {
+      console.log(error.message, "Failed to change the status");
+    } finally {
+      statusLoading = null;
+    }
+  }
+
   async function getProducts() {
     try {
       setIsLoading(true);
 
-      const response = await axios.get("http://localhost:4000/products");
+      const response = await axios.post(
+        "/api/demo-adbook/api/products/list",
+        formData
+      );
 
-      if (response.status === 200) {
-        setProdList(response.data);
+      if (response.data.status) {
+        setProdList(response.data.products);
       }
     } catch (error) {
       console.log(error.message);
@@ -73,17 +107,6 @@ export default function ProductManagement() {
   useEffect(() => {
     getProducts();
   }, []);
-
-  async function updateProduct(id, product) {
-    try {
-      const response = await axios.put(
-        `http://localhost:4000/products/${id}`,
-        product
-      );
-    } catch (error) {
-      console.log(error.message);
-    }
-  }
 
   return (
     <div className="bg-gray-200 w-full h-dvh pl-10 pr-10 box-shadow overflow-scroll">

@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #114593;
+  background-color: #193cb8;
 }
 
 table td,
@@ -39,4 +39,49 @@ table tr {
 
 button {
   cursor: pointer;
+}
+
+.inputGroup {
+  margin-bottom: 15px;
+}
+
+.inputGroup input,
+.inputGroup select,
+.inputGroup textarea {
+  border: 1px solid gray;
+  padding: 5px 10px;
+  width: 100%;
+  outline: none;
+}
+.inputGroup input:disabled {
+  background-color: #e9ecef;
+}
+
+.inputGroup span {
+  background-color: #f7fafc;
+  padding: 8px 15px;
+}
+
+input::file-selector-button {
+  background-color: #e9ecef;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.tabList {
+  transform: translateY(1px);
+  position: relative;
+  z-index: 5;
+  li {
+    padding: 10px;
+  }
+}
+
+.normalTabBorder {
+  border: 1px solid transparent;
+}
+
+.tabActive {
+  border: 1px solid #e5e7eb !important;
+  border-bottom: 1px solid #fff !important;
 }

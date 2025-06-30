@@ -9,7 +9,7 @@ export default function Sidebar() {
   const { logout } = useContext(AppContext);
 
   return (
-    <div className="w-1/5 bg-blue-800 h-dvh">
+    <div className="hidden sm:block w-2xs bg-blue-800 h-max sticky z-10 top-28 left-0">
       <ul
         className={` ${styles.dashList} dash-list text-white border-b-1 border-gray-400 mt-5 pb-5`}
       >

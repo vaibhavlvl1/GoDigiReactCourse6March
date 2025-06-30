@@ -1,21 +1,27 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import UserTable from "../components/uicomponents/UserTable";
 import axios from "axios";
+import { AppContext } from "../context/AppProvider";
 
 export default function UserManagement() {
   const [isLoading, setIsLoading] = useState(false);
+  const [statusLoading, setStatusLoading] = useState(null);
   const [userList, setUserList] = useState([]);
+  const { token } = useContext(AppContext);
+  const formData = new FormData();
+  formData.append("token", token);
 
   async function getUsers() {
     try {
       setIsLoading(true);
-      const response = await axios.get("http://localhost:4000/users");
+      const response = await axios.post(
+        "/api/demo-adbook/api/users/list",
+        formData
+      );
 
-      console.log(response.data.users);
-
-      if (response.status === 200) {
-        setUserList(response.data);
+      if (response.data.status) {
+        setUserList(response.data.data);
       }
     } catch (error) {
       console.log(error.message);
@@ -24,20 +30,34 @@ export default function UserManagement() {
     }
   }
 
-  const updateItem = async (id, user) => {
-    console.log(id, user);
+  async function handleStatus(id) {
     try {
-      const response = await axios.put(
-        `http://localhost:4000/users/${id}`,
-        user
+      setStatusLoading(id);
+      console.log(statusLoading);
+      const response = await axios.post(
+        `/api/demo-adbook/api/users/active-inactive/${id}`,
+        formData
       );
 
-      console.log("Item updated: with", id, updatedStatus, response.data);
-      // Optionally update state here
+      if (response.data.status) {
+        const newUserList = userList.map((user) =>
+          user.user_id === id
+            ? {
+                ...user,
+                status:
+                  user.status === "Reactivate" ? "Deactivate" : "Reactivate",
+              }
+            : user
+        );
+        setUserList(newUserList);
+      }
     } catch (error) {
-      console.error("Error updating item:", error);
+      console.log(error.message, "failed to change the status");
+    } finally {
+      console.log(statusLoading);
+      setStatusLoading(null);
     }
-  };
+  }
 
   useEffect(() => {
     getUsers();
@@ -51,7 +71,7 @@ export default function UserManagement() {
           <Link to="/">Home</Link> / <Link to="/usermanagement">Users</Link>{" "}
         </p>
       </div>
-      <div className="tableContainer bg-white p-5">
+      <div className="tableContainer  bg-white p-5">
         <div className="entryFilter mb-5">
           Show
           <select
@@ -67,8 +87,8 @@ export default function UserManagement() {
           </select>
           entries
         </div>
-        <div className="mainTable ">
-          <table className="table-auto w-full text-left">
+        <div className="mainTable overflow-x-scroll bg-white ">
+          <table className="table-auto w-full  text-left  bg-white">
             <thead>
               <tr>
                 <th>ID</th>
@@ -83,7 +103,12 @@ export default function UserManagement() {
             </thead>
             <tbody>
               {userList.map((dataRow) => (
-                <UserTable updateItem={updateItem} dataRow={dataRow} />
+                <UserTable
+                  key={dataRow.user_id}
+                  dataRow={dataRow}
+                  handleStatus={handleStatus}
+                  statusLoading={statusLoading}
+                />
               ))}
             </tbody>
           </table>
