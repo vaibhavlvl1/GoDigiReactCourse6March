@@ -5,6 +5,7 @@ export default function InputForm({ addNote }) {
   const [singleNote, setSingleNote] = useState("");
   return (
     <form
+      className={styles.form}
       onSubmit={(e) => {
         addNote(e, singleNote);
         setSingleNote("");
