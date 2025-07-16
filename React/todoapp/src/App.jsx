@@ -1,5 +1,4 @@
 import Header from "./components/Header";
-import "./app.css";
 import { useState } from "react";
 import InputForm from "./components/InputForm";
 import Display from "./components/Display";
@@ -39,7 +38,7 @@ export default function App() {
           handleDelete={handleDelete}
         />
       ) : (
-        <div style={{ width: "100%", paddingTop: "20px", paddingLeft: "20px" }}>
+        <div style={{ paddingTop: "20px", paddingLeft: "20px" }}>
           <h1 style={{ textAlign: "center" }}>No New Notes</h1>
         </div>
       )}
