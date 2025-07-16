@@ -31,6 +31,7 @@ export default function App() {
   return (
     <>
       <Header />
+      <InputForm addNote={addNote} />
       {notesList.length > 0 ? (
         <Display
           notesList={notesList}
@@ -38,7 +39,9 @@ export default function App() {
           handleDelete={handleDelete}
         />
       ) : (
-        <h1>No New Notes</h1>
+        <div style={{ width: "100%", paddingTop: "20px", paddingLeft: "20px" }}>
+          <h1 style={{ textAlign: "center" }}>No New Notes</h1>
+        </div>
       )}
     </>
   );

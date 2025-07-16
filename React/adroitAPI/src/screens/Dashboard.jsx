@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, lazy, Suspense } from "react";
 import DashboardBox from "../components/uicomponents/DashboardBox";
 import DashboardDateBox from "../components/uicomponents/DashboardDateBox";
 import ProductReport from "../components/uicomponents/ProductReport";
@@ -6,8 +6,13 @@ import SalesRepReport from "../components/uicomponents/SalesRepReport";
 
 import { AppContext } from "../context/AppProvider";
 import axios from "axios";
-import ChartContainer from "../components/uicomponents/ChartContainer";
+
+const ChartContainer = lazy(() =>
+  import("../components/uicomponents/ChartContainer")
+);
+
 import DashboardBoxContainer from "../components/uicomponents/DashboardBoxContainer";
+import { Loader2 } from "lucide-react";
 
 export default function Dashboard() {
   const [response, setResponse] = useState([]);
@@ -22,8 +27,9 @@ export default function Dashboard() {
       <ProductReport />
 
       <SalesRepReport />
-
-      <ChartContainer />
+      <Suspense fallback={<Loader2 />}>
+        <ChartContainer />
+      </Suspense>
     </div>
   ) : (
     <p>Loading</p>

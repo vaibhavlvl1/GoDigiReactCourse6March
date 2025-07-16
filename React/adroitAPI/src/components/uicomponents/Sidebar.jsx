@@ -6,13 +6,11 @@ import styles from "./Sidebar.module.css";
 import { AppContext } from "../../context/AppProvider";
 
 export default function Sidebar() {
-  const { logout } = useContext(AppContext);
+  const { logout, sideBarOpen } = useContext(AppContext);
 
   return (
-    <div className="hidden sm:block w-2xs bg-blue-800 h-max sticky z-10 top-28 left-0">
-      <ul
-        className={` ${styles.dashList} dash-list text-white border-b-1 border-gray-400 mt-5 pb-5`}
-      >
+    <div className="hidden sm:block  bg-blue-800 h-max sticky z-10 top-28 left-0">
+      <ul className={` text-white border-b-1 border-gray-400 mt-5 pb-5`}>
         <li className="flex p-5 gap-2 hover:bg-white hover:text-black transition-all duration-300">
           <CircleGauge />
           <Link to="/">Dashboard</Link>

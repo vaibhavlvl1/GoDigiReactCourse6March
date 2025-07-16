@@ -28,7 +28,6 @@ export default function BookAd() {
         formData
       );
 
-      console.log(response.data);
       if (response.data.status) {
         setApiData(response.data);
       }

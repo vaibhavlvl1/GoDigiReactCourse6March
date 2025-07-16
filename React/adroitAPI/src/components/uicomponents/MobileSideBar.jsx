@@ -40,10 +40,12 @@ export default function MobileSideBar() {
       >
         <li
           onClick={closeMobileNav}
-          className="flex p-5 gap-2 hover:bg-white hover:text-black transition-all duration-300"
+          className="flex p-5 gap-2  hover:bg-white hover:text-black transition-all duration-300"
         >
           <CircleGauge />
-          <Link to="/">Dashboard</Link>
+          <Link className="w-full h-full clicker" to="/">
+            Dashboard
+          </Link>
         </li>
         <li
           onClick={closeMobileNav}

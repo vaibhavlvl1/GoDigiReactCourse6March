@@ -60,5 +60,9 @@ export default function BarChart({ barChartData }) {
     },
   };
 
-  return <Bar data={barChartData} options={options} />;
+  return (
+    <div className="w-full lg:w-4/5 h-3/4 flex justify-center items-center ">
+      <Bar data={barChartData} options={options} />
+    </div>
+  );
 }

@@ -5,7 +5,7 @@ import Loader from "./Loader";
 import LineChart from "../charts/LineChart";
 import BarChart from "../charts/BarChart";
 
-export default function ChartContainer() {
+function ChartContainer() {
   const { token } = useContext(AppContext);
   const [chartData, setChartData] = useState([]);
 
@@ -91,13 +91,11 @@ export default function ChartContainer() {
 
   return chartData ? (
     <div className="charts w-full h-auto ">
-      <div className="line-chart-container bg-white sm:p-20 mb-10">
-        <button>Switch</button>
+      <div className="line-chart-container flex justify-center items-center bg-white sm:p-20 mb-10">
         {lineChartData && <LineChart lineChartData={lineChartData} />}
       </div>
 
-      <div className="bar-chart-container bg-white sm:p-20 ">
-        <button>Switch</button>
+      <div className="bar-chart-container flex justify-center items-center bg-white sm:p-20 ">
         {barChartData && <BarChart barChartData={barChartData} />}
       </div>
     </div>
@@ -105,3 +103,5 @@ export default function ChartContainer() {
     <Loader />
   );
 }
+
+export default React.memo(ChartContainer);

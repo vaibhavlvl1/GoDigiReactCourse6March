@@ -15,6 +15,7 @@ export default function AppProvider({ children }) {
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [userEmail, setUserEmail] = useState(localStorage.getItem("useremail"));
   const [userPhone, setUserPhone] = useState(localStorage.getItem("userphone"));
+  const [sideBarOpen, setSideBarOpen] = useState(true);
 
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [viewCard, setViewCard] = useState(false);
@@ -81,6 +82,8 @@ export default function AppProvider({ children }) {
         userPhone,
         viewCard,
         setViewCard,
+        sideBarOpen,
+        setSideBarOpen,
       }}
     >
       {children}

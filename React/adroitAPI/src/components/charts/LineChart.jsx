@@ -68,5 +68,9 @@ export default function LineChart({ lineChartData }) {
     },
   };
 
-  return <Line data={lineChartData} options={options} />;
+  return (
+    <div className="w-full lg:w-4/5 h-3/4 flex justify-center items-center ">
+      <Line className="w-full" data={lineChartData} options={options} />
+    </div>
+  );
 }

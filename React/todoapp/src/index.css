@@ -5,11 +5,26 @@
   padding: 0;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+}
+
 .noteItem {
   padding: 10px;
   background-color: #fff;
   margin: 10px 0px;
   font-size: 28px;
+  display: flex;
+  flex-wrap: wrap;
 
   span {
     margin: 0 5px;
@@ -26,5 +41,16 @@
 
   input {
     padding: 5px;
+  }
+}
+
+@media (max-width: 640px) {
+  .noteText {
+    display: block;
+    width: 100% !important;
+  }
+
+  .buttonDiv {
+    margin-top: 20px;
   }
 }

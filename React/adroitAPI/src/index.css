@@ -6,6 +6,16 @@
 
 body {
   background-color: #193cb8;
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
 }
 
 table td,
@@ -56,6 +66,9 @@ button {
 .inputGroup input:disabled {
   background-color: #e9ecef;
 }
+.inputGroup select:disabled {
+  background-color: #e9ecef;
+}
 
 .inputGroup span {
   background-color: #f7fafc;
@@ -84,4 +97,26 @@ input::file-selector-button {
 .tabActive {
   border: 1px solid #e5e7eb !important;
   border-bottom: 1px solid #fff !important;
+}
+
+.clicker a {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+table.adlist {
+  padding-left: 20px;
+}
+
+table.adlist td,
+table.adlist th {
+  padding: 15px !important;
+}
+
+.adListGreyed {
+  background-color: gray !important;
+}
+
+.filter-date {
+  width: 50% !important;
 }

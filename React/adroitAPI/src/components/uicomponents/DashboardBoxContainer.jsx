@@ -13,7 +13,7 @@ export default function DashboardBoxContainer() {
   async function getDashboardCount() {
     try {
       const res = await axios.post("/api/demo-adbook/api/dashboard", formData);
-      console.log(res.data.status);
+      // console.log(res.data.status);
 
       if (res.data.status) {
         setResponse(res.data);

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function DashboardBox({ status, summary }) {
+function DashboardBox({ status, summary }) {
   let toReturn = "";
 
   const Booked = (
@@ -59,3 +59,5 @@ export default function DashboardBox({ status, summary }) {
 
   return toReturn;
 }
+
+export default React.memo(DashboardBox);

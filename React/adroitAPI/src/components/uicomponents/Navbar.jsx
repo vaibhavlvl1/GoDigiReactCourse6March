@@ -2,11 +2,12 @@ import React, { useContext } from "react";
 import logo from "../../images/AdBookPlus.png";
 import { Link } from "react-router-dom";
 import UserProfile from "./UserProfile";
-import { SquareMenu } from "lucide-react";
+import { ChevronRight, SquareMenu, ChevronLeft } from "lucide-react";
 import { AppContext } from "../../context/AppProvider";
 
 export default function Navbar() {
-  const { mobileNavOpen, setMobileNavOpen } = useContext(AppContext);
+  const { mobileNavOpen, setMobileNavOpen, sideBarOpen, setSideBarOpen } =
+    useContext(AppContext);
 
   return (
     <div className="w-full   bg-white flex flex-wrap justify-center sm:justify-between   shadow-2xl/30 pt-2 pb-2 relative">
@@ -18,6 +19,13 @@ export default function Navbar() {
       </button>
       <div className="flex flex-wrap justify-center sm:justify-start align-center items-center gap-5">
         <img className="inline" src={logo} alt="" />
+        <div
+          onClick={(e) => setSideBarOpen((prev) => !prev)}
+          className="hidden bg-gray-200 h-full sm:flex justify-center items-center cursor-pointer "
+        >
+          {sideBarOpen ? <ChevronLeft /> : <ChevronRight />}
+        </div>
+
         <div className=" hidden sm:flex w-auto ">
           <Link
             to="/bookad"

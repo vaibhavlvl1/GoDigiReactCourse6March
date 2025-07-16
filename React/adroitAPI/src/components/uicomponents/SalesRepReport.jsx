@@ -3,7 +3,7 @@ import { data } from "react-router-dom";
 import { AppContext } from "../../context/AppProvider";
 import axios from "axios";
 
-export default function SalesRepReport() {
+function SalesRepReport() {
   const { token } = useContext(AppContext);
   const [response, setResponse] = useState(null);
   const [filterFrom, setFilterFrom] = useState("");
@@ -93,3 +93,5 @@ export default function SalesRepReport() {
     <p>.....Loading</p>
   );
 }
+
+export default React.memo(SalesRepReport);

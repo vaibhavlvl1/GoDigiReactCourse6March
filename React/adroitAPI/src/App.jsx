@@ -10,6 +10,9 @@ import AdList from "./screens/AdList";
 import ProtectedRoutes from "./components/logic/ProtectedRoutes";
 import PageNotFound from "./screens/PageNotFound";
 import HiddenRoute from "./components/logic/HiddenRoute";
+import AdDetails from "./screens/AdDetails";
+
+
 
 export default function App() {
   return (
@@ -29,6 +32,8 @@ export default function App() {
           <Route path="customer" element={<Customer />} />
           <Route path="bookad" element={<BookAd />} />
           <Route path="adlist" element={<AdList />} />
+          <Route path="adlist/addetails/:id" element={<AdDetails />} />
+
           <Route path="*" element={<PageNotFound />} />
         </Route>
         <Route

@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import { AppContext } from "../../context/AppProvider";
 import axios from "axios";
 
-export default function ProductReport() {
+function ProductReport() {
   const currDate = new Date();
   const months = [
     "Jannuary",
@@ -112,3 +112,5 @@ export default function ProductReport() {
     <p>...Loading</p>
   );
 }
+
+export default React.memo(ProductReport);

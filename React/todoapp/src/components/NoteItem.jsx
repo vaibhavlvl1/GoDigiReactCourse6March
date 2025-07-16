@@ -6,36 +6,40 @@ export default function NoteItem({ note, index, handleConfirm, handleDelete }) {
 
   return (
     <li className="noteItem">
-      <span>{index} - </span>
+      <span></span>
 
-      <span>{note.text}</span>
-      <button onClick={() => handleDelete(note.id)}>Delete</button>
+      <span className="noteText">
+        {index}. {note.text}
+      </span>
+      <div className="buttonDiv">
+        <button onClick={() => handleDelete(note.id)}>Delete</button>
 
-      {isEditing && (
-        <span>
-          <input
-            value={newText}
-            onChange={(e) => setNewText(e.target.value)}
-            type="text"
-          />{" "}
-          <button
-            onClick={() => {
-              handleConfirm(newText, note.id);
-              setIsEditing(false);
-            }}
-          >
-            Confirm
-          </button>
-        </span>
-      )}
+        {isEditing && (
+          <span>
+            <input
+              value={newText}
+              onChange={(e) => setNewText(e.target.value)}
+              type="text"
+            />{" "}
+            <button
+              onClick={() => {
+                handleConfirm(newText, note.id);
+                setIsEditing(false);
+              }}
+            >
+              Confirm
+            </button>
+          </span>
+        )}
 
-      <button
-        onClick={(e) => {
-          setIsEditing(!isEditing);
-        }}
-      >
-        {isEditing ? "Cancel" : "Edit"}
-      </button>
+        <button
+          onClick={(e) => {
+            setIsEditing(!isEditing);
+          }}
+        >
+          {isEditing ? "Cancel" : "Edit"}
+        </button>
+      </div>
     </li>
   );
 }

@@ -1,12 +1,12 @@
 import { useState } from "react";
 import styles from "./InputForm.module.css";
 
-export default function InputForm({ addNote, }) {
+export default function InputForm({ addNote }) {
   const [singleNote, setSingleNote] = useState("");
   return (
     <form
       onSubmit={(e) => {
-        addNote(e, singleNote); 
+        addNote(e, singleNote);
         setSingleNote("");
       }}
     >
